@@ -1,5 +1,6 @@
 import React from "react";
 import ExampleComponent from "./Pages/LandingPage.jsx";
+import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
       <div className="p-4">
         <ExampleComponent />
       </div>
+      <Footer />
     </div>
   );
 };
