@@ -1,0 +1,65 @@
+/* Categories.css */
+
+/* Container styling */
+.categories-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+
+  /* Dark mode background */
+
+  padding-top: 10%;
+}
+
+/* Inner container for buttons */
+.categories-buttons {
+  text-align: center;
+}
+
+/* Button container styling */
+.categories-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1rem;
+
+  /* Dark mode background */
+
+  padding-top: 10%;
+  gap: 1rem;
+}
+
+/* Button styling */
+.categories-button {
+  width: 100%;
+  max-width: 400px; /* Default max width */
+  font-size: 2.875rem; /* 3xl equivalent */
+  font-weight: bold;
+  padding: 0.75rem 1.25rem; /* px-5 py-3 */
+  background-color: #3662c1;
+  color: white;
+  border-radius: 1.5rem;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect */
+.categories-button:hover {
+  background-color: #2851a3; /* Darker blue */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .categories-button {
+    width: 90%; /* Adjust button width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-button {
+    margin-top: 30%;
+    width: 100%; /* Full width for very small screens */
+    font-size: 2rem; /* Slightly smaller font size */
+  }
+}

@@ -1,0 +1,69 @@
+/* General container for the landing page */
+.landing-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px 0;
+}
+
+/* Each section container */
+.section-container {
+  position: relative;
+  margin-bottom: 2rem; /* Adds spacing between the two sections */
+}
+
+/* Image styles */
+.section-image {
+  width: 200px; /* Default size for desktop */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Button styles */
+.section-button {
+  position: absolute;
+  bottom: -20px; /* Default button position */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #3662c1;
+  color: white;
+  font-size: 1.5rem; /* Default button font size */
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.section-button:hover {
+  background-color: #2851a3; /* Slightly darker blue */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .section-image {
+    width: 250px; /* Increase image size for tablets */
+  }
+
+  .section-button {
+    font-size: 1.75rem; /* Slightly larger font size for buttons */
+    padding: 0.6rem 1.2rem;
+    bottom: -15px; /* Adjust button position */
+  }
+}
+
+@media (max-width: 480px) {
+  .section-image {
+    width: 300px; /* Larger image size for mobile */
+  }
+
+  .section-button {
+    font-size: 2rem; /* Larger font size for mobile buttons */
+    padding: 0.8rem 1.5rem;
+    bottom: -10px; /* Adjust button position */
+  }
+}
