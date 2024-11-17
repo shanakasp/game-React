@@ -1,11 +1,46 @@
 import { ChevronRight, Home, Volume2 } from "lucide-react";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import questions from "../Question.json";
 import { QuizContext } from "../QuizContext";
 
+const ProgressBar = ({ isRunning }) => {
+  const [progress, setProgress] = useState(100);
+
+  useEffect(() => {
+    if (!isRunning) {
+      setProgress(100);
+      return;
+    }
+
+    const startTime = Date.now();
+    const duration = 10000; // 10 seconds
+
+    const timer = setInterval(() => {
+      const elapsed = Date.now() - startTime;
+      const remaining = Math.max(0, 100 - (elapsed / duration) * 100);
+
+      setProgress(remaining);
+
+      if (elapsed >= duration) {
+        clearInterval(timer);
+      }
+    }, 16); // ~60fps
+
+    return () => clearInterval(timer);
+  }, [isRunning]);
+
+  return (
+    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden mb-6">
+      <div
+        className="h-full bg-red-500 transition-all duration-[16ms] ease-linear"
+        style={{ width: `${progress}%` }}
+      />
+    </div>
+  );
+};
+
 const Confetti = () => {
-  // Simple CSS-based confetti animation
   const colors = [
     "#FFD700",
     "#FF6B6B",
@@ -69,6 +104,23 @@ const AnswerSelection = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showSentence, setShowSentence] = useState(false);
   const [showError, setShowError] = useState(false);
+  const [isTimerRunning, setIsTimerRunning] = useState(true);
+
+  useEffect(() => {
+    setIsTimerRunning(true);
+    const timer = setTimeout(() => {
+      if (!selectedAnswer) {
+        setShowError(true);
+        setTimeout(() => {
+          setShowError(false);
+          setCurrentIndex((prev) => prev + 1);
+          setIsTimerRunning(true);
+        }, 1500);
+      }
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, [currentIndex, selectedAnswer]);
 
   const speak = (text) => {
     window.speechSynthesis.cancel();
@@ -77,6 +129,7 @@ const AnswerSelection = () => {
   };
 
   const handleAnswer = (answer) => {
+    setIsTimerRunning(false);
     setSelectedAnswer(answer);
     const isCorrect = answer === filteredQuestions[currentIndex].answer;
     if (isCorrect) {
@@ -98,6 +151,7 @@ const AnswerSelection = () => {
       setSelectedAnswer(null);
       setShowSentence(false);
       setShowError(false);
+      setIsTimerRunning(true);
     }
   };
 
@@ -135,9 +189,11 @@ const AnswerSelection = () => {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
+      <ProgressBar isRunning={isTimerRunning} />
+
       {showError && (
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-red-100 text-red-700 px-4 py-2 rounded-lg shadow-lg">
-          Your answer is wrong
+          Please select an answer
         </div>
       )}
 
@@ -204,7 +260,6 @@ const AnswerSelection = () => {
   );
 };
 
-// Add the confetti animation styles to your CSS
 const style = document.createElement("style");
 style.textContent = `
   @keyframes confetti-fall {
