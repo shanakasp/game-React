@@ -1,94 +1,20 @@
-{
-  "questions": [
-    {
-      "id": 1,
-      "type": "Synonyms",
-      "category": "Beginner",
-      "subType": "Verbs",
-      "question": "Run",
-      "options": ["Sprint", "Walk", "Jump", "Sit"],
-      "answer": "Sprint"
-    },
-    {
-      "id": 2,
-      "type": "Antonyms",
-      "category": "Intermediate",
-      "subType": "Adjectives",
-      "question": "Fast",
-      "options": ["Quick", "Slow", "Speedy", "Rapid"],
-      "answer": "Slow"
-    },
-    {
-      "id": 3,
-      "type": "Synonyms",
-      "category": "Advanced",
-      "subType": "Nouns",
-      "question": "Journey",
-      "options": ["Trip", "Delay", "Rest", "Block"],
-      "answer": "Trip"
-    },
-    {
-      "id": 4,
-      "type": "Antonyms",
-      "category": "Beginner",
-      "subType": "Adjectives",
-      "question": "Happy",
-      "options": ["Joyful", "Sad", "Cheerful", "Content"],
-      "answer": "Sad"
-    },
-    {
-      "id": 5,
-      "type": "Synonyms",
-      "category": "Intermediate",
-      "subType": "Verbs",
-      "question": "Jump",
-      "options": ["Hop", "Fall", "Stand", "Walk"],
-      "answer": "Hop"
-    },
-    {
-      "id": 6,
-      "type": "Antonyms",
-      "category": "Advanced",
-      "subType": "Nouns",
-      "question": "Victory",
-      "options": ["Win", "Loss", "Triumph", "Success"],
-      "answer": "Loss"
-    },
-    {
-      "id": 7,
-      "type": "Synonyms",
-      "category": "Beginner",
-      "subType": "Adjectives",
-      "question": "Cold",
-      "options": ["Chilly", "Hot", "Warm", "Mild"],
-      "answer": "Chilly"
-    },
-    {
-      "id": 8,
-      "type": "Antonyms",
-      "category": "Intermediate",
-      "subType": "Verbs",
-      "question": "Rise",
-      "options": ["Lift", "Climb", "Fall", "Jump"],
-      "answer": "Fall"
-    },
-    {
-      "id": 9,
-      "type": "Synonyms",
-      "category": "Advanced",
-      "subType": "Nouns",
-      "question": "Friend",
-      "options": ["Companion", "Enemy", "Stranger", "Opponent"],
-      "answer": "Companion"
-    },
-    {
-      "id": 10,
-      "type": "Antonyms",
-      "category": "Beginner",
-      "subType": "Adjectives",
-      "question": "Bright",
-      "options": ["Shiny", "Dull", "Radiant", "Luminous"],
-      "answer": "Dull"
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "What is a synonym for 'happy'?",
+    "options": ["Sad", "Joyful", "Elated"],
+    "answer": "Joyful"
+  },
+  {
+    "id": 2,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "What is an antonym for 'bright'?",
+    "options": ["Dim", "Luminous", "Vivid"],
+    "answer": "Dim"
+  }
+]

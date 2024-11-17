@@ -1,16 +1,39 @@
-import React from "react";
-import "./styles/Categories.css"; // Importing the external CSS file
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { QuizContext } from "../QuizContext";
+import "./styles/Categories.css";
 
 const Categories = () => {
+  const { updateQuizData } = useContext(QuizContext);
+  const navigate = useNavigate();
+
+  const handleCategorySelection = (category) => {
+    updateQuizData("category", category);
+    navigate("/type");
+  };
+
   return (
-    <div className="flex justify-center items-center px-4 bg-[#DCE9FD] dark:bg-[#4A4B4A] ">
+    <div className="flex justify-center items-center px-4 bg-[#DCE9FD] dark:bg-[#4A4B4A]">
       <div className="categories-container">
         <div className="categories-buttons">
-          <div className="categories-button-container">
-            <button className="categories-button">Beginner</button>
-            <button className="categories-button">Intermediate</button>
-            <button className="categories-button">Advanced</button>
-          </div>
+          <button
+            className="categories-button"
+            onClick={() => handleCategorySelection("Beginner")}
+          >
+            Beginner
+          </button>
+          <button
+            className="categories-button"
+            onClick={() => handleCategorySelection("Intermediate")}
+          >
+            Intermediate
+          </button>
+          <button
+            className="categories-button"
+            onClick={() => handleCategorySelection("Advanced")}
+          >
+            Advanced
+          </button>
         </div>
       </div>
     </div>

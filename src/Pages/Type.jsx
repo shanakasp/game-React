@@ -1,16 +1,39 @@
-import React from "react";
-import "./styles/Categories.css"; // Importing the external CSS file
+import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { QuizContext } from "../QuizContext";
+import "./styles/Categories.css";
 
 const Type = () => {
+  const { updateQuizData } = useContext(QuizContext);
+  const navigate = useNavigate();
+
+  const handleSubTypeSelection = (subType) => {
+    updateQuizData("subType", subType);
+    navigate("/quiz");
+  };
+
   return (
-    <div className="flex justify-center items-center px-4 bg-[#DCE9FD] dark:bg-[#4A4B4A] ">
+    <div className="flex justify-center items-center px-4 bg-[#DCE9FD] dark:bg-[#4A4B4A]">
       <div className="categories-container">
         <div className="categories-buttons">
-          <div className="categories-button-container">
-            <button className="categories-button">Nouns</button>
-            <button className="categories-button">Verbs</button>
-            <button className="categories-button">Adjectives</button>
-          </div>
+          <button
+            className="categories-button"
+            onClick={() => handleSubTypeSelection("Nouns")}
+          >
+            Nouns
+          </button>
+          <button
+            className="categories-button"
+            onClick={() => handleSubTypeSelection("Verbs")}
+          >
+            Verbs
+          </button>
+          <button
+            className="categories-button"
+            onClick={() => handleSubTypeSelection("Adjectives")}
+          >
+            Adjectives
+          </button>
         </div>
       </div>
     </div>
