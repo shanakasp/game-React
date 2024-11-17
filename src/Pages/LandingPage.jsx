@@ -7,16 +7,16 @@ const LandingPage = () => {
     <div className="text-center bg-[#DCE9FD] dark:bg-[#4A4B4A]  ">
       {/* Bus Image */}
       <div className="relative">
-        <img src={BusImage} alt="Bus" className="mx-auto h-32" />
-        <button className="absolute -bottom-1.5 left-1/2 transform -translate-x-1/2 text-3xl font-bold px-5 py-0.5 bg-[#3662C1] text-white rounded-3xl hover:bg-blue-600">
+        <img src={BusImage} alt="Bus" className="mx-auto h-[250px] mt-[5%]" />
+        <button className="absolute bottom-3.5 left-1/2 transform -translate-x-1/2 text-5xl font-bold px-5 pb-2 bg-[#3662C1] text-white rounded-3xl hover:bg-blue-600">
           Antonyms
         </button>
       </div>
 
       {/* Circle Image */}
-      <div className="relative pt-[3%]">
-        <img src={CircleImage} alt="Circle" className="mx-auto h-32" />
-        <button className="absolute  -bottom-1.5 left-1/2 transform -translate-x-1/2 text-3xl font-bold px-5 py-0.5 bg-[#3662C1] text-white rounded-3xl hover:bg-blue-600">
+      <div className="relative pt-[17%]">
+        <img src={CircleImage} alt="Circle" className="mx-auto h-[250px]" />
+        <button className="absolute bottom-1 left-1/2 transform -translate-x-1/2 text-5xl font-bold px-5 pb-2 bg-[#3662C1] text-white rounded-3xl hover:bg-blue-600">
           Synonyms
         </button>
       </div>
