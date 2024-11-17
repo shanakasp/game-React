@@ -4,17 +4,239 @@
     "type": "Synonyms",
     "category": "Beginner",
     "subType": "Nouns",
-    "question": "What is a synonym for 'happy'?",
-    "options": ["Sad", "Joyful", "Elated"],
-    "answer": "Joyful"
+    "question": "Guidance",
+    "options": ["Help", "Advice", "Instruction", "Direction"],
+    "answer": "Advice",
+    "sentence": "My teacher gave me good advice (/ədˈvaɪs/) on how to study for the test."
   },
   {
     "id": 2,
-    "type": "Antonyms",
-    "category": "Intermediate",
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Take",
+    "options": ["Borrow", "Receive", "Pick", "Acquire"],
+    "answer": "Receive",
+    "sentence": "He wants to borrow (/ˈbɒrəʊ/) some money for lunch."
+  },
+  {
+    "id": 3,
+    "type": "Synonyms",
+    "category": "Beginner",
     "subType": "Adjectives",
-    "question": "What is an antonym for 'bright'?",
-    "options": ["Dim", "Luminous", "Vivid"],
-    "answer": "Dim"
+    "question": "Uninterested",
+    "options": ["Indifferent", "Bored", "Disinterested", "Excited"],
+    "answer": "Bored",
+    "sentence": "I felt bored (/bɔːd/) during the long movie."
+  },
+  {
+    "id": 4,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Data",
+    "options": ["Information", "Details", "Fact", "Statistics"],
+    "answer": "Information",
+    "sentence": "I found information (/ˌɪnfəˈmeɪʃən/) about the museum online."
+  },
+  {
+    "id": 5,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Look",
+    "options": ["See", "Observe", "Watch", "Notice"],
+    "answer": "See",
+    "sentence": "Look (/lʊk/) at the dog! It is cute."
+  },
+  {
+    "id": 6,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Caring",
+    "options": ["Sympathetic", "Loving", "Friendly", "Compassionate"],
+    "answer": "Sympathetic",
+    "sentence": "She is sympathetic (/ˌsɪmpəˈθɛtɪk/) to my problems."
+  },
+  {
+    "id": 7,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Lodging",
+    "options": ["Accommodation", "Residence", "Room", "House"],
+    "answer": "Accommodation",
+    "sentence": "The hotel provides comfortable accommodation (/əˌkɒməˈdeɪʃən/) for all its guests."
+  },
+  {
+    "id": 8,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Raise",
+    "options": ["Lift", "Elevate", "Hoist", "Push"],
+    "answer": "Lift",
+    "sentence": "Please raise (/reɪz/) your hand if you have a question."
+  },
+  {
+    "id": 9,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Engaging",
+    "options": ["Interesting", "Captivating", "Attractive", "Entertaining"],
+    "answer": "Interesting",
+    "sentence": "The book is very interesting (/ˈɪntrəstɪŋ/)."
+  },
+  {
+    "id": 10,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Improvement",
+    "options": ["Progress", "Enhancement", "Growth", "Development"],
+    "answer": "Progress",
+    "sentence": "She is making progress (/ˈprəʊɡres/) in her studies."
+  },
+  {
+    "id": 11,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Start",
+    "options": ["Begin", "Commence", "Open", "Initiate"],
+    "answer": "Begin",
+    "sentence": "Let’s begin (/bɪˈɡɪn/) the game now."
+  },
+  {
+    "id": 12,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Pretty",
+    "options": ["Beautiful", "Lovely", "Attractive", "Gorgeous"],
+    "answer": "Beautiful",
+    "sentence": "The flowers are beautiful (/ˈbjuːtɪfəl/) in spring."
+  },
+  {
+    "id": 13,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Issue",
+    "options": ["Problem", "Dilemma", "Challenge", "Complication"],
+    "answer": "Problem",
+    "sentence": "I have a problem (/ˈprɒbləm/) with my computer."
+  },
+  {
+    "id": 14,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Shatter",
+    "options": ["Break", "Crack", "Smash", "Crush"],
+    "answer": "Break",
+    "sentence": "Be careful not to break (/breɪk/) the glass."
+  },
+  {
+    "id": 15,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Amazed",
+    "options": ["Surprised", "Shocked", "Astonished", "Dumbfounded"],
+    "answer": "Surprised",
+    "sentence": "I was surprised (/səˈpraɪzd/) by the birthday party."
+  },
+  {
+    "id": 16,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Companionship",
+    "options": ["Friendship", "Partnership", "Union", "Relationship"],
+    "answer": "Friendship",
+    "sentence": "Our friendship (/ˈfrendʃɪp/) is very special."
+  },
+  {
+    "id": 17,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Slice",
+    "options": ["Cut", "Carve", "Chop", "Sever"],
+    "answer": "Cut",
+    "sentence": "I will cut (/kʌt/) the paper in half."
+  },
+  {
+    "id": 18,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Sugary",
+    "options": ["Sweet", "Tasty", "Candy-like", "Saccharine"],
+    "answer": "Sweet",
+    "sentence": "The candy is very sweet (/swiːt/)."
+  },
+  {
+    "id": 19,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Present",
+    "options": ["Gift", "Offering", "Prize", "Token"],
+    "answer": "Gift",
+    "sentence": "I bought a gift (/ɡɪft/) for my friend."
+  },
+  {
+    "id": 20,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Stay",
+    "options": ["Wait", "Remain", "Linger", "Pause"],
+    "answer": "Wait",
+    "sentence": "Please wait (/weɪt/) for me at the bus stop."
+  },
+  {
+    "id": 21,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Lost",
+    "options": ["Missing", "Gone", "Vanished", "Unavailable"],
+    "answer": "Missing",
+    "sentence": "My key is missing (/ˈmɪsɪŋ/)."
+  },
+  {
+    "id": 22,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Thought",
+    "options": ["Idea", "Concept", "Belief", "Opinion"],
+    "answer": "Idea",
+    "sentence": "That’s a great idea (/aɪˈdɪə/)!"
+  },
+  {
+    "id": 23,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Throw",
+    "options": ["Toss", "Launch", "Cast", "Hurl"],
+    "answer": "Toss",
+    "sentence": "Please toss (/tɒs/) the ball to me."
+  },
+  {
+    "id": 24,
+    "type": "Synonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Comfortable",
+    "options": ["Cozy", "Warm", "Snug", "Relaxed"],
+    "answer": "Cozy",
+    "sentence": "I feel cozy (/ˈkəʊzi/) in this blanket."
   }
 ]
