@@ -1,9 +1,68 @@
-import { ChevronRight, Volume2 } from "lucide-react";
+import { ChevronRight, Home, Volume2 } from "lucide-react";
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import questions from "../Question.json";
 import { QuizContext } from "../QuizContext";
 
+const Confetti = () => {
+  // Simple CSS-based confetti animation
+  const colors = [
+    "#FFD700",
+    "#FF6B6B",
+    "#4ECDC4",
+    "#45B7D1",
+    "#96CEB4",
+    "#FFEEAD",
+  ];
+  return (
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {[...Array(50)].map((_, i) => (
+        <div
+          key={i}
+          className="absolute animate-confetti"
+          style={{
+            left: `${Math.random() * 100}%`,
+            top: "-10px",
+            backgroundColor: colors[Math.floor(Math.random() * colors.length)],
+            width: "10px",
+            height: "10px",
+            transform: `rotate(${Math.random() * 360}deg)`,
+            animationDelay: `${Math.random() * 2}s`,
+            animationDuration: `${2 + Math.random() * 3}s`,
+          }}
+        />
+      ))}
+    </div>
+  );
+};
+
+const CompletionScreen = ({ score, total }) => {
+  const navigate = useNavigate();
+
+  return (
+    <div className="relative flex flex-col items-center justify-center min-h-[400px] space-y-8">
+      <Confetti />
+      <div className="text-4xl font-bold text-blue-600 mb-4">
+        🎉 Congratulations! 🎉
+      </div>
+      <div className="text-2xl text-gray-700 mb-6">Your Score: {score}/10</div>
+      <div className="text-lg text-gray-600 mb-8">
+        You've completed all the questions!
+      </div>
+      <button
+        onClick={() => navigate("/type")}
+        className="flex items-center gap-2 px-6 py-3 bg-blue-500 text-white rounded-lg
+          hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl"
+      >
+        <Home className="w-5 h-5" />
+        Back to Categories
+      </button>
+    </div>
+  );
+};
+
 const AnswerSelection = () => {
+  const navigate = useNavigate();
   const { quizData } = useContext(QuizContext);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -12,7 +71,7 @@ const AnswerSelection = () => {
   const [showError, setShowError] = useState(false);
 
   const speak = (text) => {
-    window.speechSynthesis.cancel(); // Cancel any ongoing speech
+    window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     window.speechSynthesis.speak(utterance);
   };
@@ -26,7 +85,6 @@ const AnswerSelection = () => {
       setShowError(false);
     } else {
       setShowError(true);
-      // Reset after showing error message
       setTimeout(() => {
         setShowError(false);
         setSelectedAnswer(null);
@@ -69,14 +127,7 @@ const AnswerSelection = () => {
   }
 
   if (currentIndex >= filteredQuestions.length) {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-[400px] space-y-4">
-        <div className="text-2xl font-semibold text-gray-800">
-          Quiz Complete!
-        </div>
-        <div className="text-xl text-gray-700">Your Score: {score}/10</div>
-      </div>
-    );
+    return <CompletionScreen score={score} total={filteredQuestions.length} />;
   }
 
   const question = filteredQuestions[currentIndex];
@@ -152,5 +203,26 @@ const AnswerSelection = () => {
     </div>
   );
 };
+
+// Add the confetti animation styles to your CSS
+const style = document.createElement("style");
+style.textContent = `
+  @keyframes confetti-fall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh) rotate(720deg);
+      opacity: 0;
+    }
+  }
+  
+  .animate-confetti {
+    position: absolute;
+    animation: confetti-fall linear forwards;
+  }
+`;
+document.head.appendChild(style);
 
 export default AnswerSelection;
