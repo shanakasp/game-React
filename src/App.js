@@ -5,11 +5,16 @@ import Navbar from "./components/Navbar.jsx";
 
 const App = () => {
   return (
-    <div className="bg-[#DCE9FD] dark:bg-[#4A4B4A] min-h-screen">
+    <div className="flex flex-col min-h-screen bg-[#DCE9FD] dark:bg-[#4A4B4A]">
+      {/* Navbar */}
       <Navbar />
-      <div className="p-4">
+
+      {/* Main Content */}
+      <div className="flex-grow p-4">
         <ExampleComponent />
       </div>
+
+      {/* Footer */}
       <Footer />
     </div>
   );
