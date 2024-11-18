@@ -4,66 +4,94 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 20px 0;
+  gap: 2rem; /* Dynamic spacing between sections */
 }
 
 /* Each section container */
 .section-container {
   position: relative;
-  margin-bottom: 2rem; /* Adds spacing between the two sections */
 }
 
 /* Image styles */
 .section-image {
-  width: 200px; /* Default size for desktop */
+  width: clamp(180px, 25vw, 300px); /* Slightly larger minimum size */
   height: auto;
   display: block;
+  z-index: 10;
+  margin-top: 4%;
   margin: 0 auto;
+  transition: width 0.3s ease; /* Smooth resizing transition */
 }
 
 /* Button styles */
 .section-button {
   position: absolute;
-  bottom: -20px; /* Default button position */
+  bottom: 20px;
   left: 50%;
+  z: 50;
   transform: translateX(-50%);
   background-color: #3662c1;
   color: white;
-  font-size: 1.5rem; /* Default button font size */
+  font-size: clamp(1.2rem, 1.5vw, 2rem); /* Dynamically scale font size */
   font-weight: bold;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, font-size 0.3s ease; /* Smooth transition for hover effects */
 }
 
 .section-button:hover {
-  background-color: #2851a3; /* Slightly darker blue */
+  background-color: #2851a3;
 }
 
-/* Media queries for responsiveness */
+/* Media queries for tablets */
 @media (max-width: 768px) {
   .section-image {
-    width: 250px; /* Increase image size for tablets */
+    width: clamp(220px, 40vw, 350px); /* Increase image size for tablets */
   }
 
   .section-button {
-    font-size: 1.75rem; /* Slightly larger font size for buttons */
     padding: 0.6rem 1.2rem;
+  }
+}
+
+/* Media queries for mobile phones */
+@media (max-width: 480px) {
+  .section-image {
+    width: clamp(250px, 60vw, 400px); /* Larger image size for mobile */
+  }
+
+  .section-button {
+    font-size: clamp(
+      1.5rem,
+      2vw,
+      2.5rem
+    ); /* Slightly larger font size for mobile */
+    padding: 0.8rem 1.5rem;
     bottom: -15px; /* Adjust button position */
   }
 }
 
-@media (max-width: 480px) {
-  .section-image {
-    width: 300px; /* Larger image size for mobile */
+/* XL Screen Adjustments */
+@media (min-width: 1280px) {
+  .landing-page-container {
+    gap: 2rem;
   }
+}
+/* Hover effect */
+.section-button:hover {
+  background-color: #2851a3; /* Slightly darker blue for light mode */
+}
 
-  .section-button {
-    font-size: 2rem; /* Larger font size for mobile buttons */
-    padding: 0.8rem 1.5rem;
-    bottom: -10px; /* Adjust button position */
-  }
+/* Dark mode styles */
+.dark .section-button {
+  background-color: #aeafaf; /* Button background color in dark mode */
+  color: white; /* Button text color in dark mode */
+}
+
+/* Dark mode hover effect */
+.dark .section-button:hover {
+  background-color: #8e8f8f; /* Slightly darker gray for hover in dark mode */
 }
