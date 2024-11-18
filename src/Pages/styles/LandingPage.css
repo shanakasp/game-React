@@ -88,7 +88,7 @@
 /* Dark mode styles */
 .dark .section-button {
   background-color: #aeafaf; /* Button background color in dark mode */
-  color: white; /* Button text color in dark mode */
+  color: rgb(0, 0, 0); /* Button text color in dark mode */
 }
 
 /* Dark mode hover effect */
