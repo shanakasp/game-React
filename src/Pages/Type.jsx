@@ -17,19 +17,19 @@ const Type = () => {
       <div className="categories-container">
         <div className="categories-buttons dark:bg-[##AEAFAF]">
           <button
-            className="categories-button text-xl "
+            className="categories-button text-2xl "
             onClick={() => handleSubTypeSelection("Nouns")}
           >
             Nouns
           </button>
           <button
-            className="categories-button text-xl"
+            className="categories-button text-2xl"
             onClick={() => handleSubTypeSelection("Verbs")}
           >
             Verbs
           </button>
           <button
-            className="categories-button text-xl"
+            className="categories-button text-2xl"
             onClick={() => handleSubTypeSelection("Adjectives")}
           >
             Adjectives
