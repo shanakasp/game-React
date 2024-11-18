@@ -64,3 +64,8 @@
     font-size: 2rem; /* Slightly smaller font size */
   }
 }
+
+.dark .categories-button {
+  background-color: #aeafaf; /* Button background color in dark mode */
+  color: #000000; /* Button text color in dark mode */
+}
