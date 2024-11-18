@@ -15,21 +15,21 @@ const Type = () => {
   return (
     <div className="flex justify-center items-center px-4 bg-[#DCE9FD] dark:bg-[#4A4B4A]">
       <div className="categories-container">
-        <div className="categories-buttons">
+        <div className="categories-buttons dark:bg-[##AEAFAF]">
           <button
-            className="categories-button"
+            className="categories-button text-xl "
             onClick={() => handleSubTypeSelection("Nouns")}
           >
             Nouns
           </button>
           <button
-            className="categories-button"
+            className="categories-button text-xl"
             onClick={() => handleSubTypeSelection("Verbs")}
           >
             Verbs
           </button>
           <button
-            className="categories-button"
+            className="categories-button text-xl"
             onClick={() => handleSubTypeSelection("Adjectives")}
           >
             Adjectives
