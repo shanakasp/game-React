@@ -8,6 +8,18 @@
     "questionMeaning": "Help that shows someone what to do.",
     "answerMeaning": "A suggestion about what someone should do",
     "answer": "Advice",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "My teacher gave me good advice (/ədˈvaɪs/) on how to study for the test."
   },
   {
@@ -19,6 +31,18 @@
     "questionMeaning": "facts that can be used to understand something",
     "answerMeaning": "facts or details about something",
     "answer": "Information",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "I found information (/ˌɪnfəˈmeɪʃən/) about the museum online."
   },
   {
@@ -30,6 +54,18 @@
     "questionMeaning": "a place where someone can stay, like a hotel or a room",
     "answerMeaning": "a place to stay, like a hotel or room",
     "answer": "Accommodation",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "The hotel provides comfortable accommodation (/əˌkɒməˈdeɪʃən/) for all its guests."
   },
   {
@@ -41,6 +77,18 @@
     "questionMeaning": "getting better",
     "answerMeaning": "moving forward or getting better",
     "answer": "Progress",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "She is making progress (/ˈprəʊɡres/) in her studies."
   },
   {
@@ -52,17 +100,41 @@
     "questionMeaning": "a matter needing attention",
     "answerMeaning": "a situation that causes difficulty",
     "answer": "Problem",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "I have a problem (/ˈprɒbləm/) with my computer."
   },
   {
     "id": 6,
-    "type": "Synonyms",
+    "type": "Companionship",
     "category": "Beginner",
     "subType": "Nouns",
     "question": "Companionship",
     "questionMeaning": "when you feel a sense of closeness being with another person",
     "answerMeaning": "a relationship between friends",
     "answer": "Friendship",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "Our friendship (/ˈfrendʃɪp/) is very special."
   },
   {
@@ -74,6 +146,18 @@
     "questionMeaning": "something given to someone",
     "answerMeaning": "something given to someone without payment",
     "answer": "Gift",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "I bought a gift (/ɡɪft/) for my friend."
   },
   {
@@ -85,6 +169,18 @@
     "questionMeaning": "an opinion produced by thinking, or occurring suddenly in the mind",
     "answerMeaning": "a thought or suggestion as to a possible course of action",
     "answer": "Idea",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "That's a great idea (/aɪˈdɪə/) for a project!"
   },
   {
@@ -96,6 +192,18 @@
     "questionMeaning": "the state of things as they actually exist",
     "answerMeaning": "the real situation or fact",
     "answer": "Actual",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "The actual (/ˈæktʃuəl/) is different from what I thought."
   },
   {
@@ -107,6 +215,18 @@
     "questionMeaning": "a particular smell",
     "answerMeaning": "the sense that lets you notice odors",
     "answer": "Smell",
+    "options": [
+      "Advice",
+      "Information",
+      "Accommodation",
+      "Progress",
+      "Problem",
+      "Friendship",
+      "Gift",
+      "Idea",
+      "Actual",
+      "Smell"
+    ],
     "sentence": "I love the smell (/smɛl/) of freshly baked bread."
   },
 
@@ -119,6 +239,18 @@
     "questionMeaning": "to get or receive something",
     "answerMeaning": "to take something from someone with the intention of returning it",
     "answer": "Borrow",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "He wants to borrow (/ˈbɒrəʊ/) some money for lunch."
   },
   {
@@ -130,6 +262,18 @@
     "questionMeaning": "to notice with your eyes",
     "answerMeaning": "to direct your eyes to see",
     "answer": "Look",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "Look (/lʊk/) at the dog! It is cute."
   },
   {
@@ -141,6 +285,18 @@
     "questionMeaning": "to move something up",
     "answerMeaning": "to lift something to a higher position",
     "answer": "Raise",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "Please raise (/reɪz/) your hand if you have a question."
   },
   {
@@ -152,6 +308,18 @@
     "questionMeaning": "to commence",
     "answerMeaning": "to start something",
     "answer": "Begin",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "Let's begin (/bɪˈɡɪn/) the game now."
   },
   {
@@ -163,6 +331,18 @@
     "questionMeaning": "to break into pieces",
     "answerMeaning": "to separate into pieces or stop working",
     "answer": "Break",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "Be careful not to break (/breɪk/) the glass."
   },
   {
@@ -174,6 +354,18 @@
     "questionMeaning": "to cut into thin pieces",
     "answerMeaning": "to use a sharp tool to divide something",
     "answer": "Cut",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "I will cut (/kʌt/) the paper in half."
   },
   {
@@ -185,6 +377,18 @@
     "questionMeaning": "to remain in a place",
     "answerMeaning": "to stay in one place until something happens",
     "answer": "Wait",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "Please wait (/weɪt/) for me at the bus stop."
   },
   {
@@ -196,6 +400,18 @@
     "questionMeaning": "to speak once more",
     "answerMeaning": "to say or do something again",
     "answer": "Repeat",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "I will repeat (/rɪˈpiːt/) the instructions so everyone understands."
   },
   {
@@ -207,6 +423,18 @@
     "questionMeaning": "to hold onto something",
     "answerMeaning": "to keep something safe or store it for later use",
     "answer": "Save",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "I will save (/seɪv/) my money for a toy."
   },
   {
@@ -218,6 +446,18 @@
     "questionMeaning": "to record points",
     "answerMeaning": "to get points in a game or test",
     "answer": "Score",
+    "options": [
+      "Borrow",
+      "Look",
+      "Raise",
+      "Begin",
+      "Break",
+      "Score",
+      "Gift",
+      "Wait",
+      "Repeat",
+      "Save"
+    ],
     "sentence": "I want to score (/skɔː/) a goal in soccer."
   },
   {
@@ -229,6 +469,18 @@
     "questionMeaning": "not wanting to pay attention",
     "answerMeaning": "feeling tired of something because it's not interesting",
     "answer": "Bored",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "sentence": "I felt bored (/bɔːd/) during the long movie."
   },
   {
@@ -240,6 +492,18 @@
     "questionMeaning": "showing concern for others",
     "answerMeaning": "showing kindness to someone",
     "answer": "Sympathetic",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "sentence": "She is sympathetic (/ˌsɪmpəˈθɛtɪk/) to my problems."
   },
   {
@@ -248,6 +512,18 @@
     "category": "Beginner",
     "subType": "Adjectives",
     "question": "Engaging",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "questionMeaning": "attracting interest or attention",
     "answerMeaning": "something that catches your attention",
     "answer": "Interesting",
@@ -262,6 +538,18 @@
     "questionMeaning": "attractive or nice to look at",
     "answerMeaning": "very pretty or attractive",
     "answer": "Beautiful",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "sentence": "The flowers are beautiful (/ˈbjuːtɪfəl/) in spring."
   },
   {
@@ -273,6 +561,18 @@
     "questionMeaning": "feeling or showing great wonder",
     "answerMeaning": "feeling shocked or amazed by something unexpected",
     "answer": "Surprised",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "sentence": "I was surprised (/səˈpraɪzd/) by the birthday party."
   },
   {
@@ -284,6 +584,18 @@
     "questionMeaning": "containing a lot of sugar",
     "answerMeaning": "having a pleasant taste like sugar",
     "answer": "Sweet",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "sentence": "The candy is very sweet (/swiːt/)."
   },
   {
@@ -295,6 +607,18 @@
     "questionMeaning": "unable to be found or recovered",
     "answerMeaning": "not able to be found or not present",
     "answer": "Missing",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "sentence": "My key is missing (/ˈmɪsɪŋ/)."
   },
   {
@@ -306,6 +630,18 @@
     "questionMeaning": "ready to face danger or pain",
     "answerMeaning": "having the ability to face fear or difficulty",
     "answer": "Courageous",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "sentence": "The courageous (/kəˈreɪdʒəs/) firefighter saved the cat from the tree."
   },
   {
@@ -316,6 +652,18 @@
     "question": "Mad",
     "questionMeaning": "upset or annoyed",
     "answerMeaning": "feeling strong emotions because of something bad",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "answer": "Angry",
     "sentence": "She is angry (/ˈæŋɡri/) because she lost her toy."
   },
@@ -328,6 +676,18 @@
     "questionMeaning": "not good",
     "answerMeaning": "very bad or unpleasant",
     "answer": "Terrible",
+    "options": [
+      "Bored",
+      "Sympathetic",
+      "Interesting",
+      "Beautiful",
+      "Surprised",
+      "Sweet",
+      "Missing",
+      "Courageous",
+      "Angry",
+      "Terrible"
+    ],
     "sentence": "The weather is terrible (/ˈtɛrɪbl/) today."
   },
 
@@ -340,6 +700,18 @@
     "questionMeaning": "a favourable time or situation for doing something",
     "answerMeaning": "the possibility of something happening",
     "answer": "Chance",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "There's a good chance (/tʃɑːns/) it will rain tomorrow."
   },
   {
@@ -351,6 +723,18 @@
     "questionMeaning": "a way of carrying out a particular task",
     "answerMeaning": "a way of doing something",
     "answer": "Method",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "She has an effective method (/ˈmɛθəd/) for studying."
   },
   {
@@ -362,6 +746,18 @@
     "questionMeaning": "the state of something at a specific time",
     "answerMeaning": "a set of circumstances in which one finds oneself",
     "answer": "Situation",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "The situation (/ˌsɪtʃuˈeɪʃən/) at work has improved."
   },
   {
@@ -373,6 +769,18 @@
     "questionMeaning": "help provided to someone",
     "answerMeaning": "help or assistance",
     "answer": "Support",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "I appreciate your support (/səˈpɔːt/) during tough times."
   },
   {
@@ -384,6 +792,18 @@
     "questionMeaning": "a specific job or duty assigned to someone",
     "answerMeaning": "a piece of work to be done",
     "answer": "Task",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "My task (/tɑːsk/) for today is to complete the report."
   },
   {
@@ -395,6 +815,18 @@
     "questionMeaning": "the process of providing for someone's needs",
     "answerMeaning": "the way in which someone or something is dealt with",
     "answer": "Treatment",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "He received excellent treatment (/ˈtriːtmənt/) at the hospital."
   },
   {
@@ -406,6 +838,18 @@
     "questionMeaning": "the level at which something is valued",
     "answerMeaning": "the importance or worth of something",
     "answer": "Value",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "The value (/ˈvæljuː/) of honesty cannot be overstated."
   },
   {
@@ -417,6 +861,18 @@
     "questionMeaning": "a specific result that a person aims to achieve",
     "answerMeaning": "the aim or desired result of an effort",
     "answer": "Goal",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "His goal (/ɡəʊl/) is to finish the marathon."
   },
   {
@@ -428,6 +884,18 @@
     "questionMeaning": "a significant or historic building or site",
     "answerMeaning": "a place that draws visitors",
     "answer": "Attraction",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "The Eiffel Tower is a famous tourist attraction (/əˈtrækʃən/)."
   },
   {
@@ -439,6 +907,18 @@
     "questionMeaning": "the accomplishment of a goal or purpose",
     "answerMeaning": "the accomplishment of a goal or purpose",
     "answer": "Achievement",
+    "options": [
+      "Chance",
+      "Method",
+      "Situation",
+      "Support",
+      "Task",
+      "Treatment",
+      "Value",
+      "Goal",
+      "Attraction",
+      "Achievement"
+    ],
     "sentence": "Winning the award was a great achievement (/əˈtʃiːvmənt/) for her career."
   },
   {
@@ -450,6 +930,18 @@
     "questionMeaning": "to successfully complete a task",
     "answerMeaning": "to reach a goal or target",
     "answer": "Achieve",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "She worked hard to achieve (/əˈtʃiːv/) her dreams."
   },
   {
@@ -461,6 +953,18 @@
     "questionMeaning": "to increase the quality of something",
     "answerMeaning": "to make something better",
     "answer": "Improve",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "He wants to improve (/ɪmˈpruːv/) his English skills."
   },
   {
@@ -472,6 +976,18 @@
     "questionMeaning": "to make a statement less confusing",
     "answerMeaning": "to make something clear or easy to understand",
     "answer": "Explain",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "The teacher explained (/ɪkˈspleɪnd/) the main idea of the story."
   },
   {
@@ -483,6 +999,18 @@
     "questionMeaning": "to answer someone",
     "answerMeaning": "to reply or answer",
     "answer": "Respond",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "She will respond (/rɪsˈpɒnd/) to your email shortly."
   },
   {
@@ -494,6 +1022,18 @@
     "questionMeaning": "to turn away or prevent something",
     "answerMeaning": "to stop something from happening",
     "answer": "Prevent",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "We must prevent (/prɪˈvɛnt/) accidents by being careful."
   },
   {
@@ -505,6 +1045,18 @@
     "questionMeaning": "to supervise or direct",
     "answerMeaning": "to be in charge of or control something",
     "answer": "Manage",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "She will manage (/ˈmæn.ɪdʒ/) the team effectively."
   },
   {
@@ -516,6 +1068,18 @@
     "questionMeaning": "to make or manufacture something",
     "answerMeaning": "to bring something into existence",
     "answer": "Create",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "He wants to create (/kriˈeɪt/) a new app."
   },
   {
@@ -527,6 +1091,18 @@
     "questionMeaning": "to stick to something",
     "answerMeaning": "to come after or adhere to something",
     "answer": "Follow",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "Please follow (/ˈfɒl.əʊ/) the instructions carefully."
   },
   {
@@ -538,6 +1114,18 @@
     "questionMeaning": "to modify or adjust something",
     "answerMeaning": "to make something different",
     "answer": "Change",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "You can change (/tʃeɪndʒ/) your mind at any time."
   },
   {
@@ -549,6 +1137,18 @@
     "questionMeaning": "to help or assist",
     "answerMeaning": "to provide help or assistance",
     "answer": "Support",
+    "options": [
+      "Achieve",
+      "Improve",
+      "Explain",
+      "Respond",
+      "Prevent",
+      "Manage",
+      "Create",
+      "Follow",
+      "Change",
+      "Support"
+    ],
     "sentence": "We should support (/səˈpɔːt/) each other in our goals."
   },
   {
@@ -560,6 +1160,18 @@
     "questionMeaning": "having the same qualities",
     "answerMeaning": "having characteristics in common",
     "answer": "Similar",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "The two paintings are very similar (/ˈsɪmɪlə/)."
   },
   {
@@ -571,6 +1183,18 @@
     "questionMeaning": "happening often",
     "answerMeaning": "occurring frequently or widely",
     "answer": "Common",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "This is a common (/ˈkɒmən/) problem among students."
   },
   {
@@ -582,6 +1206,18 @@
     "questionMeaning": "absolutely needed",
     "answerMeaning": "required or essential",
     "answer": "Necessary",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "It is necessary (/ˈnɛsəsəri/) to finish your homework."
   },
   {
@@ -593,6 +1229,18 @@
     "questionMeaning": "not expected or anticipated",
     "answerMeaning": "causing surprise; unexpected",
     "answer": "Surprising",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "The results of the test were surprising (/səˈpraɪzɪŋ/)."
   },
   {
@@ -604,6 +1252,18 @@
     "questionMeaning": "attractive or interesting",
     "answerMeaning": "pleasing or appealing to the senses",
     "answer": "Attractive",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "The design of the building is very attractive (/əˈtræktɪv/)."
   },
   {
@@ -615,6 +1275,18 @@
     "questionMeaning": "telling the truth",
     "answerMeaning": "truthful and sincere",
     "answer": "Honest",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "It's important to be honest (/ˈɒnɪst/) with your friends."
   },
   {
@@ -626,6 +1298,18 @@
     "questionMeaning": "showing a variety of different types",
     "answerMeaning": "different types or kinds",
     "answer": "Various",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "We have various (/ˈvɛəriəs/) options to choose from."
   },
   {
@@ -637,6 +1321,18 @@
     "questionMeaning": "having meaning or importance",
     "answerMeaning": "of great significance or value",
     "answer": "Important",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "Education is important (/ɪmˈpɔːtənt/) for everyone."
   },
   {
@@ -648,6 +1344,18 @@
     "questionMeaning": "testing one's abilities",
     "answerMeaning": "hard to do or understand",
     "answer": "Difficult",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "The exam was difficult (/ˈdɪfɪkəlt/) for many students."
   },
   {
@@ -659,6 +1367,18 @@
     "questionMeaning": "having a lively and creative imagination",
     "answerMeaning": "having the ability to make new things or think in new ways",
     "answer": "Creative",
+    "options": [
+      "Similar",
+      "Common",
+      "Necessary",
+      "Surprising",
+      "Attractive",
+      "Honest",
+      "Various",
+      "Important",
+      "Difficult",
+      "Creative"
+    ],
     "sentence": "She has a creative (/kriˈeɪtɪv/) approach to problem-solving."
   },
   {
@@ -670,6 +1390,18 @@
     "questionMeaning": "a statement that appears contradictory but may reveal a deeper truth",
     "answerMeaning": "a statement or proposition that seems self-contradictory or absurd but in reality expresses a possible truth",
     "answer": "Dilemma",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "The dilemma (/dɪˈlɛm.ə/) of choosing between two equally appealing job offers was challenging."
   },
   {
@@ -681,6 +1413,18 @@
     "questionMeaning": "a wide or profound difference between people",
     "answerMeaning": "a profound difference or gap between people or viewpoints",
     "answer": "Chasm",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "The chasm (/ˈkæz.əm/) between their beliefs made communication difficult."
   },
   {
@@ -692,6 +1436,18 @@
     "questionMeaning": "a confusing and difficult problem or question",
     "answerMeaning": "a person or thing that is mysterious or difficult to understand",
     "answer": "Enigma",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "The enigma (/ɪˈnɪɡ.mə/) of the missing manuscript intrigued historians for years."
   },
   {
@@ -703,6 +1459,18 @@
     "questionMeaning": "a person or thing that is a perfect example of a particular quality",
     "answerMeaning": "the most perfect or typical example of a quality",
     "answer": "Quintessence",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "She is the quintessence (/kwɪnˈtɛs.əns/) of elegance at every event she attends."
   },
   {
@@ -714,6 +1482,18 @@
     "questionMeaning": "something that deviates from what is standard or expected",
     "answerMeaning": "a departure from the normal or typical",
     "answer": "Aberration",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "The aberration (/ˌæbəˈreɪ.ʃən/) in the data raised serious concerns among the researchers."
   },
   {
@@ -725,6 +1505,18 @@
     "questionMeaning": "the capacity to recover quickly from difficulties",
     "answerMeaning": "the ability to adjust to new conditions",
     "answer": "Adaptability",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "Her adaptability (/əˌdæp.təˈbɪl.ɪ.ti/) in challenging situations impressed everyone."
   },
   {
@@ -736,6 +1528,18 @@
     "questionMeaning": "a moment of sudden and great revelation or insight",
     "answerMeaning": "the capacity to gain an accurate understanding",
     "answer": "Insight",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "His insight (/ˈɪn.saɪt/) into human behaviour revolutionised his approach to leadership."
   },
   {
@@ -747,6 +1551,18 @@
     "questionMeaning": "the process of coming together from different directions",
     "answerMeaning": "the act of joining together",
     "answer": "Union",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "The union (/ˈjuː.njən/) of diverse ideas resulted in a groundbreaking project."
   },
   {
@@ -758,6 +1574,18 @@
     "questionMeaning": "a change of circumstances or fortune, often unwelcome",
     "answerMeaning": "an irregular rising and falling in number or amount",
     "answer": "Fluctuation",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "The fluctuation (/ˌflʌk.tʃuˈeɪ.ʃən/) in prices surprised many consumers."
   },
   {
@@ -769,6 +1597,18 @@
     "questionMeaning": "a place of refuge or safety",
     "answerMeaning": "a place of safety or refuge",
     "answer": "Haven",
+    "options": [
+      "Dilemma",
+      "Chasm",
+      "Enigma",
+      "Quintessence",
+      "Aberration",
+      "Adaptability",
+      "Insight",
+      "Union",
+      "Fluctuation",
+      "Haven"
+    ],
     "sentence": "The library became a haven (/ˈheɪ.vən/) for students seeking peace and quiet."
   },
   {
@@ -780,6 +1620,18 @@
     "questionMeaning": "to communicate or make known",
     "answerMeaning": "to make information known or communicate",
     "answer": "Impart",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
     "sentence": "The mentor sought to impart (/ɪmˈpɑːt/) valuable life lessons to his students."
   },
   {
@@ -791,6 +1643,18 @@
     "questionMeaning": "to make a problem or situation worse",
     "answerMeaning": "to intensify or worsen a situation",
     "answer": "Aggravate",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
     "sentence": "His rude comments only served to aggravate (/ˈæɡ.rə.veɪt/) the ongoing conflict."
   },
   {
@@ -802,6 +1666,18 @@
     "questionMeaning": "to deliberately make something unclear or difficult to understand",
     "answerMeaning": "to confuse or perplex",
     "answer": "Confound",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
     "sentence": "The complicated instructions seemed designed to confound (/kənˈfaʊnd/) the users."
   },
   {
@@ -813,6 +1689,18 @@
     "questionMeaning": "to accept something reluctantly but without protest",
     "answerMeaning": "to agree to something after careful consideration",
     "answer": "Consent",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
     "sentence": "After much debate, the committee finally consented (/kənˈsɛntɪd/) to the proposed changes."
   },
   {
@@ -824,6 +1712,18 @@
     "questionMeaning": "to make something greater by adding to it",
     "answerMeaning": "to increase or make something stronger",
     "answer": "Amplify",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
     "sentence": "The team plans to amplify (/ˈæmplɪfaɪ/) their marketing efforts this quarter."
   },
   {
@@ -835,6 +1735,18 @@
     "questionMeaning": "to overwhelm someone with things to deal with",
     "answerMeaning": "to overwhelm with a large quantity",
     "answer": "Flood",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
     "sentence": "The department was flooded (/ˈflʌd.ɪd/) with applications after the job advertisement."
   },
   {
@@ -846,6 +1758,18 @@
     "questionMeaning": "to make something continue indefinitely",
     "answerMeaning": "to maintain or prolong something",
     "answer": "Sustain",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
     "sentence": "The initiative aims to sustain (/səˈsteɪn/) cultural traditions for future generations."
   },
   {
@@ -853,22 +1777,46 @@
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Verb",
-    "question": "Emulate",
+    "question": "Transcend",
     "questionMeaning": "to match or surpass a person or achievement by imitation",
-    "answerMeaning": "to copy someone’s behaviour or actions",
-    "answer": "Imitate",
-    "sentence": "Young athletes often aspire to imitate (/ˈɪm.ɪ.teɪt/) the techniques of their idols."
+    "answerMeaning": "to exceed or go beyond a limit",
+    "answer": "Surpass",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
+    "sentence": "Her achievements managed to surpass (/səˈpɑːs/) all expectations."
   },
   {
     "id": 19,
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Verb",
-    "question": "Substantiate",
-    "questionMeaning": "to provide evidence to support or prove the truth of something",
-    "answerMeaning": "to validate or provide proof for",
-    "answer": "Corroborate",
-    "sentence": "The witness was able to corroborate (/kəˈrɒbəreɪt/) the defendant's alibi."
+    "question": "Emulate",
+    "questionMeaning": "to match or surpass a person or achievement by imitation",
+    "answerMeaning": "to copy someone’s behaviour or actions",
+    "answer": "Imitate",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
+    "sentence": "Young athletes often aspire to imitate (/ˈɪm.ɪ.teɪt/) the techniques of their idols."
   },
   {
     "id": 20,
@@ -879,6 +1827,18 @@
     "questionMeaning": "to describe or portray something precisely",
     "answerMeaning": "to outline or describe in detail",
     "answer": "Define",
+    "options": [
+      "Impart",
+      "Aggravate",
+      "Confound",
+      "Consent",
+      "Amplify",
+      "Flood",
+      "Sustain",
+      "Surpass",
+      "Imitate",
+      "Validate"
+    ],
     "sentence": "The report clearly defined (/dɪˈfaɪnd/) the company's strategic goals."
   },
   {
