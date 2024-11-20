@@ -1824,9 +1824,9 @@
     "category": "Advanced",
     "subType": "Verb",
     "question": "Delineate",
-    "questionMeaning": "to describe or portray something precisely",
-    "answerMeaning": "to outline or describe in detail",
-    "answer": "Define",
+    "questionMeaning": "to provide evidence to support or prove the truth of something",
+    "answerMeaning": "to confirm or support the truth of something",
+    "answer": "Validate",
     "options": [
       "Impart",
       "Aggravate",
@@ -1839,7 +1839,7 @@
       "Imitate",
       "Validate"
     ],
-    "sentence": "The report clearly defined (/dɪˈfaɪnd/) the company's strategic goals."
+    "sentence": "The study aimed to validate (/ˈvæl.ɪ.deɪt/) the initial findings of previous research."
   },
   {
     "id": 21,
@@ -1857,10 +1857,10 @@
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjective",
-    "question": "Intransigent",
-    "questionMeaning": "unwilling to change one's views or opinions",
-    "answerMeaning": "refusing to compromise or be flexible",
-    "answer": "Unyielding",
+    "question": "Meticulous",
+    "questionMeaning": "showing great attention to detail",
+    "answerMeaning": "showing care and effort in one’s work",
+    "answer": "Diligent",
     "sentence": "Her unyielding (/ʌnˈjiːldɪŋ/) stance on the issue made negotiations difficult."
   },
   {
@@ -1868,87 +1868,87 @@
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjective",
-    "question": "Pernicious",
-    "questionMeaning": "having a harmful effect, especially in a gradual or subtle way",
-    "answerMeaning": "highly destructive or injurious",
-    "answer": "Deleterious",
-    "sentence": "The deleterious (/ˌdɛlɪˈtɪərɪəs/) effects of smoking are well documented."
+    "question": "Ambivalent",
+    "questionMeaning": "having mixed feelings or contradictory ideas about something",
+    "answerMeaning": "experiencing contradictory feelings or emotions",
+    "answer": "Conflicted ",
+    "sentence": "She felt conflicted (/kənˈflɪktɪd/) about accepting the promotion due to its demands."
   },
   {
     "id": 24,
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjective",
-    "question": "Ephemeral",
-    "questionMeaning": "lasting for a very short time",
-    "answerMeaning": "lasting for a very short period",
-    "answer": "Transitory",
-    "sentence": "The transitory (/ˈtrænzɪtɔːri/) nature of fame makes it a fleeting experience."
+    "question": "Esoteric",
+    "questionMeaning": "intended for or likely to be understood by only a small number of people",
+    "answerMeaning": "understood by few; mysterious or secret",
+    "answer": "Arcane ",
+    "sentence": "His arcane (/ɑːˈkeɪn/) knowledge of ancient texts fascinated the scholars."
   },
   {
     "id": 25,
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjective",
-    "question": "Sycophantic",
-    "questionMeaning": "behaving or done in an obsequious way in order to gain advantage",
-    "answerMeaning": "flattering to gain advantage",
-    "answer": "Fawning",
-    "sentence": "His fawning (/ˈfɔːnɪŋ/) behaviour towards the boss made his colleagues uncomfortable."
+    "question": "Ineffable ",
+    "questionMeaning": "too great or extreme to be expressed in words",
+    "answerMeaning": "unable to be expressed in words; beyond description",
+    "answer": "Indescribable ",
+    "sentence": "The indescribable (/ˌɪndɪsˈkraɪbəbəl/) beauty of the landscape took our breath away."
   },
   {
     "id": 26,
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjective",
-    "question": "Irascible",
-    "questionMeaning": "having a tendency to be easily angered",
-    "answerMeaning": "easily angered or irritated",
-    "answer": "Choleric",
-    "sentence": "His choleric (/ˈkɒlərɪk/) temper made him difficult to work with."
+    "question": "Ephemeral ",
+    "questionMeaning": "lasting for a very short time",
+    "answerMeaning": "not permanent; temporary",
+    "answer": "Transitory ",
+    "sentence": "The transitory (/ˈtrænzɪtəri/) nature of trends often makes them hard to follow."
   },
   {
     "id": 27,
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjective",
-    "question": "Recalcitrant",
-    "questionMeaning": "having an obstinately uncooperative attitude",
-    "answerMeaning": "resistant to authority or control",
-    "answer": "Defiant",
-    "sentence": "The recalcitrant (/rɪˈkælsɪtrənt/) employee refused to follow the new policies."
+    "question": "Cacophonous ",
+    "questionMeaning": "involving a harsh, discordant mixture of sounds",
+    "answerMeaning": "lacking harmony; harsh sounding",
+    "answer": "Dissonant ",
+    "sentence": "The dissonant (/ˈdɪsənənt/) sounds from the street distracted her while studying."
   },
   {
     "id": 28,
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjective",
-    "question": "Effervescent",
-    "questionMeaning": "giving off bubbles; fizzy",
-    "answerMeaning": "vivacious and enthusiastic",
-    "answer": "Bubbly",
-    "sentence": "Her bubbly (/ˈbʌbli/) personality made her the life of the party."
+    "question": "Salient ",
+    "questionMeaning": "most noticeable or important",
+    "answerMeaning": "important; famous; standing out",
+    "answer": "Prominent ",
+    "sentence": "The prominent (/ˈprɒmɪnənt/) features of the report were highlighted in the discussion."
   },
   {
     "id": 29,
-    "type": "Synonyms",
+    "type": "Prosaic",
     "category": "Advanced",
     "subType": "Adjective",
     "question": "Lugubrious",
-    "questionMeaning": "looking or sounding sad and dismal",
-    "answerMeaning": "expressing or conveying sadness",
-    "answer": "Mournful",
-    "sentence": "The mournful (/ˈmɔːnfl/) melody added to the somber atmosphere."
+    "questionMeaning": "lacking poetic beauty; commonplace; unromantic",
+    "answerMeaning": "lacking interest or excitement; dull",
+    "answer": "Mundane ",
+    "sentence": "His mundane (/mʌnˈdeɪn/) routine failed to inspire creativity."
   },
   {
     "id": 30,
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjective",
-    "question": "Obdurate",
-    "questionMeaning": "stubbornly refusing to change one's opinion or course of action",
-    "answerMeaning": "stubbornly resistant to persuasion",
-    "answer": "Stubborn",
-    "sentence": "His obdurate (/ˈɒbdjʊrət/) refusal to negotiate frustrated the team."
+    "question": "Lucid ",
+    "questionMeaning": "expressed clearly; easy to understand",
+    "answerMeaning": "easy to perceive or detect; clear",
+    "answer": "Transparent ",
+    "sentence": "Her transparent (/trænsˈpɛərənt/) explanations made complex topics accessible to all."
   }
 ]
