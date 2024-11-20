@@ -60,7 +60,7 @@
 
 @media (max-width: 480px) {
   .categories-button {
-    margin-top: 30%;
+    margin-top: 20%;
     width: 100%; /* Full width for very small screens */
     font-size: 2rem; /* Slightly smaller font size */
   }
