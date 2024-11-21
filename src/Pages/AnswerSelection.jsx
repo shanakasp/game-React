@@ -138,8 +138,8 @@ const AnswerSelection = () => {
                 ${
                   selectedAnswer === option
                     ? option === question.answer
-                      ? "bg-green-100 ring-2 ring-green-500"
-                      : "bg-red-100 ring-2 ring-red-500"
+                      ? " bg-[#ABEE9B]"
+                      : "bg-[#E4A5AF]"
                     : "hover:bg-green-50"
                 }
                 ${
