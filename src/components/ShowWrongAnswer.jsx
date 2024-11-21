@@ -1,5 +1,5 @@
 import { Volume2 } from "lucide-react";
-import React from "react";
+import React, { useState } from "react";
 import { FiChevronsRight } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
 import questions from "../Question.json";
@@ -7,16 +7,27 @@ import questions from "../Question.json";
 const AnswerDetailPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { question, answer, sentence, meaning, type, category, subType, id } =
-    location.state || {};
+  const {
+    question,
+    wrongAnswer,
+    meaning,
+    sentence,
+    type,
+    category,
+    subType,
+    id,
+    isCorrect,
+  } = location.state || {};
+
+  const [correctAnswer, setCorrectAnswer] = useState(isCorrect || false);
 
   const speak = (text) => {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     window.speechSynthesis.speak(utterance);
   };
+
   const handleNextQuestion = () => {
-    // Filter questions matching the current question's type, category, and subType
     const filteredQuestions = questions.filter(
       (q) =>
         q.type?.toLowerCase() === type?.toLowerCase() &&
@@ -24,26 +35,22 @@ const AnswerDetailPage = () => {
         q.subType?.toLowerCase() === subType?.toLowerCase()
     );
 
-    // Find the index of the current question in the filtered array
     const currentQuestionIndex = filteredQuestions.findIndex(
       (q) => q.id === id
     );
 
-    // Get the next question
     const nextQuestion = filteredQuestions[currentQuestionIndex + 1];
 
     if (nextQuestion) {
-      // Navigate back to AnswerSelection with the next question's context
       navigate("/quiz", {
         state: {
           type: nextQuestion.type,
           category: nextQuestion.category,
           subType: nextQuestion.subType,
-          startFromQuestionId: nextQuestion.id, // Add this to track the starting point
+          startFromQuestionId: nextQuestion.id,
         },
       });
     } else {
-      // If no more questions, navigate back to quiz or show a message
       navigate("/quiz");
     }
   };
@@ -66,40 +73,29 @@ const AnswerDetailPage = () => {
         </div>
 
         <div>
-          <p className="text-3xl p-3 rounded-xl text-center text-[#1c863c]  dark:text-green-700 font-bold bg-[#ABEE9B]">
-            {answer}
+          <p
+            className={`text-3xl p-3 rounded-xl text-center font-bold ${"bg-[#F8B4B4] text-red-700"}`}
+          >
+            {wrongAnswer}
           </p>
         </div>
+        {/* 
+        <div className="relative bg-red-50 dark:bg-[#ffffff] rounded-lg shadow-lg flex flex-col min-h-[300px]">
+            <div className="p-4 flex-grow mb-2 dark:bg-[#ffffff]"> */}
 
-        {/* {meaning && (
-          <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-xl text-blue-800 dark:text-blue-200">
-                {meaning}
-              </span>
-              <button
-                onClick={() => speak(meaning)}
-                className="p-2 rounded-full bg-blue-100 dark:bg-blue-800 hover:bg-blue-200 transition"
-              >
-                <Volume2 className="w-6 h-6 text-blue-600 dark:text-blue-300" />
-              </button>
-            </div>
-          </div>
-        )} */}
-
-        {sentence && (
-          <div className="relative bg-green-50 dark:bg:#AFAEAF rounded-lg shadow-lg flex flex-col min-h-[300px]">
-            <div className="p-4 flex-grow mb-2 dark:bg:#AFAEAF">
+        {meaning && (
+          <div className="relative bg-red-50  rounded-lg shadow-lg flex flex-col min-h-[300px]">
+            <div className="p-4 flex-grow mb-2 ">
               <h4 className="text-xl font-semibold text-[#2851a3] dark:text-[#4b4b4b] mb-2">
-                Example Sentence:
+                Meaning:
               </h4>
               <p className="text-3xl text-[#2851a3] dark:text-[#535353] font-semibold break-words">
-                {sentence}
+                {meaning}
               </p>
             </div>
-            {/* Green Checkmark */}
+            {/* Conditional Icon: Green Checkmark or Red Cross */}
             <div
-              className="absolute bottom-4 right-4 text-green-600 dark:text-green-400 pt-3"
+              className={`absolute bottom-4 right-4 pt-3 ${"text-red-600 dark:text-red-400"}`}
               style={{ fontSize: "36px" }}
             >
               <svg
@@ -113,24 +109,25 @@ const AnswerDetailPage = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M5 13l4 4L19 7"
+                  d="M6 18L18 6M6 6l12 12"
                 />
               </svg>
             </div>
           </div>
         )}
-      </div>{" "}
+      </div>
+
       <div className="flex justify-center mt-6 gap-x-6">
         <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center cursor-pointer">
           <Volume2
-            onClick={() => speak(sentence)}
+            onClick={() => speak(meaning)}
             className="w-10 h-10 text-white"
           />
         </div>
 
         <div
           onClick={handleNextQuestion}
-          className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center  cursor-pointer"
+          className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center cursor-pointer"
         >
           <FiChevronsRight className="text-white text-5xl" />
         </div>

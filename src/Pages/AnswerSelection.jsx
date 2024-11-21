@@ -97,14 +97,16 @@ const AnswerSelection = () => {
       // Increment score
       setScore((prevScore) => prevScore + 1);
     } else {
-      setWrongAnswerMeaning(
-        questions.find((q) => q.answer === answer)?.answerMeaning
-      );
-      setShowError(true);
-      setTimeout(() => {
-        setShowError(false);
-        setSelectedAnswer(null);
-      }, 1500);
+      const wrongMeaning = questions.find(
+        (q) => q.answer === answer
+      )?.answerMeaning;
+      navigate("/show-wrong-answer", {
+        state: {
+          question: currentQuestion.question,
+          wrongAnswer: answer,
+          meaning: wrongMeaning,
+        },
+      });
     }
   };
 

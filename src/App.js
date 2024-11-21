@@ -8,6 +8,7 @@ import { QuizProvider } from "./QuizContext.js";
 import AnswerDetailPage from "./components/AnswerDetailPage.jsx";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
+import ShowWrongAnswer from "./components/ShowWrongAnswer.jsx";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
             <Route path="/type" element={<Type />} />
             <Route path="/quiz" element={<AnswerSelection />} />
             <Route path="/answer-detail" element={<AnswerDetailPage />} />
+            <Route path="/show-wrong-answer" element={<ShowWrongAnswer />} />
           </Routes>
           <Footer />
         </Router>
