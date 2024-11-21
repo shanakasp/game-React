@@ -30,11 +30,13 @@ const ProgressBar = ({ duration, isRunning, onComplete }) => {
   }, [isRunning, duration, onComplete]);
 
   return (
-    <div className="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
-      <div
-        className="h-full bg-blue-500 transition-all ease-linear"
-        style={{ width: `${progress}%` }}
-      />
+    <div className="flex items-center justify-center w-full">
+      <div className="w-3/4 h-5 bg-[#aeafaf] rounded-full overflow-hidden align-middle">
+        <div
+          className="h-full bg-[#EE6C6A] dark:bg-[#2A2727] transition-all ease-linear"
+          style={{ width: `${progress}%` }}
+        />
+      </div>
     </div>
   );
 };

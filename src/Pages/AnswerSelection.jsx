@@ -24,7 +24,7 @@ const AnswerSelection = () => {
         setShowError(true);
         setTimeout(() => {
           setShowError(false);
-          setCurrentIndex((prev) => prev + 1);
+
           setIsTimerRunning(true);
         }, 1500);
       }
@@ -111,13 +111,13 @@ const AnswerSelection = () => {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <ProgressBar isRunning={isTimerRunning} />
-
       <div className="mb-6">
-        <h3 className="text-xl font-semibold text-gray-800 mb-2">
+        <h3 className="text-5xl font-semibold text-[#2851a3] dark:text-[#ffffff] font-bold mb-[7%] text-center">
           {question.question}
         </h3>
-        <div className="flex items-center gap-2 text-gray-600 mb-4">
+
+        <ProgressBar isRunning={isTimerRunning} />
+        <div className="flex items-center gap-2 text-gray-600 mt-2">
           <span>{question.questionMeaning}</span>
           <button
             onClick={() => speak(question.questionMeaning)}
@@ -127,14 +127,14 @@ const AnswerSelection = () => {
           </button>
         </div>
 
-        <div className="space-y-2">
+        <div className="space-y-2 mt-[15%]  ">
           {question.options.slice(0, 4).map((option, idx) => (
             <button
               key={idx}
               onClick={() => handleAnswer(option)}
               disabled={selectedAnswer !== null && !showError}
-              className={`w-full py-3 px-4 rounded-lg text-left transition-all duration-200 
-                bg-white
+              className={`w-full text-center  text-2xl py-3 px-4 rounded-lg text-left transition-all duration-200 
+                bg-white    dark:bg-[#aeafaf]
                 ${
                   selectedAnswer === option
                     ? option === question.answer
@@ -148,7 +148,9 @@ const AnswerSelection = () => {
                     : ""
                 }`}
             >
-              <span className="text-gray-700">{option}</span>
+              <span className=" text-[#2851a3] dark:text-[#2A2727] font-bold">
+                {option}
+              </span>
             </button>
           ))}
         </div>
