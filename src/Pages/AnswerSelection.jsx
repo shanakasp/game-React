@@ -1,6 +1,6 @@
 import { Volume2 } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
-import { FiChevronsRight } from "react-icons/fi";
+import { FiChevronDown, FiChevronsRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import questions from "../Question.json";
 import { QuizContext } from "../QuizContext";
@@ -113,9 +113,17 @@ const AnswerSelection = () => {
   return (
     <div className="max-w-2xl mx-auto p-6">
       <div className="mb-6">
-        <h3 className="text-5xl font-semibold text-[#2851a3] dark:text-[#ffffff] font-bold mb-[7%] text-center">
-          {question.question}
-        </h3>
+        <div className="flex items-center justify-center mb-[7%]">
+          <h3 className="text-5xl font-semibold text-[#2851a3] dark:text-[#ffffff] font-bold text-center">
+            {question.question}
+          </h3>
+
+          <button className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500 ml-4">
+            <div className="w-14 h-14 bg-[#ffffff] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
+              <FiChevronDown className="text-[#2851a3] dark:text-[#ffffff] text-4xl" />
+            </div>
+          </button>
+        </div>
 
         <ProgressBar isRunning={isTimerRunning} />
         <div className="flex items-center gap-2 text-gray-600 mt-2">
@@ -128,11 +136,6 @@ const AnswerSelection = () => {
               <Volume2 className="w-10 h-10 text-white" />
             </div>
           </button>
-          <button className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500">
-            <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
-              <FiChevronsRight className="text-white text-5xl" />
-            </div>
-          </button>
         </div>
         <div className="space-y-4 mt-[15%]">
           {" "}
@@ -142,7 +145,7 @@ const AnswerSelection = () => {
               key={idx}
               onClick={() => handleAnswer(option)}
               disabled={selectedAnswer !== null && !showError}
-              className={`w-full text-center text-3xl py-4 px-4 rounded-lg text-left transition-all duration-200 
+              className={`w-full text-center text-2xl py-4 px-4 rounded-lg text-left transition-all duration-200 
         bg-white dark:bg-[#aeafaf]
         ${
           selectedAnswer === option
@@ -189,18 +192,22 @@ const AnswerSelection = () => {
         {showSentence && (
           <button
             onClick={() => speak(question.sentence)}
-            className="p-3 rounded-full bg-red-100 hover:bg-red-200 transition-colors"
+            className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500"
           >
-            <Volume2 className="w-5 h-5 text-red-600" />
+            <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
+              <Volume2 className="w-10 h-10 text-white" />
+            </div>
           </button>
         )}
 
         {(isAnswerCorrect || selectedAnswer) && (
           <button
+            className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500 "
             onClick={handleNext}
-            className="p-3 rounded-full bg-blue-100 hover:bg-blue-200 transition-colors"
           >
-            Next
+            <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
+              <FiChevronsRight className="text-white text-5xl" />
+            </div>
           </button>
         )}
       </div>
