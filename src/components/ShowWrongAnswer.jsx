@@ -26,8 +26,8 @@ const AnswerDetailPage = () => {
     const utterance = new SpeechSynthesisUtterance(text);
     window.speechSynthesis.speak(utterance);
   };
-
   const handleNextQuestion = () => {
+    // Filter questions matching the current question's type, category, and subType
     const filteredQuestions = questions.filter(
       (q) =>
         q.type?.toLowerCase() === type?.toLowerCase() &&
@@ -35,23 +35,37 @@ const AnswerDetailPage = () => {
         q.subType?.toLowerCase() === subType?.toLowerCase()
     );
 
-    const currentQuestionIndex = filteredQuestions.findIndex(
-      (q) => q.id === id
-    );
+    // If the answer was correct, navigate to the next question
+    if (isCorrect) {
+      const currentQuestionIndex = filteredQuestions.findIndex(
+        (q) => q.id === id
+      );
 
-    const nextQuestion = filteredQuestions[currentQuestionIndex + 1];
+      const nextQuestion = filteredQuestions[currentQuestionIndex + 1];
 
-    if (nextQuestion) {
+      if (nextQuestion) {
+        navigate("/quiz", {
+          state: {
+            type: nextQuestion.type,
+            category: nextQuestion.category,
+            subType: nextQuestion.subType,
+            startFromQuestionId: nextQuestion.id,
+          },
+        });
+      } else {
+        navigate("/quiz");
+      }
+    }
+    // If the answer was incorrect, return to the same question
+    else {
       navigate("/quiz", {
         state: {
-          type: nextQuestion.type,
-          category: nextQuestion.category,
-          subType: nextQuestion.subType,
-          startFromQuestionId: nextQuestion.id,
+          type: type,
+          category: category,
+          subType: subType,
+          startFromQuestionId: id, // Start from the SAME question
         },
       });
-    } else {
-      navigate("/quiz");
     }
   };
 

@@ -89,6 +89,8 @@ const AnswerSelection = () => {
           category: currentQuestion.category,
           subType: currentQuestion.subType,
           id: currentQuestion.id,
+          isCorrect: true,
+          currentIndex: currentIndex,
           nextIndex: currentIndex + 1,
           totalQuestions: filteredQuestions.length,
         },
@@ -105,6 +107,11 @@ const AnswerSelection = () => {
           question: currentQuestion.question,
           wrongAnswer: answer,
           meaning: wrongMeaning,
+          type: currentQuestion.type,
+          category: currentQuestion.category,
+          subType: currentQuestion.subType,
+          id: currentQuestion.id,
+          isCorrect: false,
         },
       });
     }
@@ -163,7 +170,7 @@ const AnswerSelection = () => {
           </h3>
 
           <button
-            onClick={openModal} // Open the modal
+            onClick={openModal}
             className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500 ml-4"
           >
             <div className="w-14 h-14 bg-[#ffffff] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
@@ -174,7 +181,6 @@ const AnswerSelection = () => {
 
         <ProgressBar isRunning={isTimerRunning} />
 
-        {/* Modal Component */}
         <QuestionModal
           isOpen={isModalOpen}
           closeModal={closeModal}
