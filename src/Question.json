@@ -2884,6 +2884,18 @@
     "questionMeaning": "the quality of being open to more than one interpretation; vagueness",
     "answer": "Clarity",
     "answerMeaning": "the quality of being clear and easy to understand",
+    "options": [
+      "Clarity",
+      "Obstruction ",
+      "Obstruction ",
+      "Inaction ",
+      "Apathy ",
+      "Focus ",
+      "Similarity ",
+      "Isolation ",
+      "Praise ",
+      "Uncertainty "
+    ],
     "sentence": "The ambiguity of the instructions caused confusion, while clarity (/ˈklær.ɪ.ti/) would have made the process smoother."
   },
   {
@@ -2895,6 +2907,19 @@
     "questionMeaning": "a set of circumstances that makes it possible to do something",
     "answer": "Obstruction",
     "answerMeaning": "something that blocks or impedes progress",
+    "options": [
+      "Obstruction ",
+      "Clarity",
+
+      "Obstruction ",
+      "Inaction ",
+      "Apathy ",
+      "Focus ",
+      "Similarity ",
+      "Isolation ",
+      "Praise ",
+      "Uncertainty "
+    ],
     "sentence": "The opportunity to travel abroad expanded her horizons, unlike the obstructions (/əbˈstrʌk.ʃənz/) she faced at home."
   },
   {
@@ -2905,6 +2930,19 @@
     "question": "Accomplishment",
     "questionMeaning": "something that has been achieved successfully",
     "answer": "Failure",
+    "options": [
+      "Obstruction ",
+      "Clarity",
+      "Obstruction ",
+
+      "Inaction ",
+      "Apathy ",
+      "Focus ",
+      "Similarity ",
+      "Isolation ",
+      "Praise ",
+      "Uncertainty "
+    ],
     "answerMeaning": "a lack of success in doing something",
     "sentence": "Her latest accomplishment was celebrated by everyone, in stark contrast to the failure (/ˈfeɪ.ljər/) of previous attempts."
   },
@@ -2916,6 +2954,19 @@
     "question": "Initiative",
     "questionMeaning": "the ability to assess and act independently",
     "answer": "Inaction",
+    "options": [
+      "Inaction ",
+      "Clarity",
+      "Obstruction ",
+      "Obstruction ",
+
+      "Apathy ",
+      "Focus ",
+      "Similarity ",
+      "Isolation ",
+      "Praise ",
+      "Uncertainty "
+    ],
     "answerMeaning": "lack of action or activity",
     "sentence": "His initiative in starting the project was commendable, particularly when faced with the inaction (/ɪnˈæk.ʃən/) of others."
   },
@@ -2927,6 +2978,19 @@
     "question": "Motivation",
     "questionMeaning": "the reason or reasons one has for acting or behaving in a particular way",
     "answer": "Apathy",
+    "options": [
+      "Apathy ",
+      "Clarity",
+      "Obstruction ",
+      "Obstruction ",
+      "Inaction ",
+
+      "Focus ",
+      "Similarity ",
+      "Isolation ",
+      "Praise ",
+      "Uncertainty "
+    ],
     "answerMeaning": "lack of interest, enthusiasm, or concern",
     "sentence": "Her strong motivation inspired the team, especially in contrast to the apathy (/ˈæp.ə.θi/) displayed by some members."
   },
@@ -2938,6 +3002,19 @@
     "question": "Distraction",
     "questionMeaning": "a thing that prevents someone from giving full attention to something else",
     "answer": "Focus",
+    "options": [
+      "Focus ",
+      "Clarity",
+      "Obstruction ",
+      "Obstruction ",
+      "Inaction ",
+      "Apathy ",
+
+      "Similarity ",
+      "Isolation ",
+      "Praise ",
+      "Uncertainty "
+    ],
     "answerMeaning": "the centre of interest or activity",
     "sentence": "The loud music became a distraction during study time, making it hard to maintain focus (/ˈfəʊ.kəs/)."
   },
@@ -2949,6 +3026,19 @@
     "question": "Distinction",
     "questionMeaning": "a difference or contrast between similar things or people",
     "answer": "Similarity ",
+    "options": [
+      "Similarity ",
+      "Clarity",
+      "Obstruction ",
+      "Obstruction ",
+      "Inaction ",
+      "Apathy ",
+      "Focus ",
+
+      "Isolation ",
+      "Praise ",
+      "Uncertainty "
+    ],
     "answerMeaning": "the state of being similar; likeness",
     "sentence": "The distinction between the two theories was crucial for understanding, especially as they share many similarities (/ˌsɪm.ɪˈlær.ɪ.tiz/)."
   },
@@ -2960,6 +3050,19 @@
     "question": "Interaction",
     "questionMeaning": "communication or involvement with someone or something",
     "answer": "Isolation",
+    "options": [
+      "Isolation ",
+      "Clarity",
+      "Obstruction ",
+      "Obstruction ",
+      "Inaction ",
+      "Apathy ",
+      "Focus ",
+      "Similarity ",
+
+      "Praise ",
+      "Uncertainty "
+    ],
     "answerMeaning": "the state of being separated from others",
     "sentence": "Positive interaction among team members fosters collaboration, while isolation (/ˌaɪ.səˈleɪ.ʃən/) can hinder progress."
   },
@@ -2971,6 +3074,19 @@
     "question": "Criticism",
     "questionMeaning": "the expression of disapproval based on perceived mistakes or faults",
     "answer": "Praise",
+    "options": [
+      "Praise ",
+      "Clarity",
+      "Obstruction ",
+      "Obstruction ",
+      "Inaction ",
+      "Apathy ",
+      "Focus ",
+      "Similarity ",
+      "Isolation ",
+
+      "Uncertainty "
+    ],
     "answerMeaning": "the expression of approval or admiration for someone or something",
     "sentence": "While criticism can be constructive, praise (/preɪz/) is equally important for motivation and encouragement."
   },
@@ -2982,7 +3098,736 @@
     "question": "Determination",
     "questionMeaning": "firmness of purpose; resoluteness",
     "answer": "Uncertainty",
+    "options": [
+      "Uncertainty ",
+      "Clarity",
+      "Obstruction ",
+      "Obstruction ",
+      "Inaction ",
+      "Apathy ",
+      "Focus ",
+      "Similarity ",
+      "Isolation ",
+      "Praise "
+    ],
     "answerMeaning": "the state of being uncertain; doubt",
     "sentence": "His determination to succeed helped him overcome the uncertainty (/ʌnˈsɜː.tən.ti/) he faced along the way"
+  },
+  {
+    "id": 1,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Facilitate",
+    "questionMeaning": "to make an action or process easier",
+    "answer": "Hinder",
+    "answerMeaning": "to create difficulties that result in a delay or obstruction",
+    "options": [
+      "Hinder",
+      "Downplay",
+      "Condemn",
+      "Withhold",
+      "Weaken",
+      "Preserve",
+      "Oppose",
+      "Contract",
+      "Segregate",
+      "Penalise"
+    ],
+    "sentence": "The new software will facilitate communication between teams, unlike the old system that often hindered (/ˈhɪndəd/) progress."
+  },
+  {
+    "id": 2,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Emphasise",
+    "questionMeaning": "to give special importance or prominence to something",
+    "answer": "Downplay",
+    "options": [
+      "Downplay",
+      "Hinder",
+
+      "Condemn",
+      "Withhold",
+      "Weaken",
+      "Preserve",
+      "Oppose",
+      "Contract",
+      "Segregate",
+      "Penalise"
+    ],
+    "answerMeaning": "to make something seem less important than it is",
+    "sentence": "The teacher chose to emphasise the importance of studying, rather than downplay (/ˌdaʊnˈpleɪ/) the challenges students might face."
+  },
+  {
+    "id": 3,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Justify",
+    "questionMeaning": "to show or prove to be right or reasonable",
+    "answer": "Condemn",
+    "options": [
+      "Condemn",
+      "Hinder",
+      "Downplay",
+
+      "Withhold",
+      "Weaken",
+      "Preserve",
+      "Oppose",
+      "Contract",
+      "Segregate",
+      "Penalise"
+    ],
+    "answerMeaning": "to express complete disapproval of something",
+    "sentence": "The lawyer worked to justify her client's actions, while the opposition sought to condemn (/kənˈdɛm/) them."
+  },
+  {
+    "id": 4,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Allocate",
+    "questionMeaning": "the ability to assess and act independently",
+    "answer": "Withhold",
+    "options": [
+      "Withhold",
+      "Hinder",
+      "Downplay",
+      "Condemn",
+
+      "Weaken",
+      "Preserve",
+      "Oppose",
+      "Contract",
+      "Segregate",
+      "Penalise"
+    ],
+    "answerMeaning": "to refuse to give something that is due or expected",
+    "sentence": "The manager decided to initiate a new policy, rather than withhold (/wɪðˈhəʊld/) resources from the team."
+  },
+  {
+    "id": 5,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Reinforce",
+    "questionMeaning": "to strengthen or support an idea or concept",
+    "answer": "Weaken",
+    "options": [
+      "Weaken",
+      "Hinder",
+      "Downplay",
+      "Condemn",
+      "Withhold",
+
+      "Preserve",
+      "Oppose",
+      "Contract",
+      "Segregate",
+      "Penalise"
+    ],
+    "answerMeaning": "to make or become weaker in strength or quality",
+    "sentence": "The new evidence will reinforce the argument, whereas the old data could potentially weaken (/ˈwiː.kən/) it."
+  },
+  {
+    "id": 6,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Transform",
+    "questionMeaning": "to make a thorough or dramatic change in form, appearance, or character",
+    "answer": "Preserve",
+    "options": [
+      "Preserve",
+      "Hinder",
+      "Downplay",
+      "Condemn",
+      "Withhold",
+      "Weaken",
+
+      "Oppose",
+      "Contract",
+      "Segregate",
+      "Penalise"
+    ],
+    "answerMeaning": "to maintain something in its original state or condition",
+    "sentence": "The initiative aimed to transform the community, rather than simply preserve (/prɪˈzɜːv/) its existing structures."
+  },
+  {
+    "id": 7,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Advocate",
+    "questionMeaning": "to publicly support or recommend a particular cause or policy",
+    "answer": "Oppose",
+    "options": [
+      "Oppose",
+      "Hinder",
+      "Downplay",
+      "Condemn",
+      "Withhold",
+      "Weaken",
+      "Preserve",
+
+      "Contract",
+      "Segregate",
+      "Penalise"
+    ],
+    "answerMeaning": "to disagree with or resist something",
+    "sentence": "Many experts advocate for sustainable practices, while some still oppose (/əˈpəʊz/) the changes."
+  },
+  {
+    "id": 8,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Expand",
+    "questionMeaning": "to increase in size, number, or importance",
+    "answer": "Contract",
+    "options": [
+      "Contract",
+      "Hinder",
+      "Downplay",
+      "Condemn",
+      "Withhold",
+      "Weaken",
+      "Preserve",
+      "Oppose",
+
+      "Segregate",
+      "Penalise"
+    ],
+    "answerMeaning": "to decrease in size, number, or range",
+    "sentence": "The company plans to expand its services, rather than contract (/kənˈtrækt/) its offerings in response to competition."
+  },
+  {
+    "id": 9,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Integrate",
+    "questionMeaning": "to combine or bring together different parts into a whole",
+    "answer": "Segregate",
+    "options": [
+      "Segregate",
+      "Hinder",
+      "Downplay",
+      "Condemn",
+      "Withhold",
+      "Weaken",
+      "Preserve",
+      "Oppose",
+      "Contract",
+
+      "Penalise"
+    ],
+    "answerMeaning": "to separate or set apart from others",
+    "sentence": "The programme aims to integrate diverse communities, rather than segregate (/ˈsɛɡrɪɡeɪt/) them further."
+  },
+  {
+    "id": 10,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Verbs",
+    "question": "Compensate",
+    "questionMeaning": "to make up for something unwelcome or unpleasant by exerting an opposite force",
+    "answer": "Penalise",
+    "options": [
+      "Penalise",
+      "Hinder",
+      "Downplay",
+      "Condemn",
+      "Withhold",
+      "Weaken",
+      "Preserve",
+      "Oppose",
+      "Contract",
+      "Segregate"
+    ],
+    "answerMeaning": "to subject to a penalty or disadvantage",
+    "sentence": "The company offered to compensate employees for their overtime, rather than penalize (/ˈpiːnəlaɪz/) them for extra work."
+  },
+  {
+    "id": 1,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Resilient",
+    "questionMeaning": "able to withstand or recover quickly from difficult conditions",
+    "answer": "Fragile",
+    "options": [
+      "Fragile",
+      "Limited",
+      "Fake",
+      "Insignificant",
+      "Reckless",
+      "Pessimistic",
+      "Modern",
+      "Obvious",
+      "Disjointed",
+      "Reactive"
+    ],
+    "answerMeaning": "easily broken or damaged; delicate",
+    "sentence": "The resilient community rebuilt after the storm, showing strength in contrast to the fragile (/ˈfrædʒaɪl/) state it once faced."
+  },
+  {
+    "id": 2,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Versatile",
+    "questionMeaning": "able to adapt or be adapted to many different functions or activities",
+    "answer": "Limited",
+    "options": [
+      "Limited",
+      "Fragile",
+
+      "Fake",
+      "Insignificant",
+      "Reckless",
+      "Pessimistic",
+      "Modern",
+      "Obvious",
+      "Disjointed",
+      "Reactive"
+    ],
+    "answerMeaning": "restricted in scope or extent",
+    "sentence": "A versatile tool can be used for many tasks, whereas a limited (/ˈlɪmɪtɪd/) one serves only one purpose."
+  },
+  {
+    "id": 3,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Authentic",
+    "questionMeaning": "genuine; real and true",
+    "answer": "Fake",
+    "options": [
+      "Fake",
+      "Fragile",
+      "Limited",
+
+      "Insignificant",
+      "Reckless",
+      "Pessimistic",
+      "Modern",
+      "Obvious",
+      "Disjointed",
+      "Reactive"
+    ],
+    "answerMeaning": "not genuine; counterfeit",
+    "sentence": "The museum displayed authentic artefacts, while the market was full of fake (/feɪk/) replicas."
+  },
+  {
+    "id": 4,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Substantial",
+    "questionMeaning": "of considerable importance, size, or worth",
+    "answer": "Insignificant",
+    "options": [
+      "Insignificant",
+      "Fragile",
+      "Limited",
+      "Fake",
+
+      "Reckless",
+      "Pessimistic",
+      "Modern",
+      "Obvious",
+      "Disjointed",
+      "Reactive"
+    ],
+    "answerMeaning": "too small or unimportant to be worth consideration",
+    "sentence": "The report provided substantial evidence for the theory, unlike the insignificant (/ˌɪnsɪɡˈnɪfɪkənt/) data previously collected."
+  },
+  {
+    "id": 5,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Cautious",
+    "questionMeaning": "careful to avoid potential problems or dangers",
+    "answer": "Reckless",
+    "options": [
+      "Reckless",
+      "Fragile",
+      "Limited",
+      "Fake",
+      "Insignificant",
+
+      "Pessimistic",
+      "Modern",
+      "Obvious",
+      "Disjointed",
+      "Reactive"
+    ],
+    "answerMeaning": "without thinking or caring about the consequences of an action",
+    "sentence": "The cautious driver avoided accidents, while the reckless (/ˈrɛk.ləs/) one took unnecessary risks on the road."
+  },
+  {
+    "id": 6,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Optimistic",
+    "questionMeaning": "hopeful and confident about the future",
+    "answer": "Pessimistic",
+    "options": [
+      "Pessimistic",
+      "Fragile",
+      "Limited",
+      "Fake",
+      "Insignificant",
+      "Reckless",
+
+      "Modern",
+      "Obvious",
+      "Disjointed",
+      "Reactive"
+    ],
+    "answerMeaning": "tending to see the worst aspect of things; expecting the worst",
+    "sentence": "The optimistic outlook of the team inspired everyone, while the pessimistic (/ˌpɛsɪˈmɪstɪk/) view created doubt."
+  },
+  {
+    "id": 7,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Traditional",
+    "questionMeaning": "existing in or as part of a tradition; long-established",
+    "answer": "Modern",
+    "options": [
+      "Modern",
+      "Fragile",
+      "Limited",
+      "Fake",
+      "Insignificant",
+      "Reckless",
+      "Pessimistic",
+
+      "Obvious",
+      "Disjointed",
+      "Reactive"
+    ],
+    "answerMeaning": "relating to the present or recent times; contemporary",
+    "sentence": "The traditional festival celebrates age-old customs, while the modern (/ˈmɒdən/) event focuses on innovation."
+  },
+  {
+    "id": 8,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Elusive",
+    "questionMeaning": "difficult to find, catch, or achieve",
+    "answer": "Obvious",
+    "options": [
+      "Obvious",
+      "Fragile",
+      "Limited",
+      "Fake",
+      "Insignificant",
+      "Reckless",
+      "Pessimistic",
+      "Modern",
+
+      "Disjointed",
+      "Reactive"
+    ],
+    "answerMeaning": "easily perceived or understood; clear",
+    "sentence": "The elusive concept of happiness can be hard to define, unlike the obvious (/ˈɒbvɪəs/) need for food and shelter."
+  },
+  {
+    "id": 9,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Cohesive",
+    "questionMeaning": "forming a united whole; sticking together",
+    "answer": "Disjointed",
+    "answerMeaning": "lacking a coherent sequence or connection",
+    "options": [
+      "Disjointed",
+      "Fragile",
+      "Limited",
+      "Fake",
+      "Insignificant",
+      "Reckless",
+      "Pessimistic",
+      "Modern",
+      "Obvious",
+
+      "Reactive"
+    ],
+
+    "sentence": "The cohesive team worked well together, contrasting with the disjointed (/dɪsˈdʒɔɪntɪd/) group that struggled to communicate."
+  },
+  {
+    "id": 10,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Adjectives",
+    "question": "Proactive",
+    "questionMeaning": "creating or controlling a situation by taking the initiative",
+    "answer": "Reactive",
+    "options": [
+      "Reactive",
+      "Fragile",
+      "Limited",
+      "Fake",
+      "Insignificant",
+      "Reckless",
+      "Pessimistic",
+      "Modern",
+      "Obvious",
+      "Disjointed"
+    ],
+
+    "answerMeaning": "responding to events after they happen rather than acting in advance",
+    "sentence": "A proactive approach to health can prevent problems, unlike a reactive (/riˈæktɪv/) one that only addresses issues as they arise."
+  },
+  {
+    "id": 1,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Effectiveness",
+    "questionMeaning": "the degree to which something is successful in producing a desired result",
+    "answer": "Futility",
+    "options": [
+      "Futility",
+      "Euphoria",
+      "Sycophancy",
+      "Proximity",
+      "Dissonance",
+      "Ascendancy",
+      "Reverence",
+      "Anomaly",
+      "Abundance",
+      "Indifference"
+    ],
+    "answerMeaning": "the pointlessness or ineffectiveness of an action",
+    "sentence": "The team's efforts showcased remarkable effectiveness, a stark contrast to previous attempts that ended in futility (/fjʊˈtɪl.ɪ.ti/)."
+  },
+  {
+    "id": 2,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Despair",
+    "questionMeaning": "the complete loss or absence of hope",
+    "answer": "Euphoria",
+    "options": [
+      "Euphoria",
+      "Futility",
+
+      "Sycophancy",
+      "Proximity",
+      "Dissonance",
+      "Ascendancy",
+      "Reverence",
+      "Anomaly",
+      "Abundance",
+      "Indifference"
+    ],
+    "answerMeaning": "a feeling or state of intense excitement and happiness",
+    "sentence": "Her euphoria (/juːˈfɔː.ri.ə/) after the victory was palpable, especially when remembering the despair of earlier defeats."
+  },
+  {
+    "id": 3,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Integrity",
+    "questionMeaning": "the quality of being honest and having strong moral principles",
+    "answer": "Sycophancy",
+    "options": [
+      "Sycophancy",
+      "Futility",
+      "Euphoria",
+
+      "Proximity",
+      "Dissonance",
+      "Ascendancy",
+      "Reverence",
+      "Anomaly",
+      "Abundance",
+      "Indifference"
+    ],
+    "answerMeaning": "obsequious flattery; insincere praise",
+    "sentence": "His integrity in the face of challenges stood out, especially compared to the sycophancy (/ˈsɪk.ə.fən.si/) of those around him."
+  },
+  {
+    "id": 4,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Distance",
+    "questionMeaning": "the amount of space between two points",
+    "answer": "Proximity",
+    "options": [
+      "Proximity",
+      "Futility",
+      "Euphoria",
+      "Sycophancy",
+
+      "Dissonance",
+      "Ascendancy",
+      "Reverence",
+      "Anomaly",
+      "Abundance",
+      "Indifference"
+    ],
+    "answerMeaning": "nearness in space, time, or relationship",
+    "sentence": "The distance from the city centre is notable, while the proximity (/prɒkˈsɪm.ɪ.ti/) of the new park is a welcome addition for residents."
+  },
+  {
+    "id": 5,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Harmony",
+    "questionMeaning": "a pleasing arrangement of parts or agreement in action",
+    "answer": "Dissonance",
+    "options": [
+      "Dissonance",
+      "Futility",
+      "Euphoria",
+      "Sycophancy",
+      "Proximity",
+
+      "Ascendancy",
+      "Reverence",
+      "Anomaly",
+      "Abundance",
+      "Indifference"
+    ],
+    "answerMeaning": "a lack of harmony or agreement, often in music or ideas",
+    "sentence": "The harmony in their collaboration was impressive, easily overshadowing any moments of dissonance (/ˈdɪs.ən.əns/)."
+  },
+  {
+    "id": 6,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Decline",
+    "questionMeaning": "a gradual loss of strength or quality",
+    "answer": "Ascendancy",
+    "options": [
+      "Ascendancy",
+      "Futility",
+      "Euphoria",
+      "Sycophancy",
+      "Proximity",
+      "Dissonance",
+
+      "Reverence",
+      "Anomaly",
+      "Abundance",
+      "Indifference"
+    ],
+    "answerMeaning": "a position of dominance or influence",
+    "sentence": "The decline of the old regime marked a new era, paving the way for the ascendancy (/əˈsɛnd.ən.si/) of fresh leadership."
+  },
+  {
+    "id": 7,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Contempt",
+    "questionMeaning": "the feeling that a person or a thing is beneath consideration or worthless",
+    "answer": "Reverence",
+    "options": [
+      "Reverence",
+      "Futility",
+      "Euphoria",
+      "Sycophancy",
+      "Proximity",
+      "Dissonance",
+      "Ascendancy",
+
+      "Anomaly",
+      "Abundance",
+      "Indifference"
+    ],
+    "answerMeaning": "deep respect for someone or something",
+    "sentence": "His contempt for superficiality was evident, contrasting with the reverence (/ˈrɛv.ər.əns/) others held for their traditions."
+  },
+  {
+    "id": 8,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Conformity",
+    "questionMeaning": "compliance with standards, rules, or laws",
+    "answer": "Anomaly",
+    "options": [
+      "Anomaly",
+      "Futility",
+      "Euphoria",
+      "Sycophancy",
+      "Proximity",
+      "Dissonance",
+      "Ascendancy",
+      "Reverence",
+
+      "Abundance",
+      "Indifference"
+    ],
+    "answerMeaning": "something that deviates from what is standard or expected",
+    "sentence": "The conformity of their results was reassuring, highlighting the anomaly (/əˈnɒm.ə.li/) that raised questions previously."
+  },
+  {
+    "id": 9,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Scarcity",
+    "questionMeaning": "the state of being in short supply; rarity",
+    "answer": "Abundance",
+    "options": [
+      "Abundance",
+      "Futility",
+      "Euphoria",
+      "Sycophancy",
+      "Proximity",
+      "Dissonance",
+      "Ascendancy",
+      "Reverence",
+      "Anomaly",
+
+      "Indifference"
+    ],
+    "answerMeaning": "a very large quantity of something",
+    "sentence": "The scarcity of resources prompted innovative solutions, a sharp contrast to the abundance (/əˈbʌn.dəns/) found elsewhere."
+  },
+  {
+    "id": 10,
+    "type": "Antonyms",
+    "category": "Advanced",
+    "subType": "Nouns",
+    "question": "Compassion",
+    "questionMeaning": "sympathetic pity and concern for the sufferings or misfortunes of others",
+    "answer": "Indifference",
+    "options": [
+      "Indifference",
+      "Futility",
+      "Euphoria",
+      "Sycophancy",
+      "Proximity",
+      "Dissonance",
+      "Ascendancy",
+      "Reverence",
+      "Anomaly",
+      "Abundance"
+    ],
+
+    "answerMeaning": "lack of interest, concern, or sympathy",
+    "sentence": "Her compassion for the underprivileged was striking, especially when faced with the indifference (/ɪnˈdɪf.ər.əns/) of others."
   }
 ]
