@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
 import questions from "../Question.json";
@@ -12,7 +12,6 @@ const AnswerSelection = () => {
   const location = useLocation();
   const { quizData } = useContext(QuizContext);
 
-  // Check if there's a starting question ID from navigation
   const { startFromQuestionId } = location.state || {};
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,13 +30,31 @@ const AnswerSelection = () => {
       q.category?.toLowerCase() === quizData.category?.toLowerCase() &&
       q.subType?.toLowerCase() === quizData.subType?.toLowerCase();
 
-    // If startFromQuestionId is provided, start from that question
     if (startFromQuestionId) {
       return matchesType && q.id >= startFromQuestionId;
     }
 
     return matchesType;
   });
+
+  // Memoize prepared options for each question
+  const preparedQuestionsOptions = useMemo(() => {
+    return filteredQuestions.map((question) => {
+      // Prepare options with correct answer randomized
+      const wrongOptions = question.options.filter(
+        (opt) => opt !== question.answer
+      );
+      const shuffledWrongOptions = wrongOptions
+        .sort(() => 0.5 - Math.random())
+        .slice(0, 3);
+
+      const finalOptions = [...shuffledWrongOptions];
+      const randomIndex = Math.floor(Math.random() * 4);
+      finalOptions.splice(randomIndex, 0, question.answer);
+
+      return finalOptions;
+    });
+  }, [filteredQuestions]);
 
   // Update initial index if starting from a specific question
   useEffect(() => {
@@ -48,27 +65,6 @@ const AnswerSelection = () => {
       setCurrentIndex(startIndex !== -1 ? startIndex : 0);
     }
   }, [startFromQuestionId, filteredQuestions]);
-
-  useEffect(() => {
-    setIsTimerRunning(true);
-    const timer = setTimeout(() => {
-      if (!selectedAnswer) {
-        setShowError(true);
-        setTimeout(() => {
-          setShowError(false);
-          setIsTimerRunning(true);
-        }, 1500);
-      }
-    }, 10000);
-
-    return () => clearTimeout(timer);
-  }, [currentIndex, selectedAnswer]);
-
-  const speak = (text) => {
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
-    window.speechSynthesis.speak(utterance);
-  };
 
   const handleAnswer = (answer) => {
     setIsTimerRunning(false);
@@ -116,17 +112,6 @@ const AnswerSelection = () => {
     }
   };
 
-  const handleNext = () => {
-    if (selectedAnswer) {
-      setCurrentIndex(currentIndex + 1);
-      setSelectedAnswer(null);
-      setShowSentence(false);
-      setWrongAnswerMeaning(null);
-      setShowError(false);
-      setIsTimerRunning(true);
-    }
-  };
-
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -153,12 +138,14 @@ const AnswerSelection = () => {
     );
   }
 
-  if (currentIndex >= filteredQuestions.length) {
+  // Show completion screen after 10 correct answers
+  if (score >= 10 || currentIndex >= filteredQuestions.length) {
     return <CompletionScreen score={score} total={filteredQuestions.length} />;
   }
 
   const question = filteredQuestions[currentIndex];
-  const isAnswerCorrect = selectedAnswer === question.answer;
+  // Use pre-prepared options from memoized array
+  const preparedOptions = preparedQuestionsOptions[currentIndex];
 
   return (
     <div className="max-w-2xl mx-auto p-6">
@@ -188,7 +175,7 @@ const AnswerSelection = () => {
         />
 
         <div className="space-y-4 mt-[15%]">
-          {question.options.slice(0, 4).map((option, idx) => (
+          {preparedOptions.map((option, idx) => (
             <button
               key={idx}
               onClick={() => handleAnswer(option)}
