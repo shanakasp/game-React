@@ -1,16 +1,21 @@
 import { Volume2 } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import questions from "../Question.json";
 import { QuizContext } from "../QuizContext";
 import ProgressBar from "../components/ProgressBar";
-import QuestionModal from "../components/QuestionModal"; // Import the modal
+import QuestionModal from "../components/QuestionModal";
 import CompletionScreen from "./CompleteScreen";
 
 const AnswerSelection = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { quizData } = useContext(QuizContext);
+
+  // Check if there's a starting question ID from navigation
+  const { startFromQuestionId } = location.state || {};
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
@@ -18,7 +23,32 @@ const AnswerSelection = () => {
   const [showError, setShowError] = useState(false);
   const [isTimerRunning, setIsTimerRunning] = useState(true);
   const [wrongAnswerMeaning, setWrongAnswerMeaning] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Filter questions based on quiz data and potential starting question
+  const filteredQuestions = questions.filter((q) => {
+    const matchesType =
+      q.type?.toLowerCase() === quizData.type?.toLowerCase() &&
+      q.category?.toLowerCase() === quizData.category?.toLowerCase() &&
+      q.subType?.toLowerCase() === quizData.subType?.toLowerCase();
+
+    // If startFromQuestionId is provided, start from that question
+    if (startFromQuestionId) {
+      return matchesType && q.id >= startFromQuestionId;
+    }
+
+    return matchesType;
+  });
+
+  // Update initial index if starting from a specific question
+  useEffect(() => {
+    if (startFromQuestionId) {
+      const startIndex = filteredQuestions.findIndex(
+        (q) => q.id === startFromQuestionId
+      );
+      setCurrentIndex(startIndex !== -1 ? startIndex : 0);
+    }
+  }, [startFromQuestionId, filteredQuestions]);
 
   useEffect(() => {
     setIsTimerRunning(true);
@@ -44,12 +74,28 @@ const AnswerSelection = () => {
   const handleAnswer = (answer) => {
     setIsTimerRunning(false);
     setSelectedAnswer(answer);
-    const isCorrect = answer === filteredQuestions[currentIndex].answer;
+    const currentQuestion = filteredQuestions[currentIndex];
+    const isCorrect = answer === currentQuestion.answer;
 
     if (isCorrect) {
-      setScore(score + 1);
-      setShowSentence(true);
-      setShowError(false);
+      // Navigate to answer detail page with current question details
+      navigate("/answer-detail", {
+        state: {
+          question: currentQuestion.question,
+          answer: currentQuestion.answer,
+          meaning: currentQuestion.questionMeaning,
+          sentence: currentQuestion.sentence,
+          type: currentQuestion.type,
+          category: currentQuestion.category,
+          subType: currentQuestion.subType,
+          id: currentQuestion.id,
+          nextIndex: currentIndex + 1,
+          totalQuestions: filteredQuestions.length,
+        },
+      });
+
+      // Increment score
+      setScore((prevScore) => prevScore + 1);
     } else {
       setWrongAnswerMeaning(
         questions.find((q) => q.answer === answer)?.answerMeaning
@@ -88,14 +134,6 @@ const AnswerSelection = () => {
       </div>
     );
   }
-
-  const filteredQuestions = questions.filter((q) => {
-    return (
-      q.type?.toLowerCase() === quizData.type?.toLowerCase() &&
-      q.category?.toLowerCase() === quizData.category?.toLowerCase() &&
-      q.subType?.toLowerCase() === quizData.subType?.toLowerCase()
-    );
-  });
 
   if (filteredQuestions.length === 0) {
     return (

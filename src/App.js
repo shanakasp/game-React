@@ -5,6 +5,7 @@ import Categories from "./Pages/Categories.jsx";
 import ExampleComponent from "./Pages/LandingPage.jsx";
 import Type from "./Pages/Type.jsx";
 import { QuizProvider } from "./QuizContext.js";
+import AnswerDetailPage from "./components/AnswerDetailPage.jsx";
 import Footer from "./components/Footer.jsx";
 import Navbar from "./components/Navbar.jsx";
 
@@ -19,6 +20,7 @@ const App = () => {
             <Route path="/categories" element={<Categories />} />
             <Route path="/type" element={<Type />} />
             <Route path="/quiz" element={<AnswerSelection />} />
+            <Route path="/answer-detail" element={<AnswerDetailPage />} />
           </Routes>
           <Footer />
         </Router>
