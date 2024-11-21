@@ -1959,7 +1959,7 @@
     "question": "Ambivalent",
     "questionMeaning": "having mixed feelings or contradictory ideas about something",
     "answerMeaning": "experiencing contradictory feelings or emotions",
-    "answer": "Conflicted ",
+    "answer": "Conflicted",
     "options": [
       "Conflicted",
       "Diligent",
@@ -1997,7 +1997,7 @@
     ],
     "questionMeaning": "intended for or likely to be understood by only a small number of people",
     "answerMeaning": "understood by few; mysterious or secret",
-    "answer": "Arcane ",
+    "answer": "Arcane",
     "sentence": "His arcane (/ɑːˈkeɪn/) knowledge of ancient texts fascinated the scholars."
   },
   {
@@ -2005,7 +2005,7 @@
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjectives",
-    "question": "Ineffable ",
+    "question": "Ineffable",
     "options": [
       "Indescribable",
       "Diligent",
@@ -2022,7 +2022,7 @@
     ],
     "questionMeaning": "too great or extreme to be expressed in words",
     "answerMeaning": "unable to be expressed in words; beyond description",
-    "answer": "Indescribable ",
+    "answer": "Indescribable",
     "sentence": "The indescribable (/ˌɪndɪsˈkraɪbəbəl/) beauty of the landscape took our breath away."
   },
   {
@@ -2030,7 +2030,7 @@
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjectives",
-    "question": "Ephemeral ",
+    "question": "Ephemeral",
     "options": [
       "Transitory",
       "Diligent",
@@ -2047,7 +2047,7 @@
     ],
     "questionMeaning": "lasting for a very short time",
     "answerMeaning": "not permanent; temporary",
-    "answer": "Transitory ",
+    "answer": "Transitory",
     "sentence": "The transitory (/ˈtrænzɪtəri/) nature of trends often makes them hard to follow."
   },
   {
@@ -2055,7 +2055,7 @@
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjectives",
-    "question": "Cacophonous ",
+    "question": "Cacophonous",
     "options": [
       "Dissonant",
       "Diligent",
@@ -2072,7 +2072,7 @@
     ],
     "questionMeaning": "involving a harsh, discordant mixture of sounds",
     "answerMeaning": "lacking harmony; harsh sounding",
-    "answer": "Dissonant ",
+    "answer": "Dissonant",
     "sentence": "The dissonant (/ˈdɪsənənt/) sounds from the street distracted her while studying."
   },
   {
@@ -2080,10 +2080,10 @@
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjectives",
-    "question": "Salient ",
+    "question": "Salient",
     "questionMeaning": "most noticeable or important",
     "answerMeaning": "important; famous; standing out",
-    "answer": "Prominent ",
+    "answer": "Prominent",
     "options": [
       "Prominent",
       "Diligent",
@@ -2130,10 +2130,10 @@
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Adjectives",
-    "question": "Lucid ",
+    "question": "Lucid",
     "questionMeaning": "expressed clearly; easy to understand",
     "answerMeaning": "easy to perceive or detect; clear",
-    "answer": "Transparent ",
+    "answer": "Transparent",
     "options": [
       "Transparent",
       "Diligent",
@@ -2148,5 +2148,841 @@
       "Mundane"
     ],
     "sentence": "Her transparent (/trænsˈpɛərənt/) explanations made complex topics accessible to all."
+  },
+
+  {
+    "id": 1,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Friend",
+    "questionMeaning": "a person you like and enjoy spending time with",
+    "answerMeaning": "a person who does not like you and wants to harm you",
+    "answer": "Enemy",
+    "sentence": "My friend helped me with my homework, but my enemy (/ˈɛnəmi/) tried to make it harder.",
+    "options": [
+      "Enemy",
+      "Away",
+      "Darkness",
+      "Sorrow",
+      "Failure",
+      "Lie",
+      "War",
+      "Obligation",
+      "Curse",
+      "Beginning"
+    ]
+  },
+  {
+    "id": 2,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Home",
+    "questionMeaning": "the place where you live",
+    "options": [
+      "Away",
+      "Enemy",
+
+      "Darkness",
+      "Sorrow",
+      "Failure",
+      "Lie",
+      "War",
+      "Obligation",
+      "Curse",
+      "Beginning"
+    ],
+    "answerMeaning": "a place that is not your home",
+    "answer": "Away",
+    "sentence": "I feel safe at home, but it’s lonely when I am away (/əˈweɪ/)."
+  },
+  {
+    "id": 3,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Light",
+    "questionMeaning": "something that makes things visible",
+    "answerMeaning": "the absence of light",
+    "answer": "Darkness",
+    "options": [
+      "Darkness",
+      "Away",
+      "Enemy",
+
+      "Sorrow",
+      "Failure",
+      "Lie",
+      "War",
+      "Obligation",
+      "Curse",
+      "Beginning"
+    ],
+    "sentence": "The light in the room is bright, while the darkness (/ˈdɑːk.nəs/) outside is thick."
+  },
+  {
+    "id": 4,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Joy",
+    "questionMeaning": "a feeling of great happiness",
+    "answerMeaning": "a feeling of deep sadness",
+    "answer": "Sorrow",
+    "options": [
+      "Sorrow",
+      "Away",
+      "Enemy",
+
+      "Darkness",
+
+      "Failure",
+      "Lie",
+      "War",
+      "Obligation",
+      "Curse",
+      "Beginning"
+    ],
+    "sentence": "The joy of the party was clear, but there was also some sorrow (/ˈsɒr.əʊ/) when it ended."
+  },
+  {
+    "id": 5,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Success",
+    "questionMeaning": "the achievement of a goal",
+    "answerMeaning": "the lack of success in achieving something",
+    "answer": "Failure",
+    "options": [
+      "Failure",
+      "Away",
+      "Enemy",
+
+      "Darkness",
+      "Sorrow",
+
+      "Lie",
+      "War",
+      "Obligation",
+      "Curse",
+      "Beginning"
+    ],
+    "sentence": "Her success in the exam made her happy, unlike her previous failure (/ˈfeɪljə/)."
+  },
+  {
+    "id": 6,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Truth",
+    "questionMeaning": "what is real or factual",
+    "answerMeaning": "a false statement made to deceive",
+    "answer": "Lie",
+    "options": [
+      "Lie",
+      "Away",
+      "Enemy",
+
+      "Darkness",
+      "Sorrow",
+      "Failure",
+
+      "War",
+      "Obligation",
+      "Curse",
+      "Beginning"
+    ],
+    "sentence": "The truth can be hard to accept, but a lie (/laɪ/) can hurt more."
+  },
+  {
+    "id": 7,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Peace",
+    "questionMeaning": "a state of calm and quiet",
+    "answerMeaning": "a state of fighting between groups or countries",
+    "answer": "War",
+    "options": [
+      "War",
+      "Away",
+      "Enemy",
+
+      "Darkness",
+      "Sorrow",
+      "Failure",
+      "Lie",
+
+      "Obligation",
+      "Curse",
+      "Beginning"
+    ],
+    "sentence": "We all want peace, not the war (/wɔː/) that causes suffering."
+  },
+  {
+    "id": 8,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Choice",
+    "questionMeaning": "an act of selecting or making a decision",
+    "answerMeaning": "something you must do; a duty",
+    "answer": "Obligation",
+    "options": [
+      "Obligation",
+      "Away",
+      "Enemy",
+
+      "Darkness",
+      "Sorrow",
+      "Failure",
+      "Lie",
+      "War",
+
+      "Curse",
+      "Beginning"
+    ],
+    "sentence": "I had a choice to make, unlike when I feel an obligation (/ˌɒblɪˈɡeɪʃən/) to help."
+  },
+  {
+    "id": 9,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "Gift",
+    "questionMeaning": "something given to someone without expecting anything in return",
+    "answerMeaning": "a wish of harm or misfortune",
+    "answer": "Curse",
+    "options": [
+      "Curse",
+      "Away",
+      "Enemy",
+
+      "Darkness",
+      "Sorrow",
+      "Failure",
+      "Lie",
+      "War",
+      "Obligation",
+
+      "Beginning"
+    ],
+    "sentence": "A gift is a nice surprise, but a curse (/kɜːs/) is something to avoid."
+  },
+  {
+    "id": 10,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Nouns",
+    "question": "End",
+    "questionMeaning": "the final part of something",
+    "answerMeaning": "the starting point of something",
+    "answer": "Beginning",
+    "options": [
+      "Beginning",
+      "Away",
+      "Enemy",
+
+      "Darkness",
+      "Sorrow",
+      "Failure",
+      "Lie",
+      "War",
+      "Obligation",
+      "Curse"
+    ],
+    "sentence": "The end of the movie was exciting, just like the beginning (/bɪˈɡɪnɪŋ/)."
+  },
+
+  {
+    "id": 1,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Give",
+    "questionMeaning": "to provide someone with something",
+    "answer": "Receive",
+    "options": [
+      "Receive",
+      "Destroy",
+
+      "Dislike",
+      "Lose",
+      "Stop",
+      "Close",
+
+      "Lose",
+      "Forget",
+      "Hate",
+      "Reject"
+    ],
+    "answerMeaning": "to be given, presented with, or allowed to have something",
+    "sentence": "When you give kindness, you often receive (/rɪˈsiːv/) gratitude in return"
+  },
+  {
+    "id": 2,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Like",
+    "questionMeaning": "to find something enjoyable or agreeable",
+    "answer": "Dislike",
+    "options": [
+      "Dislike",
+      "Receive",
+
+      "Lose",
+      "Stop",
+      "Close",
+      "Destroy",
+      "Lose",
+      "Forget",
+      "Hate",
+      "Reject"
+    ],
+    "answerMeaning": "to not like something",
+    "sentence": "I like ice cream, but I dislike (/dɪsˈlaɪk/) very spicy food."
+  },
+  {
+    "id": 3,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Find",
+    "questionMeaning": "to discover something that was lost",
+    "answer": "Lose",
+    "options": [
+      "Lose",
+      "Receive",
+      "Dislike",
+
+      "Stop",
+      "Close",
+      "Destroy",
+      "Lose",
+      "Forget",
+      "Hate",
+      "Reject"
+    ],
+    "answerMeaning": "to no longer have something because it has been misplaced",
+    "sentence": "I hope to find my keys soon, or I will lose (/luːz/) time searching."
+  },
+  {
+    "id": 4,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Start",
+    "questionMeaning": "to begin an action or process",
+    "answer": "Stop",
+    "options": [
+      "Stop",
+      "Receive",
+      "Dislike",
+      "Lose",
+
+      "Close",
+      "Destroy",
+      "Lose",
+      "Forget",
+      "Hate",
+      "Reject"
+    ],
+    "answerMeaning": "to bring something to an end",
+    "sentence": "Let’s start the game now, and we will stop (/stɒp/) when it gets dark."
+  },
+  {
+    "id": 5,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Open",
+    "questionMeaning": "to move something so that it is no longer closed",
+    "answer": "Close",
+    "options": [
+      "Close",
+      "Receive",
+      "Dislike",
+      "Lose",
+      "Stop",
+
+      "Destroy",
+      "Lose",
+      "Forget",
+      "Hate",
+      "Reject"
+    ],
+    "answerMeaning": "to shut something so that it is not open",
+    "sentence": "Please open the window, and remember to close (/kləʊz/) it when you leave."
+  },
+  {
+    "id": 6,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Build",
+    "questionMeaning": "to construct or make something",
+    "answer": "Destroy",
+    "options": [
+      "Destroy",
+      "Receive",
+      "Dislike",
+      "Lose",
+      "Stop",
+      "Close",
+
+      "Lose",
+      "Forget",
+      "Hate",
+      "Reject"
+    ],
+    "answerMeaning": "to ruin or damage something completely",
+    "sentence": "We want to build a new playground, not destroy (/dɪsˈtrɔɪ/) the old one."
+  },
+  {
+    "id": 7,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Win",
+    "questionMeaning": "to achieve victory in a game or competition",
+    "answer": "Lose",
+    "options": [
+      "Lose",
+      "Receive",
+      "Dislike",
+
+      "Stop",
+      "Close",
+      "Destroy",
+      "Lose",
+      "Forget",
+      "Hate",
+      "Reject"
+    ],
+    "answerMeaning": "to not win or to fail in a game or competition",
+    "sentence": "I want to win the match, not lose (/luːz/) it to our rivals."
+  },
+  {
+    "id": 8,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Remember",
+    "questionMeaning": "to keep something in your mind or to recall",
+    "answer": "Forget",
+    "options": [
+      "Forget",
+      "Receive",
+      "Dislike",
+      "Lose",
+      "Stop",
+      "Close",
+      "Destroy",
+      "Lose",
+
+      "Hate",
+      "Reject"
+    ],
+    "answerMeaning": "to no longer remember something",
+    "sentence": "I hope to remember your birthday, not forget (/fərˈɡɛt/) it again!"
+  },
+  {
+    "id": 9,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Enjoy",
+    "questionMeaning": "to strongly dislike something",
+    "answer": "Hate",
+    "options": [
+      "Hate",
+      "Receive",
+      "Dislike",
+      "Lose",
+      "Stop",
+      "Close",
+      "Destroy",
+      "Lose",
+      "Forget",
+
+      "Reject"
+    ],
+    "answerMeaning": "to impart knowledge or skills",
+    "sentence": "I enjoy playing soccer, but I hate (/heɪt/) losing games."
+  },
+  {
+    "id": 10,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Verbs",
+    "question": "Accept",
+    "questionMeaning": "to agree to receive something",
+    "answer": "Reject",
+    "options": [
+      "Reject",
+      "Receive",
+      "Dislike",
+      "Lose",
+      "Stop",
+      "Close",
+      "Destroy",
+      "Lose",
+      "Forget",
+      "Hate"
+    ],
+    "answerMeaning": "to refuse to accept something",
+    "sentence": "I will accept your invitation, not reject (/rɪˈdʒɛkt/) it."
+  },
+
+  {
+    "id": 1,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Easy",
+    "questionMeaning": "simple and not difficult to do",
+    "answer": "Difficult",
+    "answerMeaning": "hard to do or understand",
+    "options": [
+      "Difficult",
+      "Dull",
+      "Cruel",
+      "Weak",
+      "Dirty",
+      "Poor",
+      "Quiet",
+      "Bland",
+      "Dangerous",
+      "Selfish"
+    ],
+    "sentence": "This puzzle is easy for me, but the next one looks difficult (/ˈdɪfɪkəlt/)."
+  },
+  {
+    "id": 2,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Bright",
+    "questionMeaning": "giving off a lot of light; vivid in colour",
+    "answer": "Dull",
+    "options": [
+      "Dull",
+      "Difficult",
+
+      "Cruel",
+      "Weak",
+      "Dirty",
+      "Poor",
+      "Quiet",
+      "Bland",
+      "Dangerous",
+      "Selfish"
+    ],
+    "answerMeaning": "lacking brightness or interest",
+    "sentence": "The bright sun made me smile, but the dull (/dʌl/) sky was not nice."
+  },
+  {
+    "id": 3,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Kind",
+    "questionMeaning": "being friendly, generous, and considerate",
+    "answer": "Cruel",
+    "options": [
+      "Cruel",
+      "Difficult",
+      "Dull",
+
+      "Weak",
+      "Dirty",
+      "Poor",
+      "Quiet",
+      "Bland",
+      "Dangerous",
+      "Selfish"
+    ],
+    "answerMeaning": "causing pain or suffering to others",
+    "sentence": "She is kind to animals, while others can be cruel (/ˈkruːəl/)."
+  },
+  {
+    "id": 4,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Strong",
+    "questionMeaning": "having the power to move heavy things; not weak",
+    "answer": "Weak",
+    "options": [
+      "Weak",
+      "Difficult",
+      "Dull",
+      "Cruel",
+
+      "Dirty",
+      "Poor",
+      "Quiet",
+      "Bland",
+      "Dangerous",
+      "Selfish"
+    ],
+    "answerMeaning": "lacking strength or power",
+    "sentence": "The strong man lifted the box easily, but the weak (/wiːk/) girl needed help."
+  },
+  {
+    "id": 5,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Clean",
+    "questionMeaning": "free from dirt or mess",
+    "answer": "Dirty",
+    "options": [
+      "Dirty",
+      "Difficult",
+      "Dull",
+      "Cruel",
+      "Weak",
+
+      "Poor",
+      "Quiet",
+      "Bland",
+      "Dangerous",
+      "Selfish"
+    ],
+    "answerMeaning": "covered or marked with an unclean substance",
+    "sentence": "My room is clean today, but it was dirty (/ˈdɜːti/) yesterday."
+  },
+  {
+    "id": 6,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Rich",
+    "questionMeaning": "having a lot of money or valuable resources",
+    "answer": "Poor",
+    "options": [
+      "Poor",
+      "Difficult",
+      "Dull",
+      "Cruel",
+      "Weak",
+      "Dirty",
+
+      "Quiet",
+      "Bland",
+      "Dangerous",
+      "Selfish"
+    ],
+    "answerMeaning": "lacking money or resources",
+    "sentence": "The rich family lives in a big house, while the poor (/pʊə/) family has a small flat."
+  },
+  {
+    "id": 7,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Loud",
+    "questionMeaning": "producing a lot of sound",
+    "answer": "Quiet",
+    "options": [
+      "Quiet",
+      "Difficult",
+      "Dull",
+      "Cruel",
+      "Weak",
+      "Dirty",
+      "Poor",
+
+      "Bland",
+      "Dangerous",
+      "Selfish"
+    ],
+    "answerMeaning": "making little or no noise",
+    "sentence": "The loud music was fun, but I also enjoy quiet (/ˈkwaɪət/) moments."
+  },
+  {
+    "id": 8,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Tasty",
+    "questionMeaning": "having a pleasant flavour",
+    "answer": "Bland",
+    "options": [
+      "Bland",
+      "Difficult",
+      "Dull",
+      "Cruel",
+      "Weak",
+      "Dirty",
+      "Poor",
+      "Quiet",
+
+      "Dangerous",
+      "Selfish"
+    ],
+    "answerMeaning": "lacking strong flavour",
+    "sentence": "The soup was tasty and warm, while the salad was bland (/blænd/) and cold."
+  },
+  {
+    "id": 9,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Safe",
+    "questionMeaning": "not harmful",
+    "answer": "Dangerous",
+    "options": [
+      "Dangerous",
+      "Difficult",
+      "Dull",
+      "Cruel",
+      "Weak",
+      "Dirty",
+      "Poor",
+      "Quiet",
+      "Bland",
+
+      "Selfish"
+    ],
+    "answerMeaning": "able to cause harm or injury",
+    "sentence": "The safe path through the park is better than the dangerous (/ˈdeɪndʒərəs/) road."
+  },
+  {
+    "id": 10,
+    "type": "Antonyms",
+    "category": "Beginner",
+    "subType": "Adjectives",
+    "question": "Generous",
+    "questionMeaning": "willing to give and share freely",
+    "answer": "Selfish",
+    "options": [
+      "Selfish",
+      "Difficult",
+      "Dull",
+      "Cruel",
+      "Weak",
+      "Dirty",
+      "Poor",
+      "Quiet",
+      "Bland",
+      "Dangerous"
+    ],
+    "answerMeaning": "thinking only of oneself and not helping others",
+    "sentence": "She is generous with her time, while he is often selfish (/ˈsɛlfɪʃ/)."
+  },
+  {
+    "id": 1,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Ambiguity",
+    "questionMeaning": "the quality of being open to more than one interpretation; vagueness",
+    "answer": "Clarity",
+    "answerMeaning": "the quality of being clear and easy to understand",
+    "sentence": "The ambiguity of the instructions caused confusion, while clarity (/ˈklær.ɪ.ti/) would have made the process smoother."
+  },
+  {
+    "id": 2,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Opportunity",
+    "questionMeaning": "a set of circumstances that makes it possible to do something",
+    "answer": "Obstruction",
+    "answerMeaning": "something that blocks or impedes progress",
+    "sentence": "The opportunity to travel abroad expanded her horizons, unlike the obstructions (/əbˈstrʌk.ʃənz/) she faced at home."
+  },
+  {
+    "id": 3,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Accomplishment",
+    "questionMeaning": "something that has been achieved successfully",
+    "answer": "Failure",
+    "answerMeaning": "a lack of success in doing something",
+    "sentence": "Her latest accomplishment was celebrated by everyone, in stark contrast to the failure (/ˈfeɪ.ljər/) of previous attempts."
+  },
+  {
+    "id": 4,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Initiative",
+    "questionMeaning": "the ability to assess and act independently",
+    "answer": "Inaction",
+    "answerMeaning": "lack of action or activity",
+    "sentence": "His initiative in starting the project was commendable, particularly when faced with the inaction (/ɪnˈæk.ʃən/) of others."
+  },
+  {
+    "id": 5,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Motivation",
+    "questionMeaning": "the reason or reasons one has for acting or behaving in a particular way",
+    "answer": "Apathy",
+    "answerMeaning": "lack of interest, enthusiasm, or concern",
+    "sentence": "Her strong motivation inspired the team, especially in contrast to the apathy (/ˈæp.ə.θi/) displayed by some members."
+  },
+  {
+    "id": 6,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Distraction",
+    "questionMeaning": "a thing that prevents someone from giving full attention to something else",
+    "answer": "Focus",
+    "answerMeaning": "the centre of interest or activity",
+    "sentence": "The loud music became a distraction during study time, making it hard to maintain focus (/ˈfəʊ.kəs/)."
+  },
+  {
+    "id": 7,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Distinction",
+    "questionMeaning": "a difference or contrast between similar things or people",
+    "answer": "Similarity ",
+    "answerMeaning": "the state of being similar; likeness",
+    "sentence": "The distinction between the two theories was crucial for understanding, especially as they share many similarities (/ˌsɪm.ɪˈlær.ɪ.tiz/)."
+  },
+  {
+    "id": 8,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Interaction",
+    "questionMeaning": "communication or involvement with someone or something",
+    "answer": "Isolation",
+    "answerMeaning": "the state of being separated from others",
+    "sentence": "Positive interaction among team members fosters collaboration, while isolation (/ˌaɪ.səˈleɪ.ʃən/) can hinder progress."
+  },
+  {
+    "id": 9,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Criticism",
+    "questionMeaning": "the expression of disapproval based on perceived mistakes or faults",
+    "answer": "Praise",
+    "answerMeaning": "the expression of approval or admiration for someone or something",
+    "sentence": "While criticism can be constructive, praise (/preɪz/) is equally important for motivation and encouragement."
+  },
+  {
+    "id": 10,
+    "type": "Antonyms",
+    "category": "Intermediate",
+    "subType": "Nouns",
+    "question": "Determination",
+    "questionMeaning": "firmness of purpose; resoluteness",
+    "answer": "Uncertainty",
+    "answerMeaning": "the state of being uncertain; doubt",
+    "sentence": "His determination to succeed helped him overcome the uncertainty (/ʌnˈsɜː.tən.ti/) he faced along the way"
   }
 ]
