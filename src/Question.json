@@ -4100,8 +4100,9 @@
     "questionMeaning": "unassuming or moderate in the estimation of one's abilities or achievements",
     "answer": "Ostentatious",
     "options": [
-      "Transient",
       "Ostentatious",
+      "Transient",
+
       "Perfunctory",
       "Apathetic",
       "Rare",
@@ -4123,9 +4124,10 @@
     "questionMeaning": "showing care and effort in one's work or duties",
     "answer": "Perfunctory",
     "options": [
+      "Perfunctory",
       "Transient",
       "Ostentatious",
-      "Perfunctory",
+
       "Apathetic",
       "Rare",
       "Cryptic",
@@ -4146,10 +4148,11 @@
     "questionMeaning": "having or showing zeal; passionate",
     "answer": "Apathetic",
     "options": [
+      "Apathetic",
       "Transient",
       "Ostentatious",
       "Perfunctory",
-      "Apathetic",
+
       "Rare",
       "Cryptic",
       "Insidious",
@@ -4169,11 +4172,12 @@
     "questionMeaning": "present or existing everywhere",
     "answer": "Rare",
     "options": [
+      "Rare",
       "Transient",
       "Ostentatious",
       "Perfunctory",
       "Apathetic",
-      "Rare",
+
       "Cryptic",
       "Insidious",
       "Biased",
@@ -4192,12 +4196,13 @@
     "questionMeaning": "easy to perceive or detect; open and clear",
     "answer": "Cryptic",
     "options": [
+      "Cryptic",
       "Transient",
       "Ostentatious",
       "Perfunctory",
       "Apathetic",
       "Rare",
-      "Cryptic",
+
       "Insidious",
       "Biased",
       "Disingenuous",
@@ -4215,13 +4220,14 @@
     "questionMeaning": "gentle and kindly; not harmful",
     "answer": "Insidious",
     "options": [
+      "Insidious",
       "Transient",
       "Ostentatious",
       "Perfunctory",
       "Apathetic",
       "Rare",
       "Cryptic",
-      "Insidious",
+
       "Biased",
       "Disingenuous",
       "Gullible"
@@ -4238,6 +4244,7 @@
     "questionMeaning": "treating all rivals or disputants equally; fair and just",
     "answer": "Biased",
     "options": [
+      "Biased",
       "Transient",
       "Ostentatious",
       "Perfunctory",
@@ -4245,7 +4252,7 @@
       "Rare",
       "Cryptic",
       "Insidious",
-      "Biased",
+
       "Disingenuous",
       "Gullible"
     ],
@@ -4261,6 +4268,7 @@
     "questionMeaning": "truthful and straightforward; frank",
     "answer": "Disingenuous",
     "options": [
+      "Disingenuous",
       "Transient",
       "Ostentatious",
       "Perfunctory",
@@ -4269,7 +4277,7 @@
       "Cryptic",
       "Insidious",
       "Biased",
-      "Disingenuous",
+
       "Gullible"
     ],
     "answerMeaning": "not candid or sincere; pretending to know less than one really does",
@@ -4284,6 +4292,7 @@
     "questionMeaning": "not easily convinced; having doubts or reservations",
     "answer": "Gullible",
     "options": [
+      "Gullible",
       "Transient",
       "Ostentatious",
       "Perfunctory",
@@ -4292,8 +4301,7 @@
       "Cryptic",
       "Insidious",
       "Biased",
-      "Disingenuous",
-      "Gullible"
+      "Disingenuous"
     ],
     "answerMeaning": "easily fooled or deceived",
     "sentence": "His skeptical nature prevented him from being gullible (*/ˈɡʌlɪbl/*), ensuring he made informed decisions."
