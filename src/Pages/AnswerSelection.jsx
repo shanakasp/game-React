@@ -1,10 +1,11 @@
 import { Volume2 } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
-import { FiChevronDown, FiChevronsRight } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import questions from "../Question.json";
 import { QuizContext } from "../QuizContext";
 import ProgressBar from "../components/ProgressBar";
+import QuestionModal from "../components/QuestionModal"; // Import the modal
 import CompletionScreen from "./CompleteScreen";
 
 const AnswerSelection = () => {
@@ -17,6 +18,7 @@ const AnswerSelection = () => {
   const [showError, setShowError] = useState(false);
   const [isTimerRunning, setIsTimerRunning] = useState(true);
   const [wrongAnswerMeaning, setWrongAnswerMeaning] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
 
   useEffect(() => {
     setIsTimerRunning(true);
@@ -25,7 +27,6 @@ const AnswerSelection = () => {
         setShowError(true);
         setTimeout(() => {
           setShowError(false);
-
           setIsTimerRunning(true);
         }, 1500);
       }
@@ -72,6 +73,14 @@ const AnswerSelection = () => {
     }
   };
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   if (!quizData) {
     return (
       <div className="flex justify-center items-center min-h-[400px]">
@@ -79,19 +88,14 @@ const AnswerSelection = () => {
       </div>
     );
   }
-  console.log("quizData:", quizData);
-  console.log("Questions loaded:", questions);
 
   const filteredQuestions = questions.filter((q) => {
-    console.log("Checking question:", q);
     return (
       q.type?.toLowerCase() === quizData.type?.toLowerCase() &&
       q.category?.toLowerCase() === quizData.category?.toLowerCase() &&
       q.subType?.toLowerCase() === quizData.subType?.toLowerCase()
     );
   });
-
-  console.log("Filtered Questions:", filteredQuestions);
 
   if (filteredQuestions.length === 0) {
     return (
@@ -118,7 +122,10 @@ const AnswerSelection = () => {
             {question.question}
           </h3>
 
-          <button className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500 ml-4">
+          <button
+            onClick={openModal} // Open the modal
+            className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500 ml-4"
+          >
             <div className="w-14 h-14 bg-[#ffffff] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
               <FiChevronDown className="text-[#2851a3] dark:text-[#ffffff] text-4xl" />
             </div>
@@ -126,20 +133,16 @@ const AnswerSelection = () => {
         </div>
 
         <ProgressBar isRunning={isTimerRunning} />
-        <div className="flex items-center gap-2 text-gray-600 mt-2">
-          <span>{question.questionMeaning}</span>
-          <button
-            onClick={() => speak(question.questionMeaning)}
-            className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500"
-          >
-            <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
-              <Volume2 className="w-10 h-10 text-white" />
-            </div>
-          </button>
-        </div>
+
+        {/* Modal Component */}
+        <QuestionModal
+          isOpen={isModalOpen}
+          closeModal={closeModal}
+          question={question.question}
+          meaning={question.questionMeaning}
+        />
+
         <div className="space-y-4 mt-[15%]">
-          {" "}
-          {/* Increased space between options */}
           {question.options.slice(0, 4).map((option, idx) => (
             <button
               key={idx}
@@ -191,23 +194,10 @@ const AnswerSelection = () => {
       <div className="mt-4 flex justify-end space-x-2">
         {showSentence && (
           <button
-            onClick={() => speak(question.sentence)}
-            className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500"
-          >
-            <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
-              <Volume2 className="w-10 h-10 text-white" />
-            </div>
-          </button>
-        )}
-
-        {(isAnswerCorrect || selectedAnswer) && (
-          <button
-            className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500 "
             onClick={handleNext}
+            className="px-4 py-2 bg-[#2851a3] text-white rounded-lg hover:bg-[#163e6e] transition-all"
           >
-            <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
-              <FiChevronsRight className="text-white text-5xl" />
-            </div>
+            Next Question
           </button>
         )}
       </div>
