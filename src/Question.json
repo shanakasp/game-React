@@ -32,8 +32,8 @@
     "answerMeaning": "facts or details about something",
     "answer": "Information",
     "options": [
-      "Advice",
       "Information",
+      "Advice",
       "Accommodation",
       "Progress",
       "Problem",
@@ -55,9 +55,10 @@
     "answerMeaning": "a place to stay, like a hotel or room",
     "answer": "Accommodation",
     "options": [
+      "Accommodation",
       "Advice",
       "Information",
-      "Accommodation",
+
       "Progress",
       "Problem",
       "Friendship",
@@ -78,10 +79,11 @@
     "answerMeaning": "moving forward or getting better",
     "answer": "Progress",
     "options": [
+      "Progress",
       "Advice",
       "Information",
       "Accommodation",
-      "Progress",
+
       "Problem",
       "Friendship",
       "Gift",
@@ -101,11 +103,12 @@
     "answerMeaning": "a situation that causes difficulty",
     "answer": "Problem",
     "options": [
+      "Problem",
       "Advice",
       "Information",
       "Accommodation",
       "Progress",
-      "Problem",
+
       "Friendship",
       "Gift",
       "Idea",
@@ -124,12 +127,13 @@
     "answerMeaning": "a relationship between friends",
     "answer": "Friendship",
     "options": [
+      "Friendship",
       "Advice",
       "Information",
       "Accommodation",
       "Progress",
       "Problem",
-      "Friendship",
+
       "Gift",
       "Idea",
       "Actual",
@@ -147,13 +151,14 @@
     "answerMeaning": "something given to someone without payment",
     "answer": "Gift",
     "options": [
+      "Gift",
       "Advice",
       "Information",
       "Accommodation",
       "Progress",
       "Problem",
       "Friendship",
-      "Gift",
+
       "Idea",
       "Actual",
       "Smell"
@@ -170,6 +175,7 @@
     "answerMeaning": "a thought or suggestion as to a possible course of action",
     "answer": "Idea",
     "options": [
+      "Idea",
       "Advice",
       "Information",
       "Accommodation",
@@ -177,7 +183,7 @@
       "Problem",
       "Friendship",
       "Gift",
-      "Idea",
+
       "Actual",
       "Smell"
     ],
@@ -193,6 +199,7 @@
     "answerMeaning": "the real situation or fact",
     "answer": "Actual",
     "options": [
+      "Actual",
       "Advice",
       "Information",
       "Accommodation",
@@ -201,7 +208,7 @@
       "Friendship",
       "Gift",
       "Idea",
-      "Actual",
+
       "Smell"
     ],
     "sentence": "The actual (/ˈæktʃuəl/) is different from what I thought."
@@ -216,6 +223,7 @@
     "answerMeaning": "the sense that lets you notice odors",
     "answer": "Smell",
     "options": [
+      "Smell",
       "Advice",
       "Information",
       "Accommodation",
@@ -224,8 +232,7 @@
       "Friendship",
       "Gift",
       "Idea",
-      "Actual",
-      "Smell"
+      "Actual"
     ],
     "sentence": "I love the smell (/smɛl/) of freshly baked bread."
   },

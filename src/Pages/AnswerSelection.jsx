@@ -1,4 +1,3 @@
-import { Volume2 } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
 import { FiChevronDown } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -215,37 +214,6 @@ const AnswerSelection = () => {
             </button>
           ))}
         </div>
-      </div>
-
-      {showError && wrongAnswerMeaning && (
-        <div className="mt-4 p-4 bg-red-50 rounded-lg shadow-sm flex items-center justify-between">
-          <span className="text-red-700">{wrongAnswerMeaning}</span>
-          <button
-            onClick={() => speak(wrongAnswerMeaning)}
-            className="p-2 rounded-full bg-red-100 hover:bg-red-200 transition"
-          >
-            <Volume2 className="w-5 h-5 text-red-600" />
-          </button>
-        </div>
-      )}
-
-      {showSentence && isAnswerCorrect && (
-        <div className="mt-4 p-4 bg-blue-50 rounded-lg shadow-sm">
-          <div className="flex items-center justify-between">
-            <p className="text-gray-700">{question.sentence}</p>
-          </div>
-        </div>
-      )}
-
-      <div className="mt-4 flex justify-end space-x-2">
-        {showSentence && (
-          <button
-            onClick={handleNext}
-            className="px-4 py-2 bg-[#2851a3] text-white rounded-lg hover:bg-[#163e6e] transition-all"
-          >
-            Next Question
-          </button>
-        )}
       </div>
     </div>
   );
