@@ -252,11 +252,11 @@
       "Raise",
       "Begin",
       "Break",
-      "Score",
-      "Gift",
+      "Cut",
       "Wait",
       "Repeat",
-      "Save"
+      "Save",
+      "Score"
     ],
     "sentence": "He wants to borrow (/ˈbɒrəʊ/) some money for lunch."
   },
@@ -270,16 +270,17 @@
     "answerMeaning": "to direct your eyes to see",
     "answer": "Look",
     "options": [
-      "Borrow",
       "Look",
+      "Borrow",
+
       "Raise",
       "Begin",
       "Break",
-      "Score",
-      "Gift",
+      "Cut",
       "Wait",
       "Repeat",
-      "Save"
+      "Save",
+      "Score"
     ],
     "sentence": "Look (/lʊk/) at the dog! It is cute."
   },
@@ -293,16 +294,17 @@
     "answerMeaning": "to lift something to a higher position",
     "answer": "Raise",
     "options": [
+      "Raise",
       "Borrow",
       "Look",
-      "Raise",
+
       "Begin",
       "Break",
-      "Score",
-      "Gift",
+      "Cut",
       "Wait",
       "Repeat",
-      "Save"
+      "Save",
+      "Score"
     ],
     "sentence": "Please raise (/reɪz/) your hand if you have a question."
   },
@@ -316,16 +318,17 @@
     "answerMeaning": "to start something",
     "answer": "Begin",
     "options": [
+      "Begin",
       "Borrow",
       "Look",
       "Raise",
-      "Begin",
+
       "Break",
-      "Score",
-      "Gift",
+      "Cut",
       "Wait",
       "Repeat",
-      "Save"
+      "Save",
+      "Score"
     ],
     "sentence": "Let's begin (/bɪˈɡɪn/) the game now."
   },
@@ -339,16 +342,17 @@
     "answerMeaning": "to separate into pieces or stop working",
     "answer": "Break",
     "options": [
+      "Break",
       "Borrow",
       "Look",
       "Raise",
       "Begin",
-      "Break",
-      "Score",
-      "Gift",
+
+      "Cut",
       "Wait",
       "Repeat",
-      "Save"
+      "Save",
+      "Score"
     ],
     "sentence": "Be careful not to break (/breɪk/) the glass."
   },
@@ -362,16 +366,17 @@
     "answerMeaning": "to use a sharp tool to divide something",
     "answer": "Cut",
     "options": [
+      "Cut",
       "Borrow",
       "Look",
       "Raise",
       "Begin",
       "Break",
-      "Score",
-      "Gift",
+
       "Wait",
       "Repeat",
-      "Save"
+      "Save",
+      "Score"
     ],
     "sentence": "I will cut (/kʌt/) the paper in half."
   },
@@ -385,16 +390,17 @@
     "answerMeaning": "to stay in one place until something happens",
     "answer": "Wait",
     "options": [
+      "Wait",
       "Borrow",
       "Look",
       "Raise",
       "Begin",
       "Break",
-      "Score",
-      "Gift",
-      "Wait",
+      "Cut",
+
       "Repeat",
-      "Save"
+      "Save",
+      "Score"
     ],
     "sentence": "Please wait (/weɪt/) for me at the bus stop."
   },
@@ -408,16 +414,17 @@
     "answerMeaning": "to say or do something again",
     "answer": "Repeat",
     "options": [
+      "Repeat",
       "Borrow",
       "Look",
       "Raise",
       "Begin",
       "Break",
-      "Score",
-      "Gift",
+      "Cut",
       "Wait",
-      "Repeat",
-      "Save"
+
+      "Save",
+      "Score"
     ],
     "sentence": "I will repeat (/rɪˈpiːt/) the instructions so everyone understands."
   },
@@ -431,16 +438,17 @@
     "answerMeaning": "to keep something safe or store it for later use",
     "answer": "Save",
     "options": [
+      "Save",
       "Borrow",
       "Look",
       "Raise",
       "Begin",
       "Break",
-      "Score",
-      "Gift",
+      "Cut",
       "Wait",
       "Repeat",
-      "Save"
+
+      "Score"
     ],
     "sentence": "I will save (/seɪv/) my money for a toy."
   },
@@ -454,13 +462,13 @@
     "answerMeaning": "to get points in a game or test",
     "answer": "Score",
     "options": [
+      "Score",
       "Borrow",
       "Look",
       "Raise",
       "Begin",
       "Break",
-      "Score",
-      "Gift",
+      "Cut",
       "Wait",
       "Repeat",
       "Save"
@@ -500,8 +508,9 @@
     "answerMeaning": "showing kindness to someone",
     "answer": "Sympathetic",
     "options": [
-      "Bored",
       "Sympathetic",
+      "Bored",
+
       "Interesting",
       "Beautiful",
       "Surprised",
@@ -520,9 +529,10 @@
     "subType": "Adjectives",
     "question": "Engaging",
     "options": [
+      "Interesting",
       "Bored",
       "Sympathetic",
-      "Interesting",
+
       "Beautiful",
       "Surprised",
       "Sweet",
@@ -546,10 +556,11 @@
     "answerMeaning": "very pretty or attractive",
     "answer": "Beautiful",
     "options": [
+      "Beautiful",
       "Bored",
       "Sympathetic",
       "Interesting",
-      "Beautiful",
+
       "Surprised",
       "Sweet",
       "Missing",
@@ -569,11 +580,12 @@
     "answerMeaning": "feeling shocked or amazed by something unexpected",
     "answer": "Surprised",
     "options": [
+      "Surprised",
       "Bored",
       "Sympathetic",
       "Interesting",
       "Beautiful",
-      "Surprised",
+
       "Sweet",
       "Missing",
       "Courageous",
@@ -592,12 +604,13 @@
     "answerMeaning": "having a pleasant taste like sugar",
     "answer": "Sweet",
     "options": [
+      "Sweet",
       "Bored",
       "Sympathetic",
       "Interesting",
       "Beautiful",
       "Surprised",
-      "Sweet",
+
       "Missing",
       "Courageous",
       "Angry",
@@ -615,13 +628,14 @@
     "answerMeaning": "not able to be found or not present",
     "answer": "Missing",
     "options": [
+      "Missing",
       "Bored",
       "Sympathetic",
       "Interesting",
       "Beautiful",
       "Surprised",
       "Sweet",
-      "Missing",
+
       "Courageous",
       "Angry",
       "Terrible"
@@ -638,6 +652,7 @@
     "answerMeaning": "having the ability to face fear or difficulty",
     "answer": "Courageous",
     "options": [
+      "Courageous",
       "Bored",
       "Sympathetic",
       "Interesting",
@@ -645,7 +660,7 @@
       "Surprised",
       "Sweet",
       "Missing",
-      "Courageous",
+
       "Angry",
       "Terrible"
     ],
@@ -660,6 +675,7 @@
     "questionMeaning": "upset or annoyed",
     "answerMeaning": "feeling strong emotions because of something bad",
     "options": [
+      "Angry",
       "Bored",
       "Sympathetic",
       "Interesting",
@@ -668,7 +684,7 @@
       "Sweet",
       "Missing",
       "Courageous",
-      "Angry",
+
       "Terrible"
     ],
     "answer": "Angry",
@@ -684,6 +700,7 @@
     "answerMeaning": "very bad or unpleasant",
     "answer": "Terrible",
     "options": [
+      "Terrible",
       "Bored",
       "Sympathetic",
       "Interesting",
@@ -692,8 +709,7 @@
       "Sweet",
       "Missing",
       "Courageous",
-      "Angry",
-      "Terrible"
+      "Angry"
     ],
     "sentence": "The weather is terrible (/ˈtɛrɪbl/) today."
   },
@@ -731,8 +747,9 @@
     "answerMeaning": "a way of doing something",
     "answer": "Method",
     "options": [
-      "Chance",
       "Method",
+      "Chance",
+
       "Situation",
       "Support",
       "Task",
@@ -754,9 +771,10 @@
     "answerMeaning": "a set of circumstances in which one finds oneself",
     "answer": "Situation",
     "options": [
+      "Situation",
       "Chance",
       "Method",
-      "Situation",
+
       "Support",
       "Task",
       "Treatment",
@@ -777,10 +795,11 @@
     "answerMeaning": "help or assistance",
     "answer": "Support",
     "options": [
+      "Support",
       "Chance",
       "Method",
       "Situation",
-      "Support",
+
       "Task",
       "Treatment",
       "Value",
@@ -800,11 +819,12 @@
     "answerMeaning": "a piece of work to be done",
     "answer": "Task",
     "options": [
+      "Task",
       "Chance",
       "Method",
       "Situation",
       "Support",
-      "Task",
+
       "Treatment",
       "Value",
       "Goal",
@@ -823,12 +843,13 @@
     "answerMeaning": "the way in which someone or something is dealt with",
     "answer": "Treatment",
     "options": [
+      "Treatment",
       "Chance",
       "Method",
       "Situation",
       "Support",
       "Task",
-      "Treatment",
+
       "Value",
       "Goal",
       "Attraction",
@@ -846,13 +867,14 @@
     "answerMeaning": "the importance or worth of something",
     "answer": "Value",
     "options": [
+      "Value",
       "Chance",
       "Method",
       "Situation",
       "Support",
       "Task",
       "Treatment",
-      "Value",
+
       "Goal",
       "Attraction",
       "Achievement"
@@ -869,6 +891,7 @@
     "answerMeaning": "the aim or desired result of an effort",
     "answer": "Goal",
     "options": [
+      "Goal",
       "Chance",
       "Method",
       "Situation",
@@ -876,7 +899,7 @@
       "Task",
       "Treatment",
       "Value",
-      "Goal",
+
       "Attraction",
       "Achievement"
     ],
@@ -892,6 +915,7 @@
     "answerMeaning": "a place that draws visitors",
     "answer": "Attraction",
     "options": [
+      "Attraction",
       "Chance",
       "Method",
       "Situation",
@@ -900,7 +924,7 @@
       "Treatment",
       "Value",
       "Goal",
-      "Attraction",
+
       "Achievement"
     ],
     "sentence": "The Eiffel Tower is a famous tourist attraction (/əˈtrækʃən/)."
@@ -915,6 +939,7 @@
     "answerMeaning": "the accomplishment of a goal or purpose",
     "answer": "Achievement",
     "options": [
+      "Achievement",
       "Chance",
       "Method",
       "Situation",
@@ -923,8 +948,7 @@
       "Treatment",
       "Value",
       "Goal",
-      "Attraction",
-      "Achievement"
+      "Attraction"
     ],
     "sentence": "Winning the award was a great achievement (/əˈtʃiːvmənt/) for her career."
   },
@@ -961,8 +985,9 @@
     "answerMeaning": "to make something better",
     "answer": "Improve",
     "options": [
-      "Achieve",
       "Improve",
+      "Achieve",
+
       "Explain",
       "Respond",
       "Prevent",
@@ -984,9 +1009,10 @@
     "answerMeaning": "to make something clear or easy to understand",
     "answer": "Explain",
     "options": [
+      "Explain",
       "Achieve",
       "Improve",
-      "Explain",
+
       "Respond",
       "Prevent",
       "Manage",
@@ -1007,10 +1033,11 @@
     "answerMeaning": "to reply or answer",
     "answer": "Respond",
     "options": [
+      "Respond",
       "Achieve",
       "Improve",
       "Explain",
-      "Respond",
+
       "Prevent",
       "Manage",
       "Create",
@@ -1030,11 +1057,12 @@
     "answerMeaning": "to stop something from happening",
     "answer": "Prevent",
     "options": [
+      "Prevent",
       "Achieve",
       "Improve",
       "Explain",
       "Respond",
-      "Prevent",
+
       "Manage",
       "Create",
       "Follow",
@@ -1053,12 +1081,13 @@
     "answerMeaning": "to be in charge of or control something",
     "answer": "Manage",
     "options": [
+      "Manage",
       "Achieve",
       "Improve",
       "Explain",
       "Respond",
       "Prevent",
-      "Manage",
+
       "Create",
       "Follow",
       "Change",
@@ -1076,13 +1105,14 @@
     "answerMeaning": "to bring something into existence",
     "answer": "Create",
     "options": [
+      "Create",
       "Achieve",
       "Improve",
       "Explain",
       "Respond",
       "Prevent",
       "Manage",
-      "Create",
+
       "Follow",
       "Change",
       "Support"
@@ -1099,6 +1129,7 @@
     "answerMeaning": "to come after or adhere to something",
     "answer": "Follow",
     "options": [
+      "Follow",
       "Achieve",
       "Improve",
       "Explain",
@@ -1106,7 +1137,7 @@
       "Prevent",
       "Manage",
       "Create",
-      "Follow",
+
       "Change",
       "Support"
     ],
@@ -1122,6 +1153,7 @@
     "answerMeaning": "to make something different",
     "answer": "Change",
     "options": [
+      "Change",
       "Achieve",
       "Improve",
       "Explain",
@@ -1130,7 +1162,7 @@
       "Manage",
       "Create",
       "Follow",
-      "Change",
+
       "Support"
     ],
     "sentence": "You can change (/tʃeɪndʒ/) your mind at any time."
@@ -1145,6 +1177,7 @@
     "answerMeaning": "to provide help or assistance",
     "answer": "Support",
     "options": [
+      "Support",
       "Achieve",
       "Improve",
       "Explain",
@@ -1153,8 +1186,7 @@
       "Manage",
       "Create",
       "Follow",
-      "Change",
-      "Support"
+      "Change"
     ],
     "sentence": "We should support (/səˈpɔːt/) each other in our goals."
   },
@@ -1191,8 +1223,9 @@
     "answerMeaning": "occurring frequently or widely",
     "answer": "Common",
     "options": [
-      "Similar",
       "Common",
+      "Similar",
+
       "Necessary",
       "Surprising",
       "Attractive",
@@ -1214,9 +1247,10 @@
     "answerMeaning": "required or essential",
     "answer": "Necessary",
     "options": [
+      "Necessary",
       "Similar",
       "Common",
-      "Necessary",
+
       "Surprising",
       "Attractive",
       "Honest",
@@ -1237,10 +1271,11 @@
     "answerMeaning": "causing surprise; unexpected",
     "answer": "Surprising",
     "options": [
+      "Surprising",
       "Similar",
       "Common",
       "Necessary",
-      "Surprising",
+
       "Attractive",
       "Honest",
       "Various",
@@ -1260,11 +1295,12 @@
     "answerMeaning": "pleasing or appealing to the senses",
     "answer": "Attractive",
     "options": [
+      "Attractive",
       "Similar",
       "Common",
       "Necessary",
       "Surprising",
-      "Attractive",
+
       "Honest",
       "Various",
       "Important",
@@ -1283,12 +1319,13 @@
     "answerMeaning": "truthful and sincere",
     "answer": "Honest",
     "options": [
+      "Honest",
       "Similar",
       "Common",
       "Necessary",
       "Surprising",
       "Attractive",
-      "Honest",
+
       "Various",
       "Important",
       "Difficult",
@@ -1306,13 +1343,14 @@
     "answerMeaning": "different types or kinds",
     "answer": "Various",
     "options": [
+      "Various",
       "Similar",
       "Common",
       "Necessary",
       "Surprising",
       "Attractive",
       "Honest",
-      "Various",
+
       "Important",
       "Difficult",
       "Creative"
@@ -1329,6 +1367,7 @@
     "answerMeaning": "of great significance or value",
     "answer": "Important",
     "options": [
+      "Important",
       "Similar",
       "Common",
       "Necessary",
@@ -1336,7 +1375,7 @@
       "Attractive",
       "Honest",
       "Various",
-      "Important",
+
       "Difficult",
       "Creative"
     ],
@@ -1352,6 +1391,7 @@
     "answerMeaning": "hard to do or understand",
     "answer": "Difficult",
     "options": [
+      "Difficult",
       "Similar",
       "Common",
       "Necessary",
@@ -1360,7 +1400,7 @@
       "Honest",
       "Various",
       "Important",
-      "Difficult",
+
       "Creative"
     ],
     "sentence": "The exam was difficult (/ˈdɪfɪkəlt/) for many students."
@@ -1375,6 +1415,7 @@
     "answerMeaning": "having the ability to make new things or think in new ways",
     "answer": "Creative",
     "options": [
+      "Creative",
       "Similar",
       "Common",
       "Necessary",
@@ -1383,8 +1424,7 @@
       "Honest",
       "Various",
       "Important",
-      "Difficult",
-      "Creative"
+      "Difficult"
     ],
     "sentence": "She has a creative (/kriˈeɪtɪv/) approach to problem-solving."
   },
