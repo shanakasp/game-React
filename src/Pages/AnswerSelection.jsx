@@ -1,5 +1,6 @@
 import { Volume2 } from "lucide-react";
 import React, { useContext, useEffect, useState } from "react";
+import { FiChevronsRight } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import questions from "../Question.json";
 import { QuizContext } from "../QuizContext";
@@ -121,34 +122,42 @@ const AnswerSelection = () => {
           <span>{question.questionMeaning}</span>
           <button
             onClick={() => speak(question.questionMeaning)}
-            className="p-2 rounded-full bg-blue-100 hover:bg-blue-200 transition"
+            className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500"
           >
-            <Volume2 className="w-5 h-5 text-blue-600" />
+            <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
+              <Volume2 className="w-10 h-10 text-white" />
+            </div>
+          </button>
+          <button className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500">
+            <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
+              <FiChevronsRight className="text-white text-5xl" />
+            </div>
           </button>
         </div>
-
-        <div className="space-y-2 mt-[15%]  ">
+        <div className="space-y-4 mt-[15%]">
+          {" "}
+          {/* Increased space between options */}
           {question.options.slice(0, 4).map((option, idx) => (
             <button
               key={idx}
               onClick={() => handleAnswer(option)}
               disabled={selectedAnswer !== null && !showError}
-              className={`w-full text-center  text-2xl py-3 px-4 rounded-lg text-left transition-all duration-200 
-                bg-white    dark:bg-[#aeafaf]
-                ${
-                  selectedAnswer === option
-                    ? option === question.answer
-                      ? " bg-[#ABEE9B]"
-                      : "bg-[#E4A5AF]"
-                    : "hover:bg-green-50"
-                }
-                ${
-                  selectedAnswer === null
-                    ? "hover:transform hover:-translate-y-0.5"
-                    : ""
-                }`}
+              className={`w-full text-center text-3xl py-4 px-4 rounded-lg text-left transition-all duration-200 
+        bg-white dark:bg-[#aeafaf]
+        ${
+          selectedAnswer === option
+            ? option === question.answer
+              ? " bg-[#ABEE9B]"
+              : "bg-[#E4A5AF]"
+            : "hover:bg-green-50"
+        }
+        ${
+          selectedAnswer === null
+            ? "hover:transform hover:-translate-y-0.5"
+            : ""
+        }`}
             >
-              <span className=" text-[#2851a3] dark:text-[#2A2727] font-bold">
+              <span className="text-[#2851a3] dark:text-[#2A2727] font-bold py-2">
                 {option}
               </span>
             </button>
