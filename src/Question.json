@@ -1432,7 +1432,7 @@
     "id": 1,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Paradox",
     "questionMeaning": "a statement that appears contradictory but may reveal a deeper truth",
     "answerMeaning": "a statement or proposition that seems self-contradictory or absurd but in reality expresses a possible truth",
@@ -1455,14 +1455,15 @@
     "id": 2,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Abyss",
     "questionMeaning": "a wide or profound difference between people",
     "answerMeaning": "a profound difference or gap between people or viewpoints",
     "answer": "Chasm",
     "options": [
-      "Dilemma",
       "Chasm",
+      "Dilemma",
+
       "Enigma",
       "Quintessence",
       "Aberration",
@@ -1478,15 +1479,16 @@
     "id": 3,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Conundrum",
     "questionMeaning": "a confusing and difficult problem or question",
     "answerMeaning": "a person or thing that is mysterious or difficult to understand",
     "answer": "Enigma",
     "options": [
+      "Enigma",
       "Dilemma",
       "Chasm",
-      "Enigma",
+
       "Quintessence",
       "Aberration",
       "Adaptability",
@@ -1501,16 +1503,17 @@
     "id": 4,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Epitome",
     "questionMeaning": "a person or thing that is a perfect example of a particular quality",
     "answerMeaning": "the most perfect or typical example of a quality",
     "answer": "Quintessence",
     "options": [
+      "Quintessence",
       "Dilemma",
       "Chasm",
       "Enigma",
-      "Quintessence",
+
       "Aberration",
       "Adaptability",
       "Insight",
@@ -1524,17 +1527,18 @@
     "id": 5,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Anomaly",
     "questionMeaning": "something that deviates from what is standard or expected",
     "answerMeaning": "a departure from the normal or typical",
     "answer": "Aberration",
     "options": [
+      "Aberration",
       "Dilemma",
       "Chasm",
       "Enigma",
       "Quintessence",
-      "Aberration",
+
       "Adaptability",
       "Insight",
       "Union",
@@ -1547,18 +1551,19 @@
     "id": 6,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Resilience",
     "questionMeaning": "the capacity to recover quickly from difficulties",
     "answerMeaning": "the ability to adjust to new conditions",
     "answer": "Adaptability",
     "options": [
+      "Adaptability",
       "Dilemma",
       "Chasm",
       "Enigma",
       "Quintessence",
       "Aberration",
-      "Adaptability",
+
       "Insight",
       "Union",
       "Fluctuation",
@@ -1570,19 +1575,20 @@
     "id": 7,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Epiphany",
     "questionMeaning": "a moment of sudden and great revelation or insight",
     "answerMeaning": "the capacity to gain an accurate understanding",
     "answer": "Insight",
     "options": [
+      "Insight",
       "Dilemma",
       "Chasm",
       "Enigma",
       "Quintessence",
       "Aberration",
       "Adaptability",
-      "Insight",
+
       "Union",
       "Fluctuation",
       "Haven"
@@ -1593,12 +1599,13 @@
     "id": 8,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Convergence",
     "questionMeaning": "the process of coming together from different directions",
     "answerMeaning": "the act of joining together",
     "answer": "Union",
     "options": [
+      "Union",
       "Dilemma",
       "Chasm",
       "Enigma",
@@ -1606,7 +1613,7 @@
       "Aberration",
       "Adaptability",
       "Insight",
-      "Union",
+
       "Fluctuation",
       "Haven"
     ],
@@ -1616,12 +1623,13 @@
     "id": 9,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Vicissitude",
     "questionMeaning": "a change of circumstances or fortune, often unwelcome",
     "answerMeaning": "an irregular rising and falling in number or amount",
     "answer": "Fluctuation",
     "options": [
+      "Fluctuation",
       "Dilemma",
       "Chasm",
       "Enigma",
@@ -1630,7 +1638,7 @@
       "Adaptability",
       "Insight",
       "Union",
-      "Fluctuation",
+
       "Haven"
     ],
     "sentence": "The fluctuation (/ˌflʌk.tʃuˈeɪ.ʃən/) in prices surprised many consumers."
@@ -1639,12 +1647,13 @@
     "id": 10,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Noun",
+    "subType": "Nouns",
     "question": "Sanctuary",
     "questionMeaning": "a place of refuge or safety",
     "answerMeaning": "a place of safety or refuge",
     "answer": "Haven",
     "options": [
+      "Haven",
       "Dilemma",
       "Chasm",
       "Enigma",
@@ -1653,16 +1662,15 @@
       "Adaptability",
       "Insight",
       "Union",
-      "Fluctuation",
-      "Haven"
+      "Fluctuation"
     ],
     "sentence": "The library became a haven (/ˈheɪ.vən/) for students seeking peace and quiet."
   },
   {
-    "id": 11,
+    "id": 1,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Convey",
     "questionMeaning": "to communicate or make known",
     "answerMeaning": "to make information known or communicate",
@@ -1682,17 +1690,18 @@
     "sentence": "The mentor sought to impart (/ɪmˈpɑːt/) valuable life lessons to his students."
   },
   {
-    "id": 12,
+    "id": 2,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Exacerbate",
     "questionMeaning": "to make a problem or situation worse",
     "answerMeaning": "to intensify or worsen a situation",
     "answer": "Aggravate",
     "options": [
-      "Impart",
       "Aggravate",
+      "Impart",
+
       "Confound",
       "Consent",
       "Amplify",
@@ -1705,7 +1714,7 @@
     "sentence": "His rude comments only served to aggravate (/ˈæɡ.rə.veɪt/) the ongoing conflict."
   },
   {
-    "id": 13,
+    "id": 3,
     "type": "Synonyms",
     "category": "Advanced",
     "subType": "Verbs",
@@ -1714,9 +1723,10 @@
     "answerMeaning": "to confuse or perplex",
     "answer": "Confound",
     "options": [
+      "Confound",
       "Impart",
       "Aggravate",
-      "Confound",
+
       "Consent",
       "Amplify",
       "Flood",
@@ -1728,19 +1738,20 @@
     "sentence": "The complicated instructions seemed designed to confound (/kənˈfaʊnd/) the users."
   },
   {
-    "id": 14,
+    "id": 4,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Acquiesce",
     "questionMeaning": "to accept something reluctantly but without protest",
     "answerMeaning": "to agree to something after careful consideration",
     "answer": "Consent",
     "options": [
+      "Consent",
       "Impart",
       "Aggravate",
       "Confound",
-      "Consent",
+
       "Amplify",
       "Flood",
       "Sustain",
@@ -1751,20 +1762,21 @@
     "sentence": "After much debate, the committee finally consented (/kənˈsɛntɪd/) to the proposed changes."
   },
   {
-    "id": 15,
+    "id": 5,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Augment",
     "questionMeaning": "to make something greater by adding to it",
     "answerMeaning": "to increase or make something stronger",
     "answer": "Amplify",
     "options": [
+      "Amplify",
       "Impart",
       "Aggravate",
       "Confound",
       "Consent",
-      "Amplify",
+
       "Flood",
       "Sustain",
       "Surpass",
@@ -1774,21 +1786,22 @@
     "sentence": "The team plans to amplify (/ˈæmplɪfaɪ/) their marketing efforts this quarter."
   },
   {
-    "id": 16,
+    "id": 6,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Inundate",
     "questionMeaning": "to overwhelm someone with things to deal with",
     "answerMeaning": "to overwhelm with a large quantity",
     "answer": "Flood",
     "options": [
+      "Flood",
       "Impart",
       "Aggravate",
       "Confound",
       "Consent",
       "Amplify",
-      "Flood",
+
       "Sustain",
       "Surpass",
       "Imitate",
@@ -1797,22 +1810,23 @@
     "sentence": "The department was flooded (/ˈflʌd.ɪd/) with applications after the job advertisement."
   },
   {
-    "id": 17,
+    "id": 7,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Perpetuate",
     "questionMeaning": "to make something continue indefinitely",
     "answerMeaning": "to maintain or prolong something",
     "answer": "Sustain",
     "options": [
+      "Sustain",
       "Impart",
       "Aggravate",
       "Confound",
       "Consent",
       "Amplify",
       "Flood",
-      "Sustain",
+
       "Surpass",
       "Imitate",
       "Validate"
@@ -1820,15 +1834,16 @@
     "sentence": "The initiative aims to sustain (/səˈsteɪn/) cultural traditions for future generations."
   },
   {
-    "id": 18,
+    "id": 8,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Transcend",
     "questionMeaning": "to match or surpass a person or achievement by imitation",
     "answerMeaning": "to exceed or go beyond a limit",
     "answer": "Surpass",
     "options": [
+      "Surpass",
       "Impart",
       "Aggravate",
       "Confound",
@@ -1836,22 +1851,23 @@
       "Amplify",
       "Flood",
       "Sustain",
-      "Surpass",
+
       "Imitate",
       "Validate"
     ],
     "sentence": "Her achievements managed to surpass (/səˈpɑːs/) all expectations."
   },
   {
-    "id": 19,
+    "id": 9,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Emulate",
     "questionMeaning": "to match or surpass a person or achievement by imitation",
     "answerMeaning": "to copy someone’s behaviour or actions",
     "answer": "Imitate",
     "options": [
+      "Imitate",
       "Impart",
       "Aggravate",
       "Confound",
@@ -1860,21 +1876,22 @@
       "Flood",
       "Sustain",
       "Surpass",
-      "Imitate",
+
       "Validate"
     ],
     "sentence": "Young athletes often aspire to imitate (/ˈɪm.ɪ.teɪt/) the techniques of their idols."
   },
   {
-    "id": 20,
+    "id": 10,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Delineate",
     "questionMeaning": "to provide evidence to support or prove the truth of something",
     "answerMeaning": "to confirm or support the truth of something",
     "answer": "Validate",
     "options": [
+      "Validate",
       "Impart",
       "Aggravate",
       "Confound",
@@ -1883,119 +1900,253 @@
       "Flood",
       "Sustain",
       "Surpass",
-      "Imitate",
-      "Validate"
+      "Imitate"
     ],
     "sentence": "The study aimed to validate (/ˈvæl.ɪ.deɪt/) the initial findings of previous research."
   },
   {
-    "id": 21,
+    "id": 1,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Ubiquitous",
     "questionMeaning": "present or existing everywhere",
     "answerMeaning": "found or existing everywhere",
     "answer": "Omnipresent",
+    "options": [
+      "Omnipresent",
+      "Diligent",
+      "Conflicted",
+      "Arcane",
+      "Indescribable",
+      "Transitory",
+      "Dissonant",
+      "Prominent",
+      "Mundane",
+      "Transparent"
+    ],
     "sentence": "The omnipresent (/ˌɒmnɪˈprɛzənt/) influence of social media can be seen in every aspect of modern life."
   },
   {
-    "id": 22,
+    "id": 2,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Meticulous",
     "questionMeaning": "showing great attention to detail",
     "answerMeaning": "showing care and effort in one’s work",
     "answer": "Diligent",
+    "options": [
+      "Diligent",
+      "Omnipresent",
+
+      "Conflicted",
+      "Arcane",
+      "Indescribable",
+      "Transitory",
+      "Dissonant",
+      "Prominent",
+      "Mundane",
+      "Transparent"
+    ],
     "sentence": "Her unyielding (/ʌnˈjiːldɪŋ/) stance on the issue made negotiations difficult."
   },
   {
-    "id": 23,
+    "id": 3,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Ambivalent",
     "questionMeaning": "having mixed feelings or contradictory ideas about something",
     "answerMeaning": "experiencing contradictory feelings or emotions",
     "answer": "Conflicted ",
+    "options": [
+      "Conflicted",
+      "Diligent",
+      "Omnipresent",
+
+      "Arcane",
+      "Indescribable",
+      "Transitory",
+      "Dissonant",
+      "Prominent",
+      "Mundane",
+      "Transparent"
+    ],
     "sentence": "She felt conflicted (/kənˈflɪktɪd/) about accepting the promotion due to its demands."
   },
   {
-    "id": 24,
+    "id": 4,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Esoteric",
+    "options": [
+      "Arcane",
+      "Diligent",
+      "Omnipresent",
+
+      "Conflicted",
+
+      "Indescribable",
+      "Transitory",
+      "Dissonant",
+      "Prominent",
+      "Mundane",
+      "Transparent"
+    ],
     "questionMeaning": "intended for or likely to be understood by only a small number of people",
     "answerMeaning": "understood by few; mysterious or secret",
     "answer": "Arcane ",
     "sentence": "His arcane (/ɑːˈkeɪn/) knowledge of ancient texts fascinated the scholars."
   },
   {
-    "id": 25,
+    "id": 5,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Ineffable ",
+    "options": [
+      "Indescribable",
+      "Diligent",
+      "Omnipresent",
+
+      "Conflicted",
+      "Arcane",
+
+      "Transitory",
+      "Dissonant",
+      "Prominent",
+      "Mundane",
+      "Transparent"
+    ],
     "questionMeaning": "too great or extreme to be expressed in words",
     "answerMeaning": "unable to be expressed in words; beyond description",
     "answer": "Indescribable ",
     "sentence": "The indescribable (/ˌɪndɪsˈkraɪbəbəl/) beauty of the landscape took our breath away."
   },
   {
-    "id": 26,
+    "id": 6,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Ephemeral ",
+    "options": [
+      "Transitory",
+      "Diligent",
+      "Omnipresent",
+
+      "Conflicted",
+      "Arcane",
+      "Indescribable",
+
+      "Dissonant",
+      "Prominent",
+      "Mundane",
+      "Transparent"
+    ],
     "questionMeaning": "lasting for a very short time",
     "answerMeaning": "not permanent; temporary",
     "answer": "Transitory ",
     "sentence": "The transitory (/ˈtrænzɪtəri/) nature of trends often makes them hard to follow."
   },
   {
-    "id": 27,
+    "id": 7,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Cacophonous ",
+    "options": [
+      "Dissonant",
+      "Diligent",
+      "Omnipresent",
+
+      "Conflicted",
+      "Arcane",
+      "Indescribable",
+      "Transitory",
+
+      "Prominent",
+      "Mundane",
+      "Transparent"
+    ],
     "questionMeaning": "involving a harsh, discordant mixture of sounds",
     "answerMeaning": "lacking harmony; harsh sounding",
     "answer": "Dissonant ",
     "sentence": "The dissonant (/ˈdɪsənənt/) sounds from the street distracted her while studying."
   },
   {
-    "id": 28,
+    "id": 8,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Salient ",
     "questionMeaning": "most noticeable or important",
     "answerMeaning": "important; famous; standing out",
     "answer": "Prominent ",
+    "options": [
+      "Prominent",
+      "Diligent",
+      "Omnipresent",
+
+      "Conflicted",
+      "Arcane",
+      "Indescribable",
+      "Transitory",
+      "Dissonant",
+
+      "Mundane",
+      "Transparent"
+    ],
     "sentence": "The prominent (/ˈprɒmɪnənt/) features of the report were highlighted in the discussion."
   },
   {
-    "id": 29,
+    "id": 9,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Lugubrious",
     "questionMeaning": "lacking poetic beauty; commonplace; unromantic",
     "answerMeaning": "lacking interest or excitement; dull",
-    "answer": "Mundane ",
+    "answer": "Mundane",
+    "options": [
+      "Mundane",
+      "Diligent",
+      "Omnipresent",
+
+      "Conflicted",
+      "Arcane",
+      "Indescribable",
+      "Transitory",
+      "Dissonant",
+      "Prominent",
+
+      "Transparent"
+    ],
     "sentence": "His mundane (/mʌnˈdeɪn/) routine failed to inspire creativity."
   },
   {
-    "id": 30,
+    "id": 10,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Adjective",
+    "subType": "Adjectives",
     "question": "Lucid ",
     "questionMeaning": "expressed clearly; easy to understand",
     "answerMeaning": "easy to perceive or detect; clear",
     "answer": "Transparent ",
+    "options": [
+      "Transparent",
+      "Diligent",
+      "Omnipresent",
+
+      "Conflicted",
+      "Arcane",
+      "Indescribable",
+      "Transitory",
+      "Dissonant",
+      "Prominent",
+      "Mundane"
+    ],
     "sentence": "Her transparent (/trænsˈpɛərənt/) explanations made complex topics accessible to all."
   }
 ]
