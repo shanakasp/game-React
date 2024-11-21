@@ -66,7 +66,7 @@ const AnswerDetailPage = () => {
         </div>
 
         <div>
-          <p className="text-3xl p-3 rounded-xl text-center text-[#2851a3]  dark:text-green-400 font-bold bg-[#ABEE9B]">
+          <p className="text-3xl p-3 rounded-xl text-center text-[#2851a3]  dark:text-green-700 font-bold bg-[#ABEE9B]">
             {answer}
           </p>
         </div>
@@ -88,12 +88,12 @@ const AnswerDetailPage = () => {
         )} */}
 
         {sentence && (
-          <div className="relative bg-green-50 dark:bg-green-900 rounded-lg shadow-lg flex flex-col min-h-[300px]">
-            <div className="p-4 flex-grow mb-2">
-              <h4 className="text-xl font-semibold text-[#2851a3] dark:text-[#ffffff] mb-2">
+          <div className="relative bg-green-50 dark:bg:#AFAEAF rounded-lg shadow-lg flex flex-col min-h-[300px]">
+            <div className="p-4 flex-grow mb-2 dark:bg:#AFAEAF">
+              <h4 className="text-xl font-semibold text-[#2851a3] dark:text-[#4b4b4b] mb-2">
                 Example Sentence:
               </h4>
-              <p className="text-3xl text-[#2851a3] dark:text-[#ffffff] font-semibold break-words">
+              <p className="text-3xl text-[#2851a3] dark:text-[#535353] font-semibold break-words">
                 {sentence}
               </p>
             </div>
@@ -121,7 +121,7 @@ const AnswerDetailPage = () => {
         )}
       </div>{" "}
       <div className="flex justify-center mt-6 gap-x-6">
-        <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
+        <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center cursor-pointer">
           <Volume2
             onClick={() => speak(sentence)}
             className="w-10 h-10 text-white"
@@ -130,7 +130,7 @@ const AnswerDetailPage = () => {
 
         <div
           onClick={handleNextQuestion}
-          className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center"
+          className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center  cursor-pointer"
         >
           <FiChevronsRight className="text-white text-5xl" />
         </div>
