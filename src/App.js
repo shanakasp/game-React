@@ -2,6 +2,7 @@ import React from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import AnswerSelection from "./Pages/AnswerSelection.jsx";
 import Categories from "./Pages/Categories.jsx";
+import CompletionScreen from "./Pages/CompleteScreen.jsx";
 import ExampleComponent from "./Pages/LandingPage.jsx";
 import Type from "./Pages/Type.jsx";
 import { QuizProvider } from "./QuizContext.js";
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/type" element={<Type />} />
             <Route path="/quiz" element={<AnswerSelection />} />
             <Route path="/answer-detail" element={<AnswerDetailPage />} />
+            <Route path="/completion" element={<CompletionScreen />} />
             <Route path="/show-wrong-answer" element={<ShowWrongAnswer />} />
           </Routes>
           <Footer />

@@ -1668,7 +1668,7 @@
     "id": 13,
     "type": "Synonyms",
     "category": "Advanced",
-    "subType": "Verb",
+    "subType": "Verbs",
     "question": "Obfuscate",
     "questionMeaning": "to deliberately make something unclear or difficult to understand",
     "answerMeaning": "to confuse or perplex",

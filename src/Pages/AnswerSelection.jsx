@@ -73,7 +73,25 @@ const AnswerSelection = () => {
     const isCorrect = answer === currentQuestion.answer;
 
     if (isCorrect) {
-      // Navigate to answer detail page with current question details
+      // Get current score from localStorage
+      const currentScore = parseInt(localStorage.getItem("quizScore") || "0");
+      const newScore = currentScore + 1;
+
+      // Save new score to localStorage
+      localStorage.setItem("quizScore", newScore.toString());
+
+      // Check if score reached 10
+      if (newScore >= 10) {
+        navigate("/completion", {
+          state: {
+            score: newScore,
+            total: filteredQuestions.length,
+          },
+        });
+        return;
+      }
+
+      // Navigate to answer detail page
       navigate("/answer-detail", {
         state: {
           question: currentQuestion.question,
@@ -87,16 +105,15 @@ const AnswerSelection = () => {
           isCorrect: true,
           currentIndex: currentIndex,
           nextIndex: currentIndex + 1,
+          score: newScore,
           totalQuestions: filteredQuestions.length,
         },
       });
-
-      // Increment score
-      setScore((prevScore) => prevScore + 1);
     } else {
       const wrongMeaning = questions.find(
         (q) => q.answer === answer
       )?.answerMeaning;
+
       navigate("/show-wrong-answer", {
         state: {
           question: currentQuestion.question,
@@ -107,10 +124,13 @@ const AnswerSelection = () => {
           subType: currentQuestion.subType,
           id: currentQuestion.id,
           isCorrect: false,
+          currentIndex: currentIndex,
         },
       });
     }
   };
+
+  // Add this useEffect to initialize or reset score
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -138,7 +158,6 @@ const AnswerSelection = () => {
     );
   }
 
-  // Show completion screen after 10 correct answers
   if (score >= 10 || currentIndex >= filteredQuestions.length) {
     return <CompletionScreen score={score} total={filteredQuestions.length} />;
   }
