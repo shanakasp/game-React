@@ -16,17 +16,33 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center space-x-3 md:space-x-3 ">
           {/* Social Icons */}
           <div className="flex space-x-3">
-            <div className="p-2 rounded-full bg-[#3662C1] dark:bg-gray-800">
+            <a
+              href="https://www.facebook.com/GoalC2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-[#3662C1] dark:bg-gray-800"
+            >
               <Facebook className="h-6 w-6 text-white dark:text-white" />
-            </div>
-            <div className="p-2 rounded-full bg-[#3662C1] dark:bg-gray-800">
+            </a>
+            <a
+              href="https://www.instagram.com/goalc2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-full bg-[#3662C1] dark:bg-gray-800"
+            >
               <Instagram className="h-6 w-6 text-white dark:text-white" />
-            </div>
+            </a>
           </div>
 
           {/* URL Text */}
           <p className="mt-2 p-0.3 text-gray-700 dark:text-gray-300 text-[8px] font-bold underline bg-yellow-400 text-[#3662C1]">
-            <a href="https://copyrightfrance.com">copyrightFRANCE.com</a>
+            <a
+              href="https://www.copyrightfrance.com/phtml/copyright.php"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              copyrightFRANCE.com
+            </a>
           </p>
         </div>
       </div>
