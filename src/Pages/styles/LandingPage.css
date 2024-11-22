@@ -49,7 +49,7 @@
 }
 
 /* Responsive Adjustments for Mobile */
-@media (max-width: 480px) {
+@media (max-width: 780px) {
   .section-image {
     width: clamp(220px, 40vw, 340px); /* Scales slightly larger for mobile */
   }
