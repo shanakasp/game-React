@@ -3,86 +3,78 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 20px 0;
-  gap: 2rem; /* Dynamic spacing between sections */
+  justify-content: center; /* Vertically centers content */
+  padding: 20px;
+  gap: 2rem; /* Spacing between sections */
+  min-height: 70vh; /* Full viewport height to prevent scroll */
+  overflow: hidden; /* Prevents scrollbars from appearing */
+  box-sizing: border-box; /* Ensures padding doesn't affect dimensions */
 }
 
 /* Each section container */
 .section-container {
   position: relative;
+  text-align: center; /* Centers button text */
 }
 
 /* Image styles */
 .section-image {
-  width: clamp(180px, 25vw, 300px); /* Slightly larger minimum size */
+  width: clamp(10px, 20vw, 180px); /* Dynamically scale image size */
   height: auto;
   display: block;
-  z-index: 10;
-  margin-top: 4%;
   margin: 0 auto;
-  transition: width 0.3s ease; /* Smooth resizing transition */
+  transition: transform 0.3s ease; /* Smooth scaling effect */
 }
 
 /* Button styles */
 .section-button {
   position: absolute;
-  bottom: 20px;
+  bottom: -15px; /* Adjust button positioning */
   left: 50%;
-  z: 50;
   transform: translateX(-50%);
   background-color: #3662c1;
   color: white;
-  font-size: clamp(1.2rem, 1.5vw, 2rem); /* Dynamically scale font size */
+  font-size: clamp(1.2rem, 2vw, 1.5rem); /* Larger and scalable font size */
   font-weight: bold;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.6rem; /* Larger button padding */
   border-radius: 20px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color 0.3s ease, font-size 0.3s ease; /* Smooth transition for hover effects */
+  transition: background-color 0.3s ease, font-size 0.3s ease;
 }
 
+/* Hover effect */
 .section-button:hover {
   background-color: #2851a3;
 }
 
-/* Media queries for tablets */
-@media (max-width: 768px) {
+/* Responsive Adjustments for Mobile */
+@media (max-width: 480px) {
   .section-image {
-    width: clamp(220px, 40vw, 350px); /* Increase image size for tablets */
+    width: clamp(220px, 40vw, 340px); /* Scales slightly larger for mobile */
   }
 
   .section-button {
-    padding: 0.6rem 1.2rem;
+    font-size: clamp(1.5rem, 3vw, 2.2rem); /* Larger font size for mobile */
+    padding: 1rem 2rem; /* Larger button padding for better touch targets */
+    bottom: 0; /* Adjust button position */
   }
 }
 
-/* Media queries for mobile phones */
-@media (max-width: 480px) {
-  .section-image {
-    width: clamp(250px, 60vw, 400px); /* Larger image size for mobile */
+/* Larger screens (desktop) */
+@media (min-width: 1280px) {
+  .landing-page-container {
+    gap: 3rem; /* Increase spacing between sections */
   }
 
   .section-button {
     font-size: clamp(
-      1.5rem,
-      2vw,
-      2.5rem
-    ); /* Slightly larger font size for mobile */
-    padding: 0.8rem 1.5rem;
-    bottom: -15px; /* Adjust button position */
+      1.2rem,
+      1.5vw,
+      2rem
+    ); /* Slightly smaller font for desktops */
+    padding: 1rem 2rem;
   }
-}
-
-/* XL Screen Adjustments */
-@media (min-width: 1280px) {
-  .landing-page-container {
-    gap: 2rem;
-  }
-}
-/* Hover effect */
-.section-button:hover {
-  background-color: #2851a3; /* Slightly darker blue for light mode */
 }
 
 /* Dark mode styles */
