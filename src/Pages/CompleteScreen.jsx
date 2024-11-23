@@ -62,7 +62,7 @@ const CompletionScreen = ({ categoryPage }) => {
 
         {/* Responsive Q&A Layout */}
         <div className="w-full bg-white/10 rounded-lg backdrop-blur-sm shadow-xl overflow-hidden">
-          <div className="flex flex-col lg:flex-row">
+          <div className="flex flex-col-2 lg:flex-row">
             {/* Questions Column */}
             <div className="w-full lg:w-1/2 p-4 border-b lg:border-b-0 lg:border-r border-gray-300">
               <h2 className="text-lg sm:text-xl font-bold text-[#2851a3] dark:text-white pb-2 border-b border-gray-300">
