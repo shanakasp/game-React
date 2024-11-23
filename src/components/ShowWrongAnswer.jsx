@@ -100,9 +100,7 @@ const AnswerDetailPage = () => {
         {meaning && (
           <div className="relative bg-red-50  rounded-lg shadow-lg flex flex-col min-h-[300px]">
             <div className="p-4 flex-grow mb-2 ">
-              <h4 className="text-xl font-semibold text-[#2851a3] dark:text-[#4b4b4b] mb-2">
-                Meaning:
-              </h4>
+              <h4 className="text-xl font-semibold text-[#2851a3] dark:text-[#4b4b4b] mb-2"></h4>
               <p className="text-3xl text-[#2851a3] dark:text-[#535353] font-semibold break-words">
                 {meaning}
               </p>

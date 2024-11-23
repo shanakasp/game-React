@@ -77,6 +77,38 @@ const AnswerSelection = () => {
     }
   }, [startFromQuestionId, filteredQuestions]);
 
+  const handleTimeComplete = () => {
+    const currentQuestion = filteredQuestions[currentIndex];
+    const attempts = JSON.parse(localStorage.getItem("quizAttempts") || "{}");
+    const currentScore = parseInt(localStorage.getItem("quizScore") || "0");
+
+    // Only deduct score if this is the first attempt at this question
+    if (!attempts[currentQuestion.id]) {
+      const newScore = currentScore > 0 ? currentScore - 1 : 0;
+      localStorage.setItem("quizScore", newScore.toString());
+
+      // Mark question as attempted
+      attempts[currentQuestion.id] = 1;
+      localStorage.setItem("quizAttempts", JSON.stringify(attempts));
+    }
+
+    setIsTimerRunning(false);
+    navigate("/show-wrong-answer", {
+      state: {
+        question: currentQuestion.question,
+        wrongAnswer: "Time's up!",
+        meaning: "No answer was provided within the time limit",
+        type: currentQuestion.type,
+        category: currentQuestion.category,
+        subType: currentQuestion.subType,
+        id: currentQuestion.id,
+        isCorrect: false,
+        currentIndex: currentIndex,
+        score: parseInt(localStorage.getItem("quizScore") || "0"),
+      },
+    });
+  };
+
   const handleAnswer = (answer) => {
     setIsTimerRunning(false);
     setSelectedAnswer(answer);
@@ -87,20 +119,16 @@ const AnswerSelection = () => {
     const currentScore = parseInt(localStorage.getItem("quizScore") || "0");
     const attempts = JSON.parse(localStorage.getItem("quizAttempts") || "{}");
 
-    // Initialize attempts for the current question if not present
-    if (!attempts[currentQuestion.id]) {
-      attempts[currentQuestion.id] = 0;
-    }
-
     if (isCorrect) {
       // Increment score only for the first correct attempt
-      if (attempts[currentQuestion.id] === 0) {
+      if (!attempts[currentQuestion.id]) {
         const newScore = currentScore + 1;
         localStorage.setItem("quizScore", newScore.toString());
       }
 
-      attempts[currentQuestion.id] += 1; // Mark as attempted
-
+      attempts[currentQuestion.id] = attempts[currentQuestion.id]
+        ? attempts[currentQuestion.id] + 1
+        : 1;
       localStorage.setItem("quizAttempts", JSON.stringify(attempts));
 
       navigate("/answer-detail", {
@@ -116,19 +144,20 @@ const AnswerSelection = () => {
           isCorrect: true,
           currentIndex: currentIndex,
           nextIndex: currentIndex + 1,
-          score: currentScore + 1,
+          score: parseInt(localStorage.getItem("quizScore") || "0"),
           totalQuestions: filteredQuestions.length,
         },
       });
     } else {
-      // Deduct score only on the first wrong attempt
-      if (attempts[currentQuestion.id] === 0) {
-        const newScore = currentScore > 0 ? currentScore - 1 : -1;
+      // Deduct score only if this is the first attempt
+      if (!attempts[currentQuestion.id]) {
+        const newScore = currentScore > 0 ? currentScore - 1 : 0;
         localStorage.setItem("quizScore", newScore.toString());
       }
 
-      attempts[currentQuestion.id] += 1; // Mark as attempted
-
+      attempts[currentQuestion.id] = attempts[currentQuestion.id]
+        ? attempts[currentQuestion.id] + 1
+        : 1;
       localStorage.setItem("quizAttempts", JSON.stringify(attempts));
 
       const wrongMeaning = questions.find(
@@ -146,7 +175,7 @@ const AnswerSelection = () => {
           id: currentQuestion.id,
           isCorrect: false,
           currentIndex: currentIndex,
-          score: currentScore > 0 ? currentScore - 1 : -1,
+          score: parseInt(localStorage.getItem("quizScore") || "0"),
         },
       });
     }
@@ -195,7 +224,11 @@ const AnswerSelection = () => {
           </button>
         </div>
 
-        <ProgressBar isRunning={isTimerRunning} />
+        <ProgressBar
+          duration={10000}
+          isRunning={isTimerRunning}
+          onComplete={handleTimeComplete}
+        />
 
         <QuestionModal
           isOpen={isModalOpen}
@@ -211,19 +244,19 @@ const AnswerSelection = () => {
               onClick={() => handleAnswer(option)}
               disabled={selectedAnswer !== null && !showError}
               className={`w-full text-center text-2xl py-4 px-4 rounded-lg text-left transition-all duration-200 
-        bg-white dark:bg-[#aeafaf]
-        ${
-          selectedAnswer === option
-            ? option === question.answer
-              ? " bg-[#ABEE9B]"
-              : "bg-[#E4A5AF]"
-            : "hover:bg-blue-50"
-        }
-        ${
-          selectedAnswer === null
-            ? "hover:transform hover:-translate-y-0.5"
-            : ""
-        }`}
+                bg-white dark:bg-[#aeafaf]
+                ${
+                  selectedAnswer === option
+                    ? option === question.answer
+                      ? " bg-[#ABEE9B]"
+                      : "bg-[#E4A5AF]"
+                    : "hover:bg-blue-50"
+                }
+                ${
+                  selectedAnswer === null
+                    ? "hover:transform hover:-translate-y-0.5"
+                    : ""
+                }`}
             >
               <span className="text-[#2851a3] dark:text-[#2A2727] font-bold py-2">
                 {option}
