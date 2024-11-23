@@ -58,6 +58,10 @@ const AnswerSelection = () => {
 
   // Update initial index if starting from a specific question
   useEffect(() => {
+    if (filteredQuestions.length > 0 && filteredQuestions[0].id === 1) {
+      localStorage.removeItem("quizScore");
+    }
+
     if (startFromQuestionId) {
       const startIndex = filteredQuestions.findIndex(
         (q) => q.id === startFromQuestionId
