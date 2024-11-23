@@ -10,12 +10,49 @@ const AnswerDetailPage = () => {
   const { question, answer, sentence, meaning, type, category, subType, id } =
     location.state || {};
 
+  const quizAttempts = {
+    1: 3,
+    2: 1,
+    3: 1,
+    4: 1,
+    5: 1,
+    6: 1,
+    7: 1,
+    8: 1,
+    9: 1,
+    10: 2,
+  }; // Example of quizAttempts
+
   const speak = (text) => {
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     window.speechSynthesis.speak(utterance);
   };
+
   const handleNextQuestion = () => {
+    // Check if the current question is the last one based on quizAttempts
+    const currentQuestionIndex = Object.keys(quizAttempts).findIndex(
+      (key) => parseInt(key) === id
+    );
+
+    if (currentQuestionIndex !== -1) {
+      // Get the next question key
+      const nextQuestionKey = parseInt(
+        Object.keys(quizAttempts)[currentQuestionIndex + 1]
+      );
+
+      // If there's no next question, navigate to the completion page
+      if (!nextQuestionKey) {
+        navigate("/completion", {
+          state: {
+            score: quizAttempts[id] || 0, // Use the current score as the score for completion
+            total: Object.keys(quizAttempts).length,
+          },
+        });
+        return;
+      }
+    }
+
     // Filter questions matching the current question's type, category, and subType
     const filteredQuestions = questions.filter(
       (q) =>
@@ -25,12 +62,12 @@ const AnswerDetailPage = () => {
     );
 
     // Find the index of the current question in the filtered array
-    const currentQuestionIndex = filteredQuestions.findIndex(
+    const currentQuestionIndexInFiltered = filteredQuestions.findIndex(
       (q) => q.id === id
     );
 
     // Get the next question
-    const nextQuestion = filteredQuestions[currentQuestionIndex + 1];
+    const nextQuestion = filteredQuestions[currentQuestionIndexInFiltered + 1];
 
     if (nextQuestion) {
       // Navigate back to AnswerSelection with the next question's context
@@ -43,8 +80,13 @@ const AnswerDetailPage = () => {
         },
       });
     } else {
-      // If no more questions, navigate back to quiz or show a message
-      navigate("/quiz");
+      // If no more questions, navigate to completion
+      navigate("/completion", {
+        state: {
+          score: quizAttempts[id] || 0, // Use the current score as the score for completion
+          total: Object.keys(quizAttempts).length,
+        },
+      });
     }
   };
 
@@ -71,25 +113,9 @@ const AnswerDetailPage = () => {
           </p>
         </div>
 
-        {/* {meaning && (
-          <div className="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-            <div className="flex items-center justify-between">
-              <span className="text-xl text-blue-800 dark:text-blue-200">
-                {meaning}
-              </span>
-              <button
-                onClick={() => speak(meaning)}
-                className="p-2 rounded-full bg-blue-100 dark:bg-blue-800 hover:bg-blue-200 transition"
-              >
-                <Volume2 className="w-6 h-6 text-blue-600 dark:text-blue-300" />
-              </button>
-            </div>
-          </div>
-        )} */}
-
         {sentence && (
-          <div className="relative bg-green-50 dark:bg:#AFAEAF rounded-lg shadow-lg flex flex-col min-h-[300px]">
-            <div className="p-4 flex-grow mb-2 dark:bg:#AFAEAF">
+          <div className="relative bg-green-50 dark:bg-[#AFAEAF] rounded-lg shadow-lg flex flex-col min-h-[300px]">
+            <div className="p-4 flex-grow mb-2 dark:bg-[#AFAEAF]">
               <h4 className="text-xl font-semibold text-[#2851a3] dark:text-[#4b4b4b] mb-2">
                 Example Sentence:
               </h4>
@@ -119,7 +145,7 @@ const AnswerDetailPage = () => {
             </div>
           </div>
         )}
-      </div>{" "}
+      </div>
       <div className="flex justify-center mt-6 gap-x-6">
         <div className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center cursor-pointer">
           <Volume2

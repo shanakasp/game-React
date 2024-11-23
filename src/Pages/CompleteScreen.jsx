@@ -1,23 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
 import { useWindowSize } from "react-use";
 
-const CompletionScreen = ({ score, categoryPage }) => {
+const CompletionScreen = ({ categoryPage }) => {
   const navigate = useNavigate();
   const { width, height } = useWindowSize();
+  const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    // Retrieve the score from localStorage
+    const quizScore = localStorage.getItem("quizScore");
+    if (quizScore) {
+      setScore(parseInt(quizScore, 10)); // Parse and set the score
+    }
+  }, []);
 
   const handleNavigate = (path) => {
-    // Remove quizScore from localStorage
+    // Remove quizScore and quizAttempts from localStorage
     localStorage.removeItem("quizScore");
+    localStorage.removeItem("quizAttempts");
 
     // Navigate to the specified path
     navigate(path);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center   min-h-[400px] text-white">
-      {/* Fireworks effect */}
+    <div className="flex flex-col items-center justify-center min-h-[400px] text-white">
+      {/* Confetti effect */}
       <Confetti
         width={width}
         height={height}
@@ -26,14 +36,14 @@ const CompletionScreen = ({ score, categoryPage }) => {
       />
 
       {/* Completion message */}
-      <h1 className="text-3xl font-bold mb-4  text-[#2851a3] dark:text-[#ffffff] font-bold text-center">
+      <h1 className="text-3xl font-bold mb-4 text-[#2851a3] dark:text-[#ffffff] font-bold text-center">
         🎉 Congratulations! 🎉
       </h1>
       <p className="text-2xl mb-8 text-[#2851a3] dark:text-[#ffffff] font-semibold">
         You completed the challenge:
       </p>
       <div className="text-6xl font-extrabold bg-white text-purple-700 px-8 py-4 rounded-lg shadow-lg">
-        10/10
+        {score}/10
       </div>
 
       {/* Navigate to category page button */}

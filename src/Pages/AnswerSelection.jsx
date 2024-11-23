@@ -5,7 +5,6 @@ import questions from "../Question.json";
 import { QuizContext } from "../QuizContext";
 import ProgressBar from "../components/ProgressBar";
 import QuestionModal from "../components/QuestionModal";
-import CompletionScreen from "./CompleteScreen";
 
 const AnswerSelection = () => {
   const navigate = useNavigate();
@@ -15,7 +14,6 @@ const AnswerSelection = () => {
   const { startFromQuestionId } = location.state || {};
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showSentence, setShowSentence] = useState(false);
   const [showError, setShowError] = useState(false);
@@ -40,7 +38,6 @@ const AnswerSelection = () => {
   // Memoize prepared options for each question
   const preparedQuestionsOptions = useMemo(() => {
     return filteredQuestions.map((question) => {
-      // Prepare options with correct answer randomized
       const wrongOptions = question.options.filter(
         (opt) => opt !== question.answer
       );
@@ -56,10 +53,20 @@ const AnswerSelection = () => {
     });
   }, [filteredQuestions]);
 
-  // Update initial index if starting from a specific question
+  // Track attempts in localStorage
+  useEffect(() => {
+    if (!localStorage.getItem("quizAttempts")) {
+      localStorage.setItem("quizAttempts", JSON.stringify({}));
+    }
+  }, []);
+
+  // Handle resetting the quiz score only on the first load of question 1
   useEffect(() => {
     if (filteredQuestions.length > 0 && filteredQuestions[0].id === 1) {
-      localStorage.removeItem("quizScore");
+      const attempts = JSON.parse(localStorage.getItem("quizAttempts") || "{}");
+      if (!attempts[1]) {
+        localStorage.removeItem("quizScore");
+      }
     }
 
     if (startFromQuestionId) {
@@ -76,26 +83,26 @@ const AnswerSelection = () => {
     const currentQuestion = filteredQuestions[currentIndex];
     const isCorrect = answer === currentQuestion.answer;
 
+    // Get current score and attempts from localStorage
+    const currentScore = parseInt(localStorage.getItem("quizScore") || "0");
+    const attempts = JSON.parse(localStorage.getItem("quizAttempts") || "{}");
+
+    // Initialize attempts for the current question if not present
+    if (!attempts[currentQuestion.id]) {
+      attempts[currentQuestion.id] = 0;
+    }
+
     if (isCorrect) {
-      // Get current score from localStorage
-      const currentScore = parseInt(localStorage.getItem("quizScore") || "0");
-      const newScore = currentScore + 1;
-
-      // Save new score to localStorage
-      localStorage.setItem("quizScore", newScore.toString());
-
-      // Check if score reached 10
-      if (newScore >= 10) {
-        navigate("/completion", {
-          state: {
-            score: newScore,
-            total: filteredQuestions.length,
-          },
-        });
-        return;
+      // Increment score only for the first correct attempt
+      if (attempts[currentQuestion.id] === 0) {
+        const newScore = currentScore + 1;
+        localStorage.setItem("quizScore", newScore.toString());
       }
 
-      // Navigate to answer detail page
+      attempts[currentQuestion.id] += 1; // Mark as attempted
+
+      localStorage.setItem("quizAttempts", JSON.stringify(attempts));
+
       navigate("/answer-detail", {
         state: {
           question: currentQuestion.question,
@@ -109,11 +116,21 @@ const AnswerSelection = () => {
           isCorrect: true,
           currentIndex: currentIndex,
           nextIndex: currentIndex + 1,
-          score: newScore,
+          score: currentScore + 1,
           totalQuestions: filteredQuestions.length,
         },
       });
     } else {
+      // Deduct score only on the first wrong attempt
+      if (attempts[currentQuestion.id] === 0) {
+        const newScore = currentScore > 0 ? currentScore - 1 : -1;
+        localStorage.setItem("quizScore", newScore.toString());
+      }
+
+      attempts[currentQuestion.id] += 1; // Mark as attempted
+
+      localStorage.setItem("quizAttempts", JSON.stringify(attempts));
+
       const wrongMeaning = questions.find(
         (q) => q.answer === answer
       )?.answerMeaning;
@@ -129,20 +146,15 @@ const AnswerSelection = () => {
           id: currentQuestion.id,
           isCorrect: false,
           currentIndex: currentIndex,
+          score: currentScore > 0 ? currentScore - 1 : -1,
         },
       });
     }
   };
 
-  // Add this useEffect to initialize or reset score
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  // Open/Close modal
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   if (!quizData) {
     return (
@@ -162,12 +174,7 @@ const AnswerSelection = () => {
     );
   }
 
-  if (score >= 10 || currentIndex >= filteredQuestions.length) {
-    return <CompletionScreen score={score} total={filteredQuestions.length} />;
-  }
-
   const question = filteredQuestions[currentIndex];
-  // Use pre-prepared options from memoized array
   const preparedOptions = preparedQuestionsOptions[currentIndex];
 
   return (
