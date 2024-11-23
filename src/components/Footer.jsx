@@ -3,7 +3,7 @@ import linkgif from "../images/copyrightfrance.gif";
 const Footer = () => {
   return (
     <footer className="bg-[#DCE9FD] dark:bg-[#4A4B4A] text-black dark:text-white py-6 mt-auto px-4">
-      <div className="container mx-auto flex justify-between items-center text-sm">
+      <div className="container text-[#3662C1] dark:text-white mx-auto flex justify-between items-center text-sm">
         {/* Left Side: Legal Texts */}
         <div className="text-xs">
           <p>Mentions légales</p>

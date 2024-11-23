@@ -53,6 +53,21 @@ const CompletionScreen = ({ categoryPage }) => {
             {score}/10
           </div>
         </div>
+        {/* Navigation Buttons */}
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center mt-4 sm:mt-8">
+          <button
+            onClick={() => handleNavigate(categoryPage || "/categories")}
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-[#2851a3] dark:bg-[#aeafaf] dark:text-[#000000] text-[#ffffff] text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-blue-400 hover:scale-105 transition-transform"
+          >
+            Back to Categories
+          </button>
+          <button
+            onClick={() => handleNavigate("/")}
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-[#2851a3] dark:bg-[#aeafaf] dark:text-[#000000] text-[#ffffff] text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-blue-400 hover:scale-105 transition-transform"
+          >
+            Back to Home
+          </button>
+        </div>
 
         {/* Fixed Two-Column Layout */}
         <div className="w-full bg-white/10 rounded-lg backdrop-blur-sm shadow-xl overflow-hidden">
@@ -100,22 +115,6 @@ const CompletionScreen = ({ categoryPage }) => {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Navigation Buttons */}
-        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center mt-4 sm:mt-8">
-          <button
-            onClick={() => handleNavigate(categoryPage || "/categories")}
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-[#2851a3] dark:bg-[#aeafaf] dark:text-[#000000] text-[#ffffff] text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-yellow-300 hover:scale-105 transition-transform"
-          >
-            Back to Categories
-          </button>
-          <button
-            onClick={() => handleNavigate("/")}
-            className="px-4 sm:px-6 py-2 sm:py-3 bg-[#2851a3] dark:bg-[#aeafaf] dark:text-[#000000] text-[#ffffff] text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-green-300 hover:scale-105 transition-transform"
-          >
-            Back to Home
-          </button>
         </div>
       </div>
     </div>
