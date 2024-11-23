@@ -19,14 +19,14 @@ const LandingPage = () => {
       <div className="landing-page-container">
         <div
           className="section-container"
-          onClick={() => handleTypeSelection("Synonyms")}
+          onClick={() => handleTypeSelection("Antonyms")}
         >
           <img src={BusImage} alt="Bus" className="section-image" />
           <button className="section-button">Antonyms</button>
         </div>
         <div
           className="section-container"
-          onClick={() => handleTypeSelection("Antonyms")}
+          onClick={() => handleTypeSelection("Synonyms")}
         >
           <img
             src={CircleImage}

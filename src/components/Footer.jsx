@@ -1,5 +1,5 @@
 import { Facebook, Instagram } from "lucide-react"; // Importing SVGs from Lucide React
-
+import linkgif from "../images/copyrightfrance.gif";
 const Footer = () => {
   return (
     <footer className="bg-[#DCE9FD] dark:bg-[#4A4B4A] text-black dark:text-white py-6 mt-auto px-4">
@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
 
         {/* Right Side: Social Icons and URL */}
-        <div className="flex flex-col md:flex-row items-center space-x-3 md:space-x-3 ">
+        <div className="flex flex-col items-center space-y-3">
           {/* Social Icons */}
           <div className="flex space-x-3">
             <a
@@ -34,14 +34,18 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* URL Text */}
-          <p className="mt-2 p-0.3 text-gray-700 dark:text-gray-300 text-[8px] font-bold underline bg-yellow-400 text-[#3662C1]">
+          {/* URL GIF */}
+          <p className="mt-2">
             <a
               href="https://www.copyrightfrance.com/phtml/copyright.php"
               target="_blank"
               rel="noopener noreferrer"
             >
-              copyrightFRANCE.com
+              <img
+                src={linkgif}
+                alt="Copyright France"
+                className="h-3.5 w-auto"
+              />
             </a>
           </p>
         </div>
