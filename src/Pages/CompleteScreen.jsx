@@ -49,7 +49,7 @@ const CompletionScreen = ({ categoryPage }) => {
           <p className="text-lg sm:text-2xl text-[#2851a3] dark:text-[#ffffff] font-semibold">
             You completed the challenge:
           </p>
-          <div className="inline-block text-3xl sm:text-6xl font-extrabold bg-white text-purple-700 dark:text-[#8f8f8f] px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg">
+          <div className="inline-block text-3xl sm:text-6xl font-extrabold bg-white text-[#2851a3] dark:text-[#8f8f8f] px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg">
             {score}/10
           </div>
         </div>

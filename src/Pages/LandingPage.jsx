@@ -10,7 +10,14 @@ const LandingPage = () => {
   const navigate = useNavigate();
 
   const handleTypeSelection = (type) => {
+    // Remove quizScore and quizAttempts from localStorage
+    localStorage.removeItem("quizScore");
+    localStorage.removeItem("quizAttempts");
+
+    // Update quiz data with the selected type
     updateQuizData("type", type);
+
+    // Navigate to the categories page
     navigate("/categories");
   };
 

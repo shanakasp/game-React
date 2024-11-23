@@ -125,7 +125,7 @@ const AnswerDetailPage = () => {
             </div>
             {/* Green Checkmark */}
             <div
-              className="absolute bottom-4 right-4 text-green-600 dark:text-green-400 pt-3"
+              className="absolute bottom-4 right-4 text-green-600 dark:text-green-300 pt-3"
               style={{ fontSize: "36px" }}
             >
               <svg
