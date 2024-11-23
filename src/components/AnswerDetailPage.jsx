@@ -23,29 +23,38 @@ const AnswerDetailPage = () => {
     10: 2,
   }; // Example of quizAttempts
 
+  // Helper function to extract pronunciation data
+  const extractPronunciation = (text) => {
+    const match = text.match(/\((.*?)\)/);
+    return match ? match[1] : null;
+  };
+
+  // Helper function to remove pronunciation from the sentence
+  const removePronunciation = (text) => text.replace(/\(.*?\)/, "").trim();
+
+  const pronunciation = sentence ? extractPronunciation(sentence) : null;
+  const displaySentence = sentence ? removePronunciation(sentence) : "";
+
   const speak = (text) => {
     window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(text);
+    const utterance = new SpeechSynthesisUtterance(removePronunciation(text));
     window.speechSynthesis.speak(utterance);
   };
 
   const handleNextQuestion = () => {
-    // Check if the current question is the last one based on quizAttempts
     const currentQuestionIndex = Object.keys(quizAttempts).findIndex(
       (key) => parseInt(key) === id
     );
 
     if (currentQuestionIndex !== -1) {
-      // Get the next question key
       const nextQuestionKey = parseInt(
         Object.keys(quizAttempts)[currentQuestionIndex + 1]
       );
 
-      // If there's no next question, navigate to the completion page
       if (!nextQuestionKey) {
         navigate("/completion", {
           state: {
-            score: quizAttempts[id] || 0, // Use the current score as the score for completion
+            score: quizAttempts[id] || 0,
             total: Object.keys(quizAttempts).length,
           },
         });
@@ -53,7 +62,6 @@ const AnswerDetailPage = () => {
       }
     }
 
-    // Filter questions matching the current question's type, category, and subType
     const filteredQuestions = questions.filter(
       (q) =>
         q.type?.toLowerCase() === type?.toLowerCase() &&
@@ -61,29 +69,25 @@ const AnswerDetailPage = () => {
         q.subType?.toLowerCase() === subType?.toLowerCase()
     );
 
-    // Find the index of the current question in the filtered array
     const currentQuestionIndexInFiltered = filteredQuestions.findIndex(
       (q) => q.id === id
     );
 
-    // Get the next question
     const nextQuestion = filteredQuestions[currentQuestionIndexInFiltered + 1];
 
     if (nextQuestion) {
-      // Navigate back to AnswerSelection with the next question's context
       navigate("/quiz", {
         state: {
           type: nextQuestion.type,
           category: nextQuestion.category,
           subType: nextQuestion.subType,
-          startFromQuestionId: nextQuestion.id, // Add this to track the starting point
+          startFromQuestionId: nextQuestion.id,
         },
       });
     } else {
-      // If no more questions, navigate to completion
       navigate("/completion", {
         state: {
-          score: quizAttempts[id] || 0, // Use the current score as the score for completion
+          score: quizAttempts[id] || 0,
           total: Object.keys(quizAttempts).length,
         },
       });
@@ -99,7 +103,7 @@ const AnswerDetailPage = () => {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6  flex flex-col justify-center">
+    <div className="max-w-2xl mx-auto p-6 flex flex-col justify-center">
       <div className="bg-white dark:bg-[#2A2727] rounded-lg shadow-lg p-6 space-y-6">
         <div>
           <h3 className="text-4xl font-bold text-[#2851a3] dark:text-[#ffffff] mb-4 text-center">
@@ -108,9 +112,14 @@ const AnswerDetailPage = () => {
         </div>
 
         <div>
-          <p className="text-3xl p-3 rounded-xl text-center text-[#1c863c]  dark:text-green-700 font-bold bg-[#ABEE9B]">
+          <p className="text-3xl p-3 rounded-xl text-center text-[#1c863c] dark:text-green-700 font-bold bg-[#ABEE9B]">
             {answer}
           </p>
+          {pronunciation && (
+            <p className="text-xl text-gray-600 dark:text-gray-400 text-center italic">
+              {` /${pronunciation}/`}
+            </p>
+          )}
         </div>
 
         {sentence && (
@@ -120,10 +129,9 @@ const AnswerDetailPage = () => {
                 Example Sentence:
               </h4>
               <p className="text-3xl text-[#2851a3] dark:text-[#535353] font-semibold break-words">
-                {sentence}
+                {displaySentence}
               </p>
             </div>
-            {/* Green Checkmark */}
             <div
               className="absolute bottom-4 right-4 text-green-600 dark:text-green-300 pt-3"
               style={{ fontSize: "36px" }}
@@ -156,7 +164,7 @@ const AnswerDetailPage = () => {
 
         <div
           onClick={handleNextQuestion}
-          className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center  cursor-pointer"
+          className="w-14 h-14 bg-[#EE6C6A] dark:bg-[#2A2727] rounded-full flex items-center justify-center cursor-pointer"
         >
           <FiChevronsRight className="text-white text-5xl" />
         </div>
