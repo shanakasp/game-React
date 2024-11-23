@@ -15,10 +15,7 @@ const AnswerSelection = () => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [showSentence, setShowSentence] = useState(false);
-  const [showError, setShowError] = useState(false);
   const [isTimerRunning, setIsTimerRunning] = useState(true);
-  const [wrongAnswerMeaning, setWrongAnswerMeaning] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Filter questions based on quiz data and potential starting question
@@ -53,19 +50,19 @@ const AnswerSelection = () => {
     });
   }, [filteredQuestions]);
 
-  // Track attempts in localStorage
+  // Initialize attempts in localStorage
   useEffect(() => {
     if (!localStorage.getItem("quizAttempts")) {
       localStorage.setItem("quizAttempts", JSON.stringify({}));
     }
   }, []);
 
-  // Handle resetting the quiz score only on the first load of question 1
+  // Reset the quiz score only on the first load of question 1
   useEffect(() => {
     if (filteredQuestions.length > 0 && filteredQuestions[0].id === 1) {
       const attempts = JSON.parse(localStorage.getItem("quizAttempts") || "{}");
       if (!attempts[1]) {
-        localStorage.removeItem("quizScore");
+        localStorage.setItem("quizScore", "0");
       }
     }
 
@@ -82,15 +79,15 @@ const AnswerSelection = () => {
     const attempts = JSON.parse(localStorage.getItem("quizAttempts") || "{}");
     const currentScore = parseInt(localStorage.getItem("quizScore") || "0");
 
-    // Only deduct score if this is the first attempt at this question
-    if (!attempts[currentQuestion.id]) {
-      const newScore = currentScore > 0 ? currentScore - 1 : 0;
-      localStorage.setItem("quizScore", newScore.toString());
+    // Deduct score even if it goes negative
+    const newScore = attempts[currentQuestion.id]
+      ? currentScore
+      : currentScore - 1;
+    localStorage.setItem("quizScore", newScore.toString());
 
-      // Mark question as attempted
-      attempts[currentQuestion.id] = 1;
-      localStorage.setItem("quizAttempts", JSON.stringify(attempts));
-    }
+    // Mark question as attempted
+    attempts[currentQuestion.id] = 1;
+    localStorage.setItem("quizAttempts", JSON.stringify(attempts));
 
     setIsTimerRunning(false);
     navigate("/show-wrong-answer", {
@@ -104,7 +101,7 @@ const AnswerSelection = () => {
         id: currentQuestion.id,
         isCorrect: false,
         currentIndex: currentIndex,
-        score: parseInt(localStorage.getItem("quizScore") || "0"),
+        score: newScore,
       },
     });
   };
@@ -149,11 +146,11 @@ const AnswerSelection = () => {
         },
       });
     } else {
-      // Deduct score only if this is the first attempt
-      if (!attempts[currentQuestion.id]) {
-        const newScore = currentScore > 0 ? currentScore - 1 : 0;
-        localStorage.setItem("quizScore", newScore.toString());
-      }
+      // Deduct score even if it goes negative
+      const newScore = attempts[currentQuestion.id]
+        ? currentScore
+        : currentScore - 1;
+      localStorage.setItem("quizScore", newScore.toString());
 
       attempts[currentQuestion.id] = attempts[currentQuestion.id]
         ? attempts[currentQuestion.id] + 1
@@ -175,13 +172,12 @@ const AnswerSelection = () => {
           id: currentQuestion.id,
           isCorrect: false,
           currentIndex: currentIndex,
-          score: parseInt(localStorage.getItem("quizScore") || "0"),
+          score: newScore,
         },
       });
     }
   };
 
-  // Open/Close modal
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
@@ -242,7 +238,7 @@ const AnswerSelection = () => {
             <button
               key={idx}
               onClick={() => handleAnswer(option)}
-              disabled={selectedAnswer !== null && !showError}
+              disabled={selectedAnswer !== null}
               className={`w-full text-center text-2xl py-4 px-4 rounded-lg text-left transition-all duration-200 
                 bg-white dark:bg-[#aeafaf]
                 ${
