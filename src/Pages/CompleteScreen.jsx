@@ -1,33 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Confetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
 import { useWindowSize } from "react-use";
+import questions from "../Question.json";
+import { QuizContext } from "../QuizContext.js";
 
 const CompletionScreen = ({ categoryPage }) => {
   const navigate = useNavigate();
   const { width, height } = useWindowSize();
   const [score, setScore] = useState(0);
+  const { quizData } = useContext(QuizContext);
 
   useEffect(() => {
-    // Retrieve the score from localStorage
     const quizScore = localStorage.getItem("quizScore");
     if (quizScore) {
-      setScore(parseInt(quizScore, 10)); // Parse and set the score
+      setScore(parseInt(quizScore, 10));
     }
   }, []);
 
+  const filteredQuestions = questions.filter(
+    (question) =>
+      question.type === quizData.type &&
+      question.category === quizData.category &&
+      question.subType === quizData.subType
+  );
+
   const handleNavigate = (path) => {
-    // Remove quizScore and quizAttempts from localStorage
     localStorage.removeItem("quizScore");
     localStorage.removeItem("quizAttempts");
-
-    // Navigate to the specified path
     navigate(path);
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-[400px] text-white">
-      {/* Confetti effect */}
+    <div className="max-h-screen w-full p-2 sm:p-4 flex flex-col items-center">
       <Confetti
         width={width}
         height={height}
@@ -35,32 +40,84 @@ const CompletionScreen = ({ categoryPage }) => {
         recycle={false}
       />
 
-      {/* Completion message */}
-      <h1 className="text-3xl font-bold mb-4 text-[#2851a3] dark:text-[#ffffff] font-bold text-center">
-        🎉 Congratulations! 🎉
-      </h1>
-      <p className="text-2xl mb-8 text-[#2851a3] dark:text-[#ffffff] font-semibold">
-        You completed the challenge:
-      </p>
-      <div className="text-6xl font-extrabold bg-white text-purple-700 px-8 py-4 rounded-lg shadow-lg">
-        {score}/10
+      <div className="w-full max-w-7xl mx-auto space-y-4">
+        {/* Header Section */}
+        <div className="text-center space-y-2 sm:space-y-4 mb-4">
+          <h1 className="text-xl sm:text-3xl font-bold text-[#2851a3] dark:text-[#ffffff]">
+            🎉 Congratulations! 🎉
+          </h1>
+          <p className="text-lg sm:text-2xl text-[#2851a3] dark:text-[#ffffff] font-semibold">
+            You completed the challenge:
+          </p>
+          <div className="inline-block text-3xl sm:text-6xl font-extrabold bg-white text-purple-700 dark:text-[#8f8f8f] px-4 sm:px-6 py-2 sm:py-3 rounded-lg shadow-lg">
+            {score}/10
+          </div>
+        </div>
+
+        {/* Fixed Two-Column Layout */}
+        <div className="w-full bg-white/10 rounded-lg backdrop-blur-sm shadow-xl overflow-hidden">
+          <div className="flex flex-row divide-x divide-gray-300">
+            {/* Questions Column */}
+            <div className="w-1/2 p-2 sm:p-4">
+              <h2 className="text-base sm:text-xl font-bold text-[#2851a3] dark:text-[#ffffff] pb-2 border-b border-gray-300">
+                Questions
+              </h2>
+              <div className="space-y-2 sm:space-y-4 mt-2 sm:mt-4">
+                {filteredQuestions.slice(0, 10).map((question, index) => (
+                  <div
+                    key={`q-${question.id}`}
+                    className="p-2 sm:p-3 bg-white/5 rounded-lg"
+                  >
+                    <span className="text-sm sm:text-base">
+                      <span className="font-semibold text-[#2851a3] dark:text-[#ffffff]">
+                        {index + 1}.{" "}
+                      </span>
+                      <span className="text-[#2851a3] dark:text-[#ffffff]">
+                        {question.question}
+                      </span>
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Answers Column */}
+            <div className="w-1/2 p-2 sm:p-4">
+              <h2 className="text-base sm:text-xl font-bold text-[#2851a3] dark:text-[#ffffff] pb-2 border-b border-gray-300">
+                Answers
+              </h2>
+              <div className="space-y-2 sm:space-y-4 mt-2 sm:mt-4">
+                {filteredQuestions.slice(0, 10).map((question, index) => (
+                  <div
+                    key={`a-${question.id}`}
+                    className="p-2 sm:p-3 bg-white/5 rounded-lg"
+                  >
+                    <span className="text-sm sm:text-base text-[#2851a3] dark:text-[#ffffff]">
+                      {question.answer}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Buttons */}
+        <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 justify-center mt-4 sm:mt-8">
+          <button
+            onClick={() => handleNavigate(categoryPage || "/categories")}
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-[#2851a3] dark:bg-[#aeafaf] dark:text-[#000000] text-[#ffffff] text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-yellow-300 hover:scale-105 transition-transform"
+          >
+            Back to Categories
+          </button>
+          <button
+            onClick={() => handleNavigate("/")}
+            className="px-4 sm:px-6 py-2 sm:py-3 bg-[#2851a3] dark:bg-[#aeafaf] dark:text-[#000000] text-[#ffffff] text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-green-300 hover:scale-105 transition-transform"
+          >
+            Back to Home
+          </button>
+        </div>
       </div>
-
-      {/* Navigate to category page button */}
-      <button
-        onClick={() => handleNavigate(categoryPage || "/categories")}
-        className="mt-8 px-6 py-3 bg-yellow-400 dark:bg-yellow-700 dark:text-[#ffffff] text-purple-700 font-semibold rounded-lg shadow-lg hover:bg-yellow-300 hover:scale-105 transition-transform"
-      >
-        Back to Categories
-      </button>
-
-      {/* Navigate to home page button */}
-      <button
-        onClick={() => handleNavigate("/")}
-        className="mt-4 px-6 py-3 bg-green-400 dark:bg-green-700 dark:text-[#ffffff] text-purple-700 font-semibold rounded-lg shadow-lg hover:bg-green-300 hover:scale-105 transition-transform"
-      >
-        Back to Home
-      </button>
     </div>
   );
 };
