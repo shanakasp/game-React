@@ -217,7 +217,7 @@ const AnswerSelection = () => {
             ? option === question.answer
               ? " bg-[#ABEE9B]"
               : "bg-[#E4A5AF]"
-            : "hover:bg-green-50"
+            : "hover:bg-blue-50"
         }
         ${
           selectedAnswer === null
