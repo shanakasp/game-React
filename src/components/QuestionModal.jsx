@@ -1,11 +1,10 @@
 import React from "react";
 import { FiChevronUp } from "react-icons/fi";
-
 const QuestionModal = ({ isOpen, closeModal, question, meaning }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center h-[100vh]">
+    <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center h-[100vh] z-50">
       <div className="px-4 bg-[#DCE9FD] dark:bg-[#4A4B4A] p-6 rounded-lg shadow-lg w-11/12 max-w-lg">
         <div className="flex justify-between items-center mb-6">
           <h3 className="text-3xl text-[#2851a3] dark:text-[#000000] font-bold md:text-4xl">

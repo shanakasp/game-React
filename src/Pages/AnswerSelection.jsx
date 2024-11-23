@@ -5,7 +5,6 @@ import questions from "../Question.json";
 import { QuizContext } from "../QuizContext";
 import ProgressBar from "../components/ProgressBar";
 import QuestionModal from "../components/QuestionModal";
-
 const AnswerSelection = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -18,20 +17,29 @@ const AnswerSelection = () => {
   const [isTimerRunning, setIsTimerRunning] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [timerStartTime, setTimerStartTime] = useState(Date.now());
+  useEffect(() => {
+    if (isModalOpen) {
+      setIsTimerRunning(false);
+    } else {
+      setIsTimerRunning(true);
+    }
+  }, [isModalOpen]);
 
   // Filter questions based on quiz data and potential starting question
-  const filteredQuestions = questions.filter((q) => {
-    const matchesType =
-      q.type?.toLowerCase() === quizData.type?.toLowerCase() &&
-      q.category?.toLowerCase() === quizData.category?.toLowerCase() &&
-      q.subType?.toLowerCase() === quizData.subType?.toLowerCase();
+  const filteredQuestions = useMemo(() => {
+    return questions.filter((q) => {
+      const matchesType =
+        q.type?.toLowerCase() === quizData.type?.toLowerCase() &&
+        q.category?.toLowerCase() === quizData.category?.toLowerCase() &&
+        q.subType?.toLowerCase() === quizData.subType?.toLowerCase();
 
-    if (startFromQuestionId) {
-      return matchesType && q.id >= startFromQuestionId;
-    }
+      if (startFromQuestionId) {
+        return matchesType && q.id >= startFromQuestionId;
+      }
 
-    return matchesType;
-  });
+      return matchesType;
+    });
+  }, [quizData, startFromQuestionId]);
 
   // Memoize prepared options for each question
   const preparedQuestionsOptions = useMemo(() => {
@@ -85,13 +93,11 @@ const AnswerSelection = () => {
     const attempts = JSON.parse(localStorage.getItem("quizAttempts") || "{}");
     const currentScore = parseInt(localStorage.getItem("quizScore") || "0");
 
-    // Deduct score even if it goes negative
     const newScore = attempts[currentQuestion.id]
       ? currentScore
       : currentScore - 1;
     localStorage.setItem("quizScore", newScore.toString());
 
-    // Mark question as attempted
     attempts[currentQuestion.id] = 1;
     localStorage.setItem("quizAttempts", JSON.stringify(attempts));
 
@@ -118,12 +124,10 @@ const AnswerSelection = () => {
     const currentQuestion = filteredQuestions[currentIndex];
     const isCorrect = answer === currentQuestion.answer;
 
-    // Get current score and attempts from localStorage
     const currentScore = parseInt(localStorage.getItem("quizScore") || "0");
     const attempts = JSON.parse(localStorage.getItem("quizAttempts") || "{}");
 
     if (isCorrect) {
-      // Increment score only for the first correct attempt
       if (!attempts[currentQuestion.id]) {
         const newScore = currentScore + 1;
         localStorage.setItem("quizScore", newScore.toString());
@@ -152,7 +156,6 @@ const AnswerSelection = () => {
         },
       });
     } else {
-      // Deduct score even if it goes negative
       const newScore = attempts[currentQuestion.id]
         ? currentScore
         : currentScore - 1;
@@ -182,14 +185,6 @@ const AnswerSelection = () => {
         },
       });
     }
-  };
-
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
   };
 
   if (!quizData) {
@@ -222,7 +217,7 @@ const AnswerSelection = () => {
           </h3>
 
           <button
-            onClick={openModal}
+            onClick={() => setIsModalOpen(true)}
             className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500 ml-4"
           >
             <div className="w-14 h-14 bg-[#ffffff] dark:bg-[#2A2727] rounded-full flex items-center justify-center">
@@ -236,11 +231,12 @@ const AnswerSelection = () => {
           isRunning={isTimerRunning}
           onComplete={handleTimeComplete}
           startTime={timerStartTime}
+          isPaused={isModalOpen}
         />
 
         <QuestionModal
           isOpen={isModalOpen}
-          closeModal={closeModal}
+          closeModal={() => setIsModalOpen(false)}
           question={question.question}
           meaning={question.questionMeaning}
         />
@@ -256,7 +252,7 @@ const AnswerSelection = () => {
                 ${
                   selectedAnswer === option
                     ? option === question.answer
-                      ? " bg-[#ABEE9B]"
+                      ? "bg-[#ABEE9B]"
                       : "bg-[#E4A5AF]"
                     : "hover:bg-blue-50"
                 }

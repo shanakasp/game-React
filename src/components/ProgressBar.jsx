@@ -1,35 +1,65 @@
 import React, { useEffect, useState } from "react";
-
-const ProgressBar = ({ duration, isRunning, onComplete, startTime }) => {
+const ProgressBar = ({
+  duration,
+  isRunning,
+  onComplete,
+  startTime,
+  isPaused,
+}) => {
   const [progress, setProgress] = useState(100);
+  const [pausedTime, setPausedTime] = useState(null);
+  const [pausedAt, setPausedAt] = useState(null);
+  const [adjustedStartTime, setAdjustedStartTime] = useState(startTime);
 
   useEffect(() => {
-    if (!isRunning) {
+    // When pausing
+    if (isPaused) {
+      setPausedAt(Date.now());
+      setPausedTime(progress);
       return;
     }
 
-    const currentTime = Date.now();
-    const elapsedTime = currentTime - startTime;
-    const remainingTime = Math.max(0, duration - elapsedTime);
-    const intervalDuration = duration || 10000;
+    // When resuming
+    if (!isPaused && pausedAt !== null) {
+      const pauseDuration = Date.now() - pausedAt;
+      setAdjustedStartTime((prev) => prev + pauseDuration);
+      setPausedAt(null);
+    }
+
+    if (!isRunning || pausedTime === 0) {
+      return;
+    }
 
     const timer = setInterval(() => {
-      const currentElapsedTime = Date.now() - startTime;
-      const percentage = Math.max(
-        0,
-        100 - (currentElapsedTime / intervalDuration) * 100
-      );
+      const currentTime = Date.now();
+      const elapsedTime = currentTime - adjustedStartTime;
+      const percentage = Math.max(0, 100 - (elapsedTime / duration) * 100);
 
       setProgress(percentage);
 
-      if (currentElapsedTime >= intervalDuration) {
+      if (percentage <= 0) {
         clearInterval(timer);
         if (onComplete) onComplete();
       }
     }, 16);
 
     return () => clearInterval(timer);
-  }, [isRunning, duration, onComplete, startTime]);
+  }, [
+    isRunning,
+    duration,
+    onComplete,
+    isPaused,
+    adjustedStartTime,
+    pausedTime,
+  ]);
+
+  // Reset states when starting new question
+  useEffect(() => {
+    setProgress(100);
+    setPausedTime(null);
+    setPausedAt(null);
+    setAdjustedStartTime(startTime);
+  }, [startTime]);
 
   return (
     <div className="flex items-center justify-center w-full">
@@ -42,5 +72,4 @@ const ProgressBar = ({ duration, isRunning, onComplete, startTime }) => {
     </div>
   );
 };
-
 export default ProgressBar;
