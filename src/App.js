@@ -14,9 +14,9 @@ import ShowWrongAnswer from "./components/ShowWrongAnswer.jsx";
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen bg-[#DCE9FD] dark:bg-[#4A4B4A]">
-      <Navbar />
       <QuizProvider>
         <Router>
+          <Navbar />
           <Routes>
             <Route path="/" element={<ExampleComponent />} />
             <Route path="/categories" element={<Categories />} />
