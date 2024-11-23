@@ -11,7 +11,6 @@ const QuestionModal = ({ isOpen, closeModal, question, meaning }) => {
           <h3 className="text-3xl text-[#2851a3] dark:text-[#000000] font-bold md:text-4xl">
             {question}
           </h3>
-
           <button
             onClick={closeModal}
             className="p-1 rounded-full hover:bg-blue-200 transition hover:dark:bg-slate-500 ml-4"
@@ -21,8 +20,6 @@ const QuestionModal = ({ isOpen, closeModal, question, meaning }) => {
             </div>
           </button>
         </div>
-
-        {/* Meaning Section */}
         <div className="p-4 bg-white rounded-lg dark:bg-[#a6a6a6] mb-4">
           <p className="text-xl text-gray-700 font-bold text-[#2851a3] dark:text-[#ffffff] md:text-2xl lg:text-3xl">
             {meaning}

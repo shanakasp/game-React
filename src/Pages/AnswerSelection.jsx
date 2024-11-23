@@ -17,6 +17,7 @@ const AnswerSelection = () => {
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [isTimerRunning, setIsTimerRunning] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [timerStartTime, setTimerStartTime] = useState(Date.now());
 
   // Filter questions based on quiz data and potential starting question
   const filteredQuestions = questions.filter((q) => {
@@ -56,6 +57,11 @@ const AnswerSelection = () => {
       localStorage.setItem("quizAttempts", JSON.stringify({}));
     }
   }, []);
+
+  // Initialize timer start time on component mount or question change
+  useEffect(() => {
+    setTimerStartTime(Date.now());
+  }, [currentIndex]);
 
   // Reset the quiz score only on the first load of question 1
   useEffect(() => {
@@ -178,8 +184,13 @@ const AnswerSelection = () => {
     }
   };
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   if (!quizData) {
     return (
@@ -224,6 +235,7 @@ const AnswerSelection = () => {
           duration={10000}
           isRunning={isTimerRunning}
           onComplete={handleTimeComplete}
+          startTime={timerStartTime}
         />
 
         <QuestionModal

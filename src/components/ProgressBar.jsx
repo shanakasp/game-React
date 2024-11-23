@@ -1,33 +1,35 @@
 import React, { useEffect, useState } from "react";
 
-const ProgressBar = ({ duration, isRunning, onComplete }) => {
+const ProgressBar = ({ duration, isRunning, onComplete, startTime }) => {
   const [progress, setProgress] = useState(100);
 
   useEffect(() => {
     if (!isRunning) {
-      setProgress(100); // Reset progress if timer stops
       return;
     }
 
-    const startTime = Date.now();
-    const intervalDuration = duration || 10000; // Default to 10 seconds
+    const currentTime = Date.now();
+    const elapsedTime = currentTime - startTime;
+    const remainingTime = Math.max(0, duration - elapsedTime);
+    const intervalDuration = duration || 10000;
+
     const timer = setInterval(() => {
-      const elapsedTime = Date.now() - startTime;
+      const currentElapsedTime = Date.now() - startTime;
       const percentage = Math.max(
         0,
-        100 - (elapsedTime / intervalDuration) * 100
+        100 - (currentElapsedTime / intervalDuration) * 100
       );
 
       setProgress(percentage);
 
-      if (elapsedTime >= intervalDuration) {
+      if (currentElapsedTime >= intervalDuration) {
         clearInterval(timer);
-        if (onComplete) onComplete(); // Callback when the timer completes
+        if (onComplete) onComplete();
       }
-    }, 16); // 60 FPS for smooth updates
+    }, 16);
 
     return () => clearInterval(timer);
-  }, [isRunning, duration, onComplete]);
+  }, [isRunning, duration, onComplete, startTime]);
 
   return (
     <div className="flex items-center justify-center w-full">
