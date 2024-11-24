@@ -214,7 +214,7 @@ const AnswerSelection = () => {
         <div className="flex items-center justify-center mb-[7%]">
           <h3
             className={`${
-              question.question.length > 9 ? "text-3xl" : "text-5xl"
+              question.question.length > 9 ? "text-4xl" : "text-5xl"
             } font-semibold text-[#2851a3] dark:text-[#ffffff] font-bold text-center`}
           >
             {question.question}
