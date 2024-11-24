@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-[#DCE9FD] dark:bg-[#4A4B4A] text-black dark:text-white py-6 mt-auto px-4">
       <div className="container text-[#3662C1] dark:text-white mx-auto flex justify-between items-center text-sm">
         {/* Left Side: Legal Texts */}
-        <div className="text-xs">
+        <div className="text-xs font-semibold">
           <p>Mentions légales</p>
           <p>Politique de cookies</p>
           <p>Politique de confidentialité</p>
