@@ -204,7 +204,7 @@ const CompletionScreen = ({ categoryPage }) => {
       <div className="w-full max-w-7xl mx-auto space-y-6">
         {/* Header Section */}
         <div className="text-center space-y-4 mb-6">
-          <h1 className="text-xl sm:text-3xl font-bold text-[#2851a3] dark:text-violet-300 animate-bounce">
+          <h1 className="text-xl sm:text-3xl font-bold text-[#2851a3] dark:text-violet-400 animate-bounce">
             🎉 Congratulations! 🎉
           </h1>
           <p className="text-lg sm:text-2xl text-[#2851a3] dark:text-violet-200 font-semibold">
@@ -219,13 +219,13 @@ const CompletionScreen = ({ categoryPage }) => {
         <div className="flex flex-wrap gap-4 justify-center">
           <button
             onClick={() => handleNavigate(categoryPage || "/categories")}
-            className="px-3 py-2 bg-[#2851a3] dark:bg-violet-600 dark:hover:bg-violet-500 text-white text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-blue-400 hover:scale-105 transition-transform"
+            className="px-3 py-2 bg-[#2851a3] dark:bg-[#aeafaf] dark:hover:bg-violet-500 text-white text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-blue-400 hover:scale-105 transition-transform"
           >
             Back to Categories
           </button>
           <button
             onClick={() => handleNavigate("/")}
-            className="px-6 py-2 bg-[#2851a3] dark:bg-violet-600 dark:hover:bg-violet-500 text-white text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-blue-400 hover:scale-105 transition-transform"
+            className="px-6 py-2 bg-[#2851a3] dark:bg-[#aeafaf] dark:hover:bg-violet-500 text-white text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:bg-blue-400 hover:scale-105 transition-transform"
           >
             Back to Home
           </button>
@@ -236,14 +236,14 @@ const CompletionScreen = ({ categoryPage }) => {
           <div className="flex flex-col-2 lg:flex-row">
             {/* Questions Column */}
             <div className="w-full lg:w-1/2 p-4 border-b lg:border-b-0 lg:border-r border-gray-300 dark:border-gray-700">
-              <h2 className="text-lg sm:text-xl font-bold text-[#2851a3] dark:text-violet-300 pb-2 border-b border-gray-300 dark:border-gray-700">
+              <h2 className="text-lg sm:text-xl font-bold text-[#2851a3] dark:text-violet-300 pb-2 border-b border-gray-300 dark:border-gray-400">
                 Questions
               </h2>
               <div className="space-y-3 mt-4">
                 {filteredQuestions.slice(0, 10).map((question, index) => (
                   <div
                     key={`q-${question.id}`}
-                    className="p-3 bg-white/5 dark:bg-gray-700/30 rounded-lg"
+                    className="p-3 bg-[#c6d9ff] dark:bg-gray-500/30 rounded-lg"
                   >
                     <span className="text-sm sm:text-base">
                       <span className="font-semibold text-[#2851a3] dark:text-violet-300">
@@ -260,14 +260,14 @@ const CompletionScreen = ({ categoryPage }) => {
 
             {/* Answers Column */}
             <div className="w-full lg:w-1/2 p-4">
-              <h2 className="text-lg sm:text-xl font-bold text-[#2851a3] dark:text-violet-300 pb-2 border-b border-gray-300 dark:border-gray-700">
+              <h2 className="text-lg sm:text-xl font-bold text-[#2851a3] dark:text-violet-300 pb-2 border-b border-gray-300 dark:border-gray-400">
                 Answers
               </h2>
               <div className="space-y-3 mt-4">
                 {filteredQuestions.slice(0, 10).map((question, index) => (
                   <div
                     key={`a-${question.id}`}
-                    className="p-3 bg-white/5 dark:bg-gray-700/30 rounded-lg"
+                    className="p-3 bg-[#c6d9ff] dark:bg-gray-500/30 rounded-lg"
                   >
                     <span className="text-sm sm:text-base text-[#2851a3] dark:text-gray-200">
                       {question.answer}
