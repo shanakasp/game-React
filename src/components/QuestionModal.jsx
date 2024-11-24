@@ -20,7 +20,7 @@ const QuestionModal = ({ isOpen, closeModal, question, meaning }) => {
           </button>
         </div>
         <div className="p-4 bg-white rounded-lg dark:bg-[#a6a6a6] mb-4">
-          <p className="text-xl text-gray-700 font-bold text-[#2851a3] dark:text-[#ffffff] md:text-2xl lg:text-3xl">
+          <p className="text-xl  font-bold text-[#2851a3] dark:text-[#ffffff] md:text-2xl lg:text-3xl">
             {meaning}
           </p>
         </div>

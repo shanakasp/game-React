@@ -74,7 +74,7 @@ const Navbar = () => {
             exit={{ opacity: 0, transition: { duration: 0.3 } }}
           >
             <motion.div
-              className="relative bg-white dark:bg-[#4A4B4A] text-gray-800 dark:text-white p-6 rounded-lg shadow-lg w-96 max-w-full"
+              className="relative bg-[#2851a3] dark:bg-[#4A4B4A] text-white dark:text-white p-12 rounded-3xl shadow-lg w-96 max-w-full"
               onClick={(e) => e.stopPropagation()}
               variants={modalVariants}
               initial="hidden"
@@ -83,20 +83,18 @@ const Navbar = () => {
             >
               <button
                 onClick={closeModal}
-                className="absolute top-0 right-2 text-red-600 dark:text-red-300 dark:hover:text-red-500 hover:text-red-400 text-5xl"
+                className="absolute top-0 right-2 text-white dark:text-red-300 dark:hover:text-red-500 hover:text-red-400 text-5xl"
               >
                 &times;
               </button>
 
-              <h2 className="text-xl font-bold mb-4">Instructions</h2>
-              <ol className="list-decimal list-inside space-y-2">
-                <li>Dans les paramètres régler son téléphone en anglais</li>
-                <li>Dans le menu choisir la thématique</li>
-                <li>Appuyer sur play</li>
-                <li>Vous avez 10 secondes pour trouver la réponse</li>
-                <li>Le résultat s'affiche</li>
-                <li>Pour écouter appuyer sur le haut-parleur</li>
-                <li>Pour passer au suivant appuyer sur la flèche</li>
+              <ol className="list-decimal list-inside space-y-3 text-2xl font-semibold">
+                <li>Inside phone settings change language to English</li>
+                <li>Choose to work with Antonyms or Synonyms</li>
+                <li>Choose the level and type of words</li>
+                <li>You have 10 seconds to find the correct answer</li>
+                <li>To listen, press the speaker</li>
+                <li>To move on to the next one, press the arrow.</li>
               </ol>
             </motion.div>
           </motion.div>

@@ -116,7 +116,7 @@ const AnswerDetailPage = () => {
             {answer}
           </p>
           {pronunciation && (
-            <p className="text-xl text-gray-600 dark:text-gray-400 text-center italic">
+            <p className="text-xl text-[#2851a3] dark:text-white text-center italic font-medium">
               {` /${pronunciation}/`}
             </p>
           )}
